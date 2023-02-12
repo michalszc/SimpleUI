@@ -17,6 +17,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
-      - run: yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
       - name: Run eslint and tests
-      - run: yarn validate
+        run: yarn validate
