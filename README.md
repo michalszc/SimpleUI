@@ -6,7 +6,7 @@ SimpleUI is a library that provides a set of accessible, reusable and composable
 
 ## Looking for the documentation? 📝
 
-It's available [here](michalszc.github.io/SimpleUI/). 👈
+It's available [here](https://michalszc.github.io/SimpleUI/). 👈
 
 ## Development 💻
 
