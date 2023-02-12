@@ -1,0 +1,28 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": { 
+        "no-console": 2,
+        "semi": 2,
+        "newline-before-return": 2,
+        "space-before-function-paren": ["error", {
+            "anonymous": "always",
+            "named": "never",
+            "asyncArrow": "always"
+        }],
+        "max-len": ["error", {
+            "code": 150,
+            "ignoreComments": true,
+            "ignoreRegExpLiterals": true
+        }],
+        "no-duplicate-imports": 2
+    }
+  }

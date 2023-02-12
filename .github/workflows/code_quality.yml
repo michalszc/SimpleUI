@@ -1,0 +1,22 @@
+name: Check and test the source code
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  test:
+    name: Check the source code
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.14.0]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+      - run: yarn --frozen-lockfile
+      - name: Run eslint and tests
+      - run: yarn validate
