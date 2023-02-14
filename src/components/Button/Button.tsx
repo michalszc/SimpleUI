@@ -1,42 +1,69 @@
-import React, { FC, MouseEventHandler } from "react";
-import styled from "styled-components";
+import React, { MouseEventHandler, FC } from 'react';
+import styled from 'styled-components';
 
-export interface ButtonProps {
-  text?: string,
-  primary?:boolean,
-  disabled?: boolean,
-  size?: "small" | "medium" | "large",
+export interface ButtonProps{
+  //color?: 'primary' | 'secondary' | 'error';
+  bg?: string;
+  size?: 'small' | 'medium' | 'large';
+  isDisable?: boolean;
+  mode?: 'filled' | 'outlined' | 'elevated' | 'text';
   onClick?: MouseEventHandler<HTMLButtonElement>
+  children?: React.ReactNode
 }
 
 const StyledButton = styled.button<ButtonProps>`
-    border: 0;
-    line-height: 1;
-    font-size: 15px;
-    cursor: pointer;
-    font-weight: 700;
-    font-weight: bold;
-    border-radius: 3px;
-    display: inline-block;
-    padding: ${props => props.size === "small"? "7px 25px 8px" : (props.size === "medium"? "9px 30px 11px" : "14px 30px 16px" )};
-    color: ${props => props.primary? "#1b116e":"#ffffff"};
-    background-color: ${props => props.primary ? "#6bedb5":"#1b116e"};
-    opacity: ${props => props.disabled ? 0.5 : 1};
-    &:hover:enabled {
-      background-color: ${props => props.primary ? "#55bd90":"#6bedb5"};
-    }
-    &:active:enabled {
-        border: solid 2px #1b116e;
-        padding: ${props => props.size === "small"? "5px 23px 6px" : (props.size === "medium"? "7px 28px 9px" : "12px 28px 14px" )};
-    }
+  cursor: pointer;
+  font-size: ${props => props.size === 'small' ? ".8em" : (props.size === 'medium' ? "1em": "1.3em")};
+  font-weight: bold;
+  margin: 1em;
+  padding: ${props => props.size === 'small' ? "5px 15px" : (props.size === 'medium' ? "10px 20px": "15px 30px")};
+  border-radius: 4px;
+  color: ${({color}) => color ? color: '#fff'};
+  border: 2px solid ${({bg}) => bg ? bg: '#50a8ff'};
+  background-color: ${({bg}) => bg ? bg : '#50a8ff'};
+
+  &:hover, &:focus{
+    transform: scale(1.2);
+    transition: transform .3s ease-in-out;
+  }
 `;
 
-const Button: FC<ButtonProps> = ({size, primary, disabled, text, onClick, ...props}) => {
-  return (
-      <StyledButton type="button" onClick={onClick} primary={primary} disabled={disabled} size={size} {...props}>
-          {text}
-      </StyledButton>
+const OutlinedButton = styled(StyledButton)`
+  color: ${({color}) => color ? color: '#6e6e6e'}; 
+  background-color: transparent;
+`;
+
+const TextButton = styled(StyledButton)`
+  border: none;
+  background-color: transparent;
+  color: ${({color}) => color ? color: '#6e6e6e'}; 
+`;
+
+const ElevatedButton = styled(StyledButton)`
+  box-shadow: 2px 2px 5px #00000070;
+`;
+
+const Button: FC<ButtonProps> = ({mode, isDisable, children, onClick, ...props}: ButtonProps) => {
+  
+  if (mode === 'text') {
+    return (
+      <TextButton disabled={isDisable} onClick={onClick}>{children}</TextButton>
+    );
+  }
+  else if (mode === 'outlined') {
+    return (
+      <OutlinedButton disabled={isDisable} onClick={onClick}>{children}</OutlinedButton>
+    );
+  }
+  else if (mode === 'elevated') {
+    return (
+      <ElevatedButton disabled={isDisable} onClick={onClick}>{children}</ElevatedButton>
+    );
+  }
+  else {
+    return (
+      <StyledButton disabled={isDisable} onClick={onClick}>{children}</StyledButton>
   );
-};
+}};
 
 export default Button;
