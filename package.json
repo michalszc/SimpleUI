@@ -76,5 +76,7 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
-  "dependencies": {}
+  "dependencies": {
+    "react-icons": "^4.7.1"
+  }
 }

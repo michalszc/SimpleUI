@@ -13,14 +13,19 @@ export interface ButtonProps{
 
 const StyledButton = styled.button<ButtonProps>`
   cursor: pointer;
-  font-size: ${props => props.size === 'small' ? ".8em" : (props.size === 'medium' ? "1em": "1.3em")};
+  font-size: ${props => props.size === 'small' ? ".9em" : (props.size === 'medium' ? "1em": "1.3em")};
   font-weight: bold;
   margin: 1em;
-  padding: ${props => props.size === 'small' ? "5px 15px" : (props.size === 'medium' ? "10px 20px": "15px 30px")};
+  padding: ${props => props.size === 'small' ? "7.5px 15px" : (props.size === 'medium' ? "10px 20px": "15px 30px")};
   border-radius: 4px;
   color: ${({color}) => color ? color: '#fff'};
   border: 2px solid ${({bg}) => bg ? bg: '#50a8ff'};
   background-color: ${({bg}) => bg ? bg : '#50a8ff'};
+  display: flex;
+  align-items: 'center';
+  flex-direction: 'row';
+  justify-items: 'stretch';
+  
 
   &:hover, &:focus{
     transform: scale(1.2);
@@ -43,26 +48,27 @@ const ElevatedButton = styled(StyledButton)`
   box-shadow: 2px 2px 5px #00000070;
 `;
 
-const Button: FC<ButtonProps> = ({mode, isDisable, children, onClick, ...props}: ButtonProps) => {
+
+const Button: FC<ButtonProps> = ({bg, size, mode, isDisable, children, onClick, ...props}: ButtonProps) => {
   
   if (mode === 'text') {
     return (
-      <TextButton disabled={isDisable} onClick={onClick}>{children}</TextButton>
+      <TextButton bg={bg} size={size} disabled={isDisable} onClick={onClick}>{children}</TextButton>
     );
   }
   else if (mode === 'outlined') {
     return (
-      <OutlinedButton disabled={isDisable} onClick={onClick}>{children}</OutlinedButton>
+      <OutlinedButton bg={bg} size={size} disabled={isDisable} onClick={onClick}>{children}</OutlinedButton>
     );
   }
   else if (mode === 'elevated') {
     return (
-      <ElevatedButton disabled={isDisable} onClick={onClick}>{children}</ElevatedButton>
+      <ElevatedButton bg={bg} size={size} disabled={isDisable} onClick={onClick}>{children}</ElevatedButton>
     );
   }
   else {
     return (
-      <StyledButton disabled={isDisable} onClick={onClick}>{children}</StyledButton>
+      <StyledButton bg={bg} size={size} disabled={isDisable} onClick={onClick}>{children}</StyledButton>
   );
 }};
 
