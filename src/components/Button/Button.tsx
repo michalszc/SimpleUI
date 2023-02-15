@@ -28,8 +28,8 @@ const StyledButton = styled.button<ButtonProps>`
   
 
   &:hover, &:focus{
-    transform: scale(1.2);
-    transition: transform .3s ease-in-out;
+    transform: scale(1.05);
+    transition: transform .2s ease-in-out;
   }
 `;
 
@@ -53,22 +53,22 @@ const Button: FC<ButtonProps> = ({bg, size, mode, isDisable, children, onClick, 
   
   if (mode === 'text') {
     return (
-      <TextButton bg={bg} size={size} disabled={isDisable} onClick={onClick}>{children}</TextButton>
+      <TextButton bg={bg} size={size} disabled={isDisable} onClick={onClick} {...props}>{children}</TextButton>
     );
   }
   else if (mode === 'outlined') {
     return (
-      <OutlinedButton bg={bg} size={size} disabled={isDisable} onClick={onClick}>{children}</OutlinedButton>
+      <OutlinedButton bg={bg} size={size} disabled={isDisable} onClick={onClick} {...props}>{children}</OutlinedButton>
     );
   }
   else if (mode === 'elevated') {
     return (
-      <ElevatedButton bg={bg} size={size} disabled={isDisable} onClick={onClick}>{children}</ElevatedButton>
+      <ElevatedButton bg={bg} size={size} disabled={isDisable} onClick={onClick} {...props}>{children}</ElevatedButton>
     );
   }
   else {
     return (
-      <StyledButton bg={bg} size={size} disabled={isDisable} onClick={onClick}>{children}</StyledButton>
+      <StyledButton bg={bg} size={size} disabled={isDisable} onClick={onClick} {...props}>{children}</StyledButton>
   );
 }};
 
