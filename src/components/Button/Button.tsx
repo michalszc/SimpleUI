@@ -21,10 +21,6 @@ const StyledButton = styled.button<ButtonProps>`
   color: ${({color}) => color ? color: '#fff'};
   border: 2px solid ${({bg}) => bg ? bg: '#50a8ff'};
   background-color: ${({bg}) => bg ? bg : '#50a8ff'};
-  display: flex;
-  align-items: 'center';
-  flex-direction: 'row';
-  justify-items: 'stretch';
   
 
   &:hover, &:focus{

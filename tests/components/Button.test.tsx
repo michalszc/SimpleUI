@@ -16,7 +16,7 @@ describe("Button", () => {
     expect(screen.findByText('Test')).toBeTruthy();
   });
 
-  test("button have been clicked", () => {
+  test("button has been clicked", () => {
     render(<Button onClick={onClick}>Test</Button>);
     const btn  = screen.getByRole('button');
 
