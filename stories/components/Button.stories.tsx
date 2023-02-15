@@ -15,7 +15,10 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 export const DefaultButton = Template.bind({});
 DefaultButton.args = {
   text: "Hello world!",
-  onClick: () => {}
+  onClick: () => {},
+  bg: 'red',
+  mt: '100px',
+  textColor: 'purple'
 };
 
 export const PrimaryButton = Template.bind({});
