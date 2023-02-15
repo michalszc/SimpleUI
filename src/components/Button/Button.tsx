@@ -2,8 +2,6 @@ import React, { MouseEventHandler, FC } from 'react';
 import styled from 'styled-components';
 
 export interface ButtonProps{
-  //color?: 'primary' | 'secondary' | 'error';
-  bg?: string;
   size?: 'small' | 'medium' | 'large';
   isDisable?: boolean;
   mode?: 'filled' | 'outlined' | 'elevated' | 'text';
@@ -19,9 +17,8 @@ const StyledButton = styled.button<ButtonProps>`
   padding: ${props => props.size === 'small' ? "7.5px 15px" : (props.size === 'medium' ? "10px 20px": "15px 30px")};
   border-radius: 4px;
   color: ${({color}) => color ? color: '#fff'};
-  border: 2px solid ${({bg}) => bg ? bg: '#50a8ff'};
-  background-color: ${({bg}) => bg ? bg : '#50a8ff'};
-  
+  border: 2px solid #50a8ff;
+  background-color: #50a8ff;
 
   &:hover, &:focus{
     transform: scale(1.05);
@@ -45,26 +42,26 @@ const ElevatedButton = styled(StyledButton)`
 `;
 
 
-const Button: FC<ButtonProps> = ({bg, size, mode, isDisable, children, onClick, ...props}: ButtonProps) => {
+const Button: FC<ButtonProps> = ({size, mode, isDisable, children, onClick, ...props}: ButtonProps) => {
   
   if (mode === 'text') {
     return (
-      <TextButton bg={bg} size={size} disabled={isDisable} onClick={onClick} {...props}>{children}</TextButton>
+      <TextButton size={size} disabled={isDisable} onClick={onClick} {...props}>{children}</TextButton>
     );
   }
   else if (mode === 'outlined') {
     return (
-      <OutlinedButton bg={bg} size={size} disabled={isDisable} onClick={onClick} {...props}>{children}</OutlinedButton>
+      <OutlinedButton size={size} disabled={isDisable} onClick={onClick} {...props}>{children}</OutlinedButton>
     );
   }
   else if (mode === 'elevated') {
     return (
-      <ElevatedButton bg={bg} size={size} disabled={isDisable} onClick={onClick} {...props}>{children}</ElevatedButton>
+      <ElevatedButton size={size} disabled={isDisable} onClick={onClick} {...props}>{children}</ElevatedButton>
     );
   }
   else {
     return (
-      <StyledButton bg={bg} size={size} disabled={isDisable} onClick={onClick} {...props}>{children}</StyledButton>
+      <StyledButton size={size} disabled={isDisable} onClick={onClick} {...props}>{children}</StyledButton>
   );
 }};
 

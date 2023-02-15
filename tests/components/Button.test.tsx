@@ -1,7 +1,6 @@
 import React from "react";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import { Button } from "../../src";
-
 
 describe("Button", () => {
 
@@ -12,24 +11,26 @@ describe("Button", () => {
   });
 
   test("renders the Button component", () => {
-    render(<Button>Test</Button>);
-    expect(screen.findByText('Test')).toBeTruthy();
+    const { getByRole } = render(<Button>Test</Button>);
+    const btn = getByRole('button');
+
+    expect(btn).toBeTruthy();
   });
 
   test("button has been clicked", () => {
-    render(<Button onClick={onClick}>Test</Button>);
-    const btn  = screen.getByRole('button');
+    const { getByRole } = render(<Button onClick={onClick}>Test</Button>);
+    const btn = getByRole('button');
 
     fireEvent.click(btn);
-    expect(onClick).toHaveBeenCalledTimes(1);
+    expect(onClick).toBeCalled();
   });
 
   test("disable button doesn't fire onClick event", () => {
-    render(<Button isDisable={true} onClick={onClick}>Test</Button>);
-    const disableBtn  = screen.getByRole('button');
+    const { getByRole } = render(<Button isDisable={true} onClick={onClick}>Test</Button>);
+    const disableBtn = getByRole('button');
 
     fireEvent.click(disableBtn);
-    expect(onClick).toHaveBeenCalledTimes(0);
+    expect(onClick).not.toBeCalled();
   });
 
 });
