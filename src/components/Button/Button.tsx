@@ -1,7 +1,8 @@
 import React, { FC, MouseEventHandler } from "react";
 import styled from "styled-components";
+import Styles, { StyleProps } from "../../utils/styles";
 
-export interface ButtonProps {
+export interface ButtonProps extends StyleProps {
   text?: string,
   primary?:boolean,
   disabled?: boolean,
@@ -33,9 +34,11 @@ const StyledButton = styled.button<ButtonProps>`
 
 const Button: FC<ButtonProps> = ({size, primary, disabled, text, onClick, ...props}) => {
   return (
-      <StyledButton type="button" onClick={onClick} primary={primary} disabled={disabled} size={size} {...props}>
+      <Styles {...props}>
+        <StyledButton type="button" onClick={onClick} primary={primary} disabled={disabled} size={size} >
           {text}
-      </StyledButton>
+        </StyledButton>
+      </Styles>
   );
 };
 
