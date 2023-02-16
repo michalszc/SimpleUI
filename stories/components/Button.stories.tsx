@@ -26,6 +26,10 @@ export const DefaultButton = Template.bind({});
 DefaultButton.args = {
   mode: 'filled',
   children: 'Filled Button',
+  onClick: () => {},
+  bg: 'red',
+  mt: '100px',
+  textColor: 'purple'
 };
 
 export const OutlinedButton = Template.bind({});

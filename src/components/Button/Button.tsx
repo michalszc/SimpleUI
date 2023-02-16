@@ -1,7 +1,8 @@
-import React, { MouseEventHandler, FC } from 'react';
-import styled from 'styled-components';
+import React, { FC, MouseEventHandler } from "react";
+import styled from "styled-components";
+import Styles, { StyleProps } from "../../utils/styles";
 
-export interface ButtonProps{
+export interface ButtonProps extends StyleProps{
   size?: 'small' | 'medium' | 'large';
   isDisable?: boolean;
   mode?: 'filled' | 'outlined' | 'elevated' | 'text';
@@ -46,22 +47,30 @@ const Button: FC<ButtonProps> = ({size, mode, isDisable, children, onClick, ...p
   
   if (mode === 'text') {
     return (
-      <TextButton size={size} disabled={isDisable} onClick={onClick} {...props}>{children}</TextButton>
+      <Styles {...props}>
+        <TextButton type="button" size={size} disabled={isDisable} onClick={onClick}>{children}</TextButton>
+      </Styles>
     );
   }
   else if (mode === 'outlined') {
     return (
-      <OutlinedButton size={size} disabled={isDisable} onClick={onClick} {...props}>{children}</OutlinedButton>
+      <Styles {...props}>
+        <OutlinedButton type="button" size={size} disabled={isDisable} onClick={onClick}>{children}</OutlinedButton>
+      </Styles>
     );
   }
   else if (mode === 'elevated') {
     return (
-      <ElevatedButton size={size} disabled={isDisable} onClick={onClick} {...props}>{children}</ElevatedButton>
+       <Styles {...props}>
+        <ElevatedButton type="button" size={size} disabled={isDisable} onClick={onClick}>{children}</ElevatedButton>
+      </Styles>
     );
   }
   else {
     return (
-      <StyledButton size={size} disabled={isDisable} onClick={onClick} {...props}>{children}</StyledButton>
+      <Styles {...props}>
+        <StyledButton type="button" size={size} disabled={isDisable} onClick={onClick}>{children}</StyledButton>
+      </Styles>
   );
 }};
 
