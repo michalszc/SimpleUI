@@ -46,6 +46,13 @@ ElevatedButton.args = {
   children: 'Elevated Button',
 };
 
+export const DisabledButton = Template.bind({});
+DisabledButton.args = {
+  mode: 'filled',
+  isDisable: true,
+  children: 'Disabled Button',
+};
+
 export const IconButton = Template.bind({});
 IconButton.args = {
   mode: 'filled',
