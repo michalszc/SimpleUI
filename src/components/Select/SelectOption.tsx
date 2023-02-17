@@ -30,7 +30,7 @@ const StyledOptionContainer = styled.div<SelectOptionProps>`
     transition: transform .3s ease-in-out;
 
     &:hover {
-        transform: scale(1.02);
+        transform: scale(1.05);
     }
 `;
 
