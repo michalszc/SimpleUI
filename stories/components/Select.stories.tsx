@@ -13,22 +13,22 @@ export const MultipleSelect = Template.bind({});
 MultipleSelect.args = {
     values: [
         {
-            value: "1",
-            label: "First option",
+            index: "1",
+            value: "First option",
         },
         {
-            value: "2",
-            label: "Second option",
+            index: "2",
+            value: "Second option",
         },
         {
-            value: "3",
-            label: "Third option",
+            index: "3",
+            value: "Third option",
         },
     ],
     selectedValues: [
         {
-            value: "2",
-            label: "Second option",
+            index: "2",
+            value: "Second option",
         },
     ],
     multiple: true,

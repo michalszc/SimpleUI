@@ -3,15 +3,16 @@ import styled from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
 import { SlArrowDown } from 'react-icons/sl';
 import { RxCross1 } from 'react-icons/rx';
+import SelectOption from "./SelectOption";
 
 type Option = {
-    label: string;
+    index: string;
     value: string;
 }
 
 export interface SelectProps extends StyleProps {
     /**
-     * All available options
+     * All available options 
      */
     values?: Option[];
     /**
@@ -54,7 +55,13 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues, multiple
                     <Arrow onClick={() => setShowOptions(!showOptions)}><SlArrowDown /></Arrow>
                 </StyledSearchContainer>
                 {showOptions ? 
-                <StyledOptionsContainer></StyledOptionsContainer>
+                <StyledOptionsContainer>
+                    {values?.map((elem: Option) => {
+                        return(
+                            <SelectOption key={elem.index}>{elem.value}</SelectOption>
+                        );
+                    })}
+                </StyledOptionsContainer>
                 : null}
             </StyledContainer>
         </Styles>
@@ -122,9 +129,9 @@ const Cross = styled.a`
 const StyledOptionsContainer = styled.div`
     margin-top: 10px;
     width: 100%;
-    height: 200px;
+    height: fit-content;
     border: .5px solid #00000038;
     border-radius: 10px;
     box-shadow: 0px 0px 6px #00000038;
-    padding: 5px 10px;
+    padding: 10px 10px;
 `;

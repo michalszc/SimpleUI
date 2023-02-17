@@ -22,9 +22,16 @@ export interface SelectOptionProps extends StyleProps {
 }
 
 const StyledOptionContainer = styled.div<SelectOptionProps>`
-    padding: 50px 20px;
+    font-family: sans-serif;
+    color: #555555;
+    padding: 10px 10px;
     width: 100%;
     cursor: pointer;
+    transition: transform .3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.02);
+    }
 `;
 
 
