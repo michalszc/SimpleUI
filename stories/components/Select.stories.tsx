@@ -11,13 +11,26 @@ const Template: ComponentStory<typeof Select> = (args) => <Select {...args} />;
 
 export const MultipleSelect = Template.bind({});
 MultipleSelect.args = {
-    values: {
-        "1": "First option",
-        "2": "Second option",
-        "3": "Third option",
-    },
-    selectedValues: {
-        "2": "Second option",
-    },
+    values: [
+        {
+            value: "1",
+            label: "First option",
+        },
+        {
+            value: "2",
+            label: "Second option",
+        },
+        {
+            value: "3",
+            label: "Third option",
+        },
+    ],
+    selectedValues: [
+        {
+            value: "2",
+            label: "Second option",
+        },
+    ],
     multiple: true,
+    placeholder: "Search value"
 };
