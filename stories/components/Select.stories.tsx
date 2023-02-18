@@ -52,5 +52,5 @@ SingleSelect.args = {
         },
     ],
     multi: false,
-    placeholder: "Search value"
+    placeholder: "Search value",
 };

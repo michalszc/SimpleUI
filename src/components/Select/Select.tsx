@@ -145,10 +145,9 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], mul
 export default Select;
 
 const StyledContainer = styled.div`
-    max-width: 300px;
-    min-width: 200px;
+    min-width: 300px;
+    width: 400px;
     height: auto;
-    overflow-inline: auto;
 `;
 
 const StyledSearchContainer = styled.div`
@@ -158,7 +157,7 @@ const StyledSearchContainer = styled.div`
     height: 45px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     border: .5px solid #00000038;
     border-radius: 10px;
@@ -168,7 +167,8 @@ const StyledSearchContainer = styled.div`
 
 const StyledTagsContainer = styled.div`
     height: 100%;
-    width: 80%;
+    width: auto;
+    max-width: 75%;
     display: flex;
     align-items: center;
     white-space: nowrap;
@@ -176,14 +176,13 @@ const StyledTagsContainer = styled.div`
     overflow-y: hidden;
     
     &::-webkit-scrollbar {
-        background-color: #ecf8ff;
-        width: 5px;
-        height: 5px;
+        background-color: #dedede88;
+        height: 3px;
         border-radius: 5px;
     }
 
     &::-webkit-scrollbar-thumb {
-        background: #959595;
+        background: #b0b0b0;
         border-radius: 5px;
     }
 `;
@@ -191,7 +190,7 @@ const StyledTagsContainer = styled.div`
 const StyledInput = styled.input`
     border: none;
     height: 100%;
-    width: 100%;
+    width: 60%;
     margin-left: 5px;
     font-size: 1em;
     color: #555555;
