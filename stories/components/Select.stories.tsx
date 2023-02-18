@@ -27,6 +27,22 @@ MultipleSelect.args = {
     ],
     selectedValues: [
         {
+            index: '3',
+            value: 'Third option',
+        },
+    ],
+    multi: true,
+    placeholder: "Search value"
+};
+
+export const SingleSelect = Template.bind({});
+SingleSelect.args = {
+    values: [
+        {
+            index: '1',
+            value: 'First option',
+        },
+        {
             index: '2',
             value: 'Second option',
         },
@@ -35,6 +51,6 @@ MultipleSelect.args = {
             value: 'Third option',
         },
     ],
-    multiple: true,
+    multi: false,
     placeholder: "Search value"
 };

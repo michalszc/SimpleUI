@@ -1,20 +1,17 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useState } from "react";
 import styled from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
 import { RxCross1 } from 'react-icons/rx';
 import SelectOption from "./SelectOption";
 import Tag from "./Tag";
-
-type Option = {
-    index: string;
-    value: string;
-}
+import { Option } from ".";
 
 export interface SelectProps extends StyleProps {
     /**
      * All available options 
+     * [{ index: string, value: string }]
      */
-    values?: Option[];
+    values: Option[];
     /**
      * Array of selected values
      */
@@ -22,7 +19,7 @@ export interface SelectProps extends StyleProps {
     /**
      * If true -> you can select multiple values
      */
-    multiple?: boolean;
+    multi?: boolean;
     /**
      * If true -> option shows as unselected/selected and can't be select/unselect
      */
@@ -33,13 +30,14 @@ export interface SelectProps extends StyleProps {
     placeholder?: string;
 }
 
-const Select: FC<SelectProps> = ({ placeholder, values, selectedValues, multiple, ...props }) => {
+const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], multi: multi = true, ...props }) => {
     const [showOptions, setShowOptions] = useState(false);
     const [searchInput, setSearchInput] = useState("");
     const [selectedOptions, setSelectedOptions] = useState(selectedValues);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchInput(event.target.value);
+        setShowOptions(true);
     };
 
     const resetInput = () => {
@@ -51,13 +49,36 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues, multiple
         const e = selectedOptions?.filter((item) => {
            return elem.index === item.index;
         });
-        // eslint-disable-next-line no-console
-        console.log(e);
-        if (e?.length === undefined || e?.length === 0 ) {
+
+        if (e?.length === 0 ) {
             return false;
         }
 
         return true;
+    };
+
+    const deleteSelectedOption = (elem: Option) => {
+        setSelectedOptions(selectedOptions?.filter((item: Option) => { 
+            return item.index !== elem.index;
+        }));
+    };
+
+    const addSelectedOption = (elem: Option) => {
+        setSelectedOptions((selected) => [...selected, elem]);
+    };
+
+    const changeSelectedOptions = (elem: Option) => {
+        if (checkIfSelected(elem)) {
+            deleteSelectedOption(elem);
+        } 
+        else {
+            if(!multi) {
+                setSelectedOptions(() => [elem]);
+            }
+            else{
+                addSelectedOption(elem);
+            }
+        }
     };
 
     return(
@@ -65,22 +86,20 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues, multiple
             <StyledContainer>
 
                 <StyledSearchContainer >
+                    {selectedOptions.length === 0 ?
+                    null :
                     <StyledTagsContainer>
                         {selectedOptions?.map((elem: Option) => {
                         return(
                             <Tag 
-                            onClick={() => {
-                                setSelectedOptions(selectedOptions?.filter((item: Option) => { 
-                                    return item.index !== elem.index;
-                                }));
-                            }} 
+                            onClick={() => {deleteSelectedOption(elem);}} 
                             value={elem}></Tag>
                         );
                     })}
                     </StyledTagsContainer>
+                    }
                     <StyledInput 
-                        onFocus={() => setShowOptions(!showOptions)} 
-                        // onBlur={() => setShowOptions(false)}
+                        onFocus={() => setShowOptions(!showOptions)}
                         value={searchInput} 
                         onChange={handleChange} 
                         placeholder={placeholder} 
@@ -94,6 +113,7 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues, multiple
                     {values?.map((elem: Option) => {
                         return(
                             <SelectOption 
+                            onClick={() => changeSelectedOptions(elem)}
                             isChecked={checkIfSelected(elem)} 
                             value={elem}></SelectOption>
                         );
@@ -112,9 +132,10 @@ const StyledContainer = styled.div`
     max-width: 300px;
     min-width: 200px;
     height: auto;
+    overflow-inline: auto;
 `;
 
-const StyledSearchContainer = styled.div<SelectProps>`
+const StyledSearchContainer = styled.div`
     background-color: white;
     padding: 5px 10px;
     width: 100%;
@@ -131,19 +152,31 @@ const StyledSearchContainer = styled.div<SelectProps>`
 
 const StyledTagsContainer = styled.div`
     height: 100%;
-    max-width: 75%;
+    width: 80%;
     display: flex;
     align-items: center;
     white-space: nowrap;
-    /* overflow: auto;  */
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+    &::-webkit-scrollbar {
+        background-color: #ecf8ff;
+        width: 5px;
+        height: 5px;
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #959595;
+        border-radius: 5px;
+    }
 `;
 
 const StyledInput = styled.input`
     border: none;
     height: 100%;
     width: 100%;
-    margin-right: 20px;
-    margin-left: auto;
+    margin-left: 5px;
     font-size: 1em;
     color: #555555;
 
@@ -165,4 +198,6 @@ const StyledOptionsContainer = styled.div`
     border-radius: 10px;
     box-shadow: 0px 0px 6px #00000038;
     padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
 `;
