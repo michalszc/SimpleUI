@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
 import { RxCross1 } from 'react-icons/rx';
@@ -45,6 +45,9 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], mul
         //async??? await for setSearchInput then setFilteredValues 
         setSearchInput(event.target.value);
         setShowOptions(true);
+    };
+
+    useEffect(()=> {
         if (searchInput.length > 0) {
             setFilteredValues(filteredValues.filter((item) => {
                 return item.value.match(searchInput);
@@ -53,7 +56,7 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], mul
         else {
             setFilteredValues(values);
         }
-    };
+    }, [searchInput]);
 
     const resetInput = () => {
         setSearchInput("");
@@ -106,8 +109,8 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], mul
                             {selectedOptions?.map((elem: Option) => {
                             return(
                                 <Tag 
-                                onClick={() => {deleteSelectedOption(elem);}} 
-                                value={elem} 
+                                    onClick={() => {deleteSelectedOption(elem);}} 
+                                    value={elem} 
                                 />
                             );
                             })}
@@ -128,9 +131,9 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], mul
                     {filteredValues?.map((elem: Option) => {
                         return(
                             <SelectOption 
-                            onClick={() => changeSelectedOptions(elem)}
-                            isChecked={checkIfSelected(elem)} 
-                            value={elem} 
+                                onClick={() => changeSelectedOptions(elem)}
+                                isChecked={checkIfSelected(elem)} 
+                                value={elem} 
                             />
                         );
                     })}
@@ -161,18 +164,11 @@ const StyledSearchContainer = styled.div`
     align-items: center;
     border: .5px solid #00000038;
     border-radius: 10px;
-    box-shadow: 0px 0px 6px #00000038;
+    box-shadow: 2px 0px 6px #00000038;
     transition: all .5s ease-in-out;
-`;
 
-const StyledTagsContainer = styled.div`
-    height: 100%;
-    width: auto;
-    max-width: 75%;
-    display: flex;
-    align-items: center;
     white-space: nowrap;
-    overflow-x: auto;
+    overflow-x: scroll;
     overflow-y: hidden;
     
     &::-webkit-scrollbar {
@@ -185,6 +181,13 @@ const StyledTagsContainer = styled.div`
         background: #b0b0b0;
         border-radius: 5px;
     }
+`;
+
+const StyledTagsContainer = styled.div`
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
 `;
 
 const StyledInput = styled.input`
