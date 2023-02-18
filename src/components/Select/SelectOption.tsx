@@ -1,12 +1,17 @@
 import React, { FC, useState } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
+
+type Option = {
+    index: string;
+    value: string;
+}
 
 export interface SelectOptionProps extends StyleProps {
     /**
      * Value of the option
      */
-    children: string;
+    value: Option;
    /**
     * If true -> option has been selected
     */
@@ -32,20 +37,27 @@ const StyledOptionContainer = styled.div<SelectOptionProps>`
     &:hover {
         transform: scale(1.05);
     }
+
+    ${({ isChecked }) => isChecked && css`
+        font-size: 1.05em;
+        color: #1d99ff;
+
+    `}
+
 `;
 
-
-
-const SelectOption: FC<SelectOptionProps> = ({ children, isChecked, ...props }) => {
+const SelectOption: FC<SelectOptionProps> = ({ value, isChecked, ...props }) => {
     const [checked, onChangeChecked] = useState(isChecked);
-
+    
     return(
         <Styles {...props}>
             <StyledOptionContainer 
+                value={value}
                 isChecked={checked} 
-                onClick={(prevState) => onChangeChecked(!prevState)}
+                key={value.index}
+                onClick={() => {onChangeChecked(!checked);}}
                 >
-                {children}
+                {value.value}
             </StyledOptionContainer>
         </Styles>
     );

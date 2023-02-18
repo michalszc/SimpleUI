@@ -1,9 +1,9 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
-import { SlArrowDown } from 'react-icons/sl';
 import { RxCross1 } from 'react-icons/rx';
 import SelectOption from "./SelectOption";
+import Tag from "./Tag";
 
 type Option = {
     index: string;
@@ -35,34 +35,72 @@ export interface SelectProps extends StyleProps {
 
 const Select: FC<SelectProps> = ({ placeholder, values, selectedValues, multiple, ...props }) => {
     const [showOptions, setShowOptions] = useState(false);
-    const [searchOption, setSearchOption] = useState("");
+    const [searchInput, setSearchInput] = useState("");
+    const [selectedOptions, setSelectedOptions] = useState(selectedValues);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setSearchOption(event.target.value);
+        setSearchInput(event.target.value);
     };
 
     const resetInput = () => {
-        setSearchOption("");
+        setSearchInput("");
+        setSelectedOptions([]);
+    };
+
+    const checkIfSelected = (elem: Option):boolean => {
+        const e = selectedOptions?.filter((item) => {
+           return elem.index === item.index;
+        });
+        // eslint-disable-next-line no-console
+        console.log(e);
+        if (e?.length === undefined || e?.length === 0 ) {
+            return false;
+        }
+
+        return true;
     };
 
     return(
         <Styles {...props}>
             <StyledContainer>
+
                 <StyledSearchContainer >
-                    <StyledTagsContainer></StyledTagsContainer>
-                    <StyledInput value={searchOption} onChange={handleChange} placeholder={placeholder} type="text"></StyledInput>
+                    <StyledTagsContainer>
+                        {selectedOptions?.map((elem: Option) => {
+                        return(
+                            <Tag 
+                            onClick={() => {
+                                setSelectedOptions(selectedOptions?.filter((item: Option) => { 
+                                    return item.index !== elem.index;
+                                }));
+                            }} 
+                            value={elem}></Tag>
+                        );
+                    })}
+                    </StyledTagsContainer>
+                    <StyledInput 
+                        onFocus={() => setShowOptions(!showOptions)} 
+                        // onBlur={() => setShowOptions(false)}
+                        value={searchInput} 
+                        onChange={handleChange} 
+                        placeholder={placeholder} 
+                        type="text">
+                    </StyledInput>
                     <Cross onClick={resetInput}><RxCross1></RxCross1></Cross>
-                    <Arrow onClick={() => setShowOptions(!showOptions)}><SlArrowDown /></Arrow>
                 </StyledSearchContainer>
+
                 {showOptions ? 
                 <StyledOptionsContainer>
                     {values?.map((elem: Option) => {
                         return(
-                            <SelectOption key={elem.index}>{elem.value}</SelectOption>
+                            <SelectOption 
+                            isChecked={checkIfSelected(elem)} 
+                            value={elem}></SelectOption>
                         );
                     })}
                 </StyledOptionsContainer>
                 : null}
+
             </StyledContainer>
         </Styles>
     );
@@ -80,7 +118,7 @@ const StyledSearchContainer = styled.div<SelectProps>`
     background-color: white;
     padding: 5px 10px;
     width: 100%;
-    height: 35px;
+    height: 45px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -93,10 +131,11 @@ const StyledSearchContainer = styled.div<SelectProps>`
 
 const StyledTagsContainer = styled.div`
     height: 100%;
-    width: auto;
-    overflow: auto;
+    max-width: 75%;
+    display: flex;
+    align-items: center;
     white-space: nowrap;
-    float: left;
+    /* overflow: auto;  */
 `;
 
 const StyledInput = styled.input`
@@ -113,17 +152,9 @@ const StyledInput = styled.input`
     }
 `;
 
-const Arrow = styled.a`
-    cursor: pointer;
-    width: auto;
-    margin-left: 5px;
-    float: right;
-`;
-
 const Cross = styled.a`
     cursor: pointer;
     padding-right: 5px;
-    border-right: 1px solid #555555;
 `;
 
 const StyledOptionsContainer = styled.div`
