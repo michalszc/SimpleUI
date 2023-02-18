@@ -28,21 +28,37 @@ export interface SelectProps extends StyleProps {
      * Text display when input section is empty
      */
     placeholder?: string;
+    /**
+     * component's name
+     */
+    name?: string;
 }
 
 const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], multi: multi = true, ...props }) => {
     const [showOptions, setShowOptions] = useState(false);
+    const [filteredValues, setFilteredValues] = useState(values);
     const [searchInput, setSearchInput] = useState("");
     const [selectedOptions, setSelectedOptions] = useState(selectedValues);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        event.preventDefault();
+        //async??? await for setSearchInput then setFilteredValues 
         setSearchInput(event.target.value);
         setShowOptions(true);
+        if (searchInput.length > 0) {
+            setFilteredValues(filteredValues.filter((item) => {
+                return item.value.match(searchInput);
+            }));
+        }
+        else {
+            setFilteredValues(values);
+        }
     };
 
     const resetInput = () => {
         setSearchInput("");
         setSelectedOptions([]);
+        setFilteredValues(values);
     };
 
     const checkIfSelected = (elem: Option):boolean => {
@@ -84,19 +100,18 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], mul
     return(
         <Styles {...props}>
             <StyledContainer>
-
                 <StyledSearchContainer >
-                    {selectedOptions.length === 0 ?
-                    null :
-                    <StyledTagsContainer>
-                        {selectedOptions?.map((elem: Option) => {
-                        return(
-                            <Tag 
-                            onClick={() => {deleteSelectedOption(elem);}} 
-                            value={elem}></Tag>
-                        );
-                    })}
-                    </StyledTagsContainer>
+                    {selectedOptions.length === 0 ? null :
+                        <StyledTagsContainer>
+                            {selectedOptions?.map((elem: Option) => {
+                            return(
+                                <Tag 
+                                onClick={() => {deleteSelectedOption(elem);}} 
+                                value={elem} 
+                                />
+                            );
+                            })}
+                        </StyledTagsContainer>
                     }
                     <StyledInput 
                         onFocus={() => setShowOptions(!showOptions)}
@@ -110,12 +125,13 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], mul
 
                 {showOptions ? 
                 <StyledOptionsContainer>
-                    {values?.map((elem: Option) => {
+                    {filteredValues?.map((elem: Option) => {
                         return(
                             <SelectOption 
                             onClick={() => changeSelectedOptions(elem)}
                             isChecked={checkIfSelected(elem)} 
-                            value={elem}></SelectOption>
+                            value={elem} 
+                            />
                         );
                     })}
                 </StyledOptionsContainer>
