@@ -42,7 +42,6 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], mul
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         event.preventDefault();
-        //async??? await for setSearchInput then setFilteredValues 
         setSearchInput(event.target.value);
         setShowOptions(true);
     };
@@ -50,7 +49,7 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], mul
     useEffect(()=> {
         if (searchInput.length > 0) {
             setFilteredValues(filteredValues.filter((item) => {
-                return item.value.match(searchInput);
+                return item.value.trim().toLowerCase().match(searchInput.trim().toLowerCase());
             }));
         }
         else {
@@ -65,11 +64,11 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], mul
     };
 
     const checkIfSelected = (elem: Option):boolean => {
-        const e = selectedOptions?.filter((item) => {
+        const e = selectedOptions.filter((item) => {
            return elem.index === item.index;
         });
 
-        if (e?.length === 0 ) {
+        if (e.length === 0 ) {
             return false;
         }
 
@@ -128,7 +127,7 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], mul
 
                 {showOptions ? 
                 <StyledOptionsContainer>
-                    {filteredValues?.map((elem: Option) => {
+                    {filteredValues.map((elem: Option) => {
                         return(
                             <SelectOption 
                                 onClick={() => changeSelectedOptions(elem)}
@@ -155,9 +154,9 @@ const StyledContainer = styled.div`
 
 const StyledSearchContainer = styled.div`
     background-color: white;
-    padding: 5px 10px;
     width: 100%;
     height: 45px;
+    padding: 5px 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -168,18 +167,20 @@ const StyledSearchContainer = styled.div`
     transition: all .5s ease-in-out;
 
     white-space: nowrap;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
     
     &::-webkit-scrollbar {
         background-color: #dedede88;
-        height: 3px;
-        border-radius: 5px;
+        border-radius: 20px;
+        height: 4px;
+        -webkit-overflow-scrolling: auto !important;
+        background-clip: border-box;
     }
 
     &::-webkit-scrollbar-thumb {
-        background: #b0b0b0;
-        border-radius: 5px;
+        background: #b8b8b8;
+        border-radius: 20px;
     }
 `;
 
@@ -193,6 +194,7 @@ const StyledTagsContainer = styled.div`
 const StyledInput = styled.input`
     border: none;
     height: 100%;
+    min-width: 30%;
     width: 60%;
     margin-left: 5px;
     font-size: 1em;

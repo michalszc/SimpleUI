@@ -29,7 +29,7 @@ const StyledOptionContainer = styled.a<SelectOptionProps>`
     padding: 10px 10px;
     width: 100%;
     cursor: pointer;
-    transition: transform .3s ease-in-out;
+    transition: transform .2s ease-in-out;
 
     &:hover {
         transform: scale(1.05);
