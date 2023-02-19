@@ -6,7 +6,7 @@ import SelectOption from "./SelectOption";
 import Tag from "./Tag";
 import { Option } from ".";
 
-export interface SelectProps extends StyleProps {
+export interface SelectProps extends StyleProps{
     /**
      * All available options 
      * [{ index: string, value: string }]
@@ -102,7 +102,7 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], mul
     return(
         <Styles {...props}>
             <StyledContainer>
-                <StyledSearchContainer >
+                <StyledSearchContainer>
                     {selectedOptions.length === 0 ? null :
                         <StyledTagsContainer>
                             {selectedOptions?.map((elem: Option) => {
