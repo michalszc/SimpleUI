@@ -26,13 +26,13 @@ export interface SelectOptionProps extends StyleProps {
 const StyledOptionContainer = styled.a<SelectOptionProps>`
     font-family: sans-serif;
     color: #555555;
-    padding: 10px 10px;
-    width: 100%;
+    padding: 10px;
+    width: 95%;
     cursor: pointer;
     transition: transform .2s ease-in-out;
 
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.03);
     }
 
     ${({ isChecked }) => isChecked && css`

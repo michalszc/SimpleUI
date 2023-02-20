@@ -2,7 +2,7 @@ import React, { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
 import { RxCross1 } from 'react-icons/rx';
-import SelectOption from "./SelectOption";
+//import SelectOption from "./SelectOption";
 import Tag from "./Tag";
 import { Option } from ".";
 
@@ -11,7 +11,7 @@ export interface SelectProps extends StyleProps{
      * All available options 
      * [{ index: string, value: string }]
      */
-    values: Option[];
+    values?: Option[];
     /**
      * Array of selected values
      */
@@ -32,9 +32,13 @@ export interface SelectProps extends StyleProps{
      * component's name
      */
     name?: string;
+    /**
+     * component's children -> should be <SelectOption />
+     */
+    children?: React.ReactNode;
 }
 
-const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], multi: multi = true, ...props }) => {
+const Select: FC<SelectProps> = ({ children, placeholder, values, selectedValues = [], multi: multi = true, ...props }) => {
     const [showOptions, setShowOptions] = useState(false);
     const [filteredValues, setFilteredValues] = useState(values);
     const [searchInput, setSearchInput] = useState("");
@@ -48,7 +52,7 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], mul
 
     useEffect(()=> {
         if (searchInput.length > 0) {
-            setFilteredValues(filteredValues.filter((item) => {
+            setFilteredValues(filteredValues?.filter((item) => {
                 return item.value.trim().toLowerCase().match(searchInput.trim().toLowerCase());
             }));
         }
@@ -63,40 +67,10 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], mul
         setFilteredValues(values);
     };
 
-    const checkIfSelected = (elem: Option):boolean => {
-        const e = selectedOptions.filter((item) => {
-           return elem.index === item.index;
-        });
-
-        if (e.length === 0 ) {
-            return false;
-        }
-
-        return true;
-    };
-
     const deleteSelectedOption = (elem: Option) => {
         setSelectedOptions(selectedOptions?.filter((item: Option) => { 
             return item.index !== elem.index;
         }));
-    };
-
-    const addSelectedOption = (elem: Option) => {
-        setSelectedOptions((selected) => [...selected, elem]);
-    };
-
-    const changeSelectedOptions = (elem: Option) => {
-        if (checkIfSelected(elem)) {
-            deleteSelectedOption(elem);
-        } 
-        else {
-            if(!multi) {
-                setSelectedOptions(() => [elem]);
-            }
-            else{
-                addSelectedOption(elem);
-            }
-        }
     };
 
     return(
@@ -105,7 +79,7 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], mul
                 <StyledSearchContainer>
                     {selectedOptions.length === 0 ? null :
                         <StyledTagsContainer>
-                            {selectedOptions?.map((elem: Option) => {
+                            {selectedValues?.map((elem: Option) => {
                             return(
                                 <Tag 
                                     onClick={() => {deleteSelectedOption(elem);}} 
@@ -127,7 +101,8 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], mul
 
                 {showOptions ? 
                 <StyledOptionsContainer>
-                    {filteredValues.map((elem: Option) => {
+                    {children}
+                    {/* {filteredValues.map((elem: Option) => {
                         return(
                             <SelectOption 
                                 onClick={() => changeSelectedOptions(elem)}
@@ -135,7 +110,7 @@ const Select: FC<SelectProps> = ({ placeholder, values, selectedValues = [], mul
                                 value={elem} 
                             />
                         );
-                    })}
+                    })} */}
                 </StyledOptionsContainer>
                 : null}
 
@@ -217,7 +192,7 @@ const StyledOptionsContainer = styled.div`
     border: .5px solid #00000038;
     border-radius: 10px;
     box-shadow: 0px 0px 6px #00000038;
-    padding: 10px 10px;
+    padding: 10px 5px;
     display: flex;
     flex-direction: column;
 `;
