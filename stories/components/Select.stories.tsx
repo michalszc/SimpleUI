@@ -3,29 +3,11 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Select } from "../../src/";
 import SelectOption from "../../src/components/Select/SelectOption";
 import { changeSelectedOptions, checkIfSelected } from "../../src/components/Select";
+import { Option } from '../../src/utils/types/option';
 
 export default {
     title: "SimpleUI/Select",
-    component: Select,
-    decorators: [
-        () => {
-            const [selected, setSelected] = useState([data[0]]);
-            
-            return(
-                <Select selectedValues={selected}>
-                    {data.map((elem) => {
-                        
-                        return(
-                            <SelectOption 
-                                isChecked={checkIfSelected(selected, elem)} 
-                                value={elem} 
-                                onClick={() => setSelected(changeSelectedOptions(true, selected, elem))}/>
-                        );
-                    })}
-                </Select>
-            );
-        }
-    ]
+    component: Select
 } as ComponentMeta<typeof Select>;
 
 const Template: ComponentStory<typeof Select> = (args) => <Select {...args} />;
@@ -56,8 +38,48 @@ MultipleSelect.args = {
     placeholder: "Search value"
 };
 
+MultipleSelect.decorators = [
+    (Story) => {
+        const [selected, setSelected] = useState<Option[]>([]);
+        
+        return(
+            <Select selectedValues={selected}>
+                {data.map((elem) => {
+                    
+                    return(
+                        <SelectOption 
+                            isChecked={checkIfSelected(selected, elem)} 
+                            value={elem} 
+                            onClick={() => setSelected(changeSelectedOptions(true, selected, elem))}/>
+                    );
+                })}
+            </Select>
+        );
+    }, 
+];
+
 export const SingleSelect = Template.bind({});
 SingleSelect.args = {
     multi: false,
     placeholder: "Search value",
 };
+
+SingleSelect.decorators = [
+    (Story) => {
+        const [selected, setSelected] = useState<Option[]>([]);
+        
+        return(
+            <Select selectedValues={selected}>
+                {data.map((elem) => {
+                    
+                    return(
+                        <SelectOption 
+                            isChecked={checkIfSelected(selected, elem)} 
+                            value={elem} 
+                            onClick={() => setSelected(changeSelectedOptions(false, selected, elem))}/>
+                    );
+                })}
+            </Select>
+        );
+    }, 
+];

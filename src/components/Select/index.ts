@@ -1,9 +1,5 @@
 export { default } from './Select';
-
-export type Option = {
-    index: string;
-    value: string;
-}
+import { Option } from '../../utils/types/option';
 
 export const checkIfSelected = (selectedOptions:Option[], elem: Option):boolean => {
     const e = selectedOptions.filter((item) => {
@@ -28,7 +24,6 @@ export const deleteSelectedOption = (selectedOptions:Option[],elem: Option) => {
 export const addSelectedOption = (selectedOptions:Option[], elem: Option) => {
     return([...selectedOptions, elem]);
 };
-
 
 export const changeSelectedOptions = (multi: boolean, selectedOptions:Option[], elem: Option) => {
     if (checkIfSelected(selectedOptions, elem)) {

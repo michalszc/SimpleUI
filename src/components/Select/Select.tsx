@@ -4,7 +4,8 @@ import Styles, { StyleProps } from "../../utils/styles";
 import { RxCross1 } from 'react-icons/rx';
 //import SelectOption from "./SelectOption";
 import Tag from "./Tag";
-import { Option } from ".";
+import { changeSelectedOptions } from ".";
+import { Option } from '../../utils/types/option';
 
 export interface SelectProps extends StyleProps{
     /**
@@ -33,16 +34,16 @@ export interface SelectProps extends StyleProps{
      */
     name?: string;
     /**
-     * component's children -> should be <SelectOption />
+     * component's children -> should be SelectOption components
      */
     children?: React.ReactNode;
 }
 
-const Select: FC<SelectProps> = ({ children, placeholder, values, selectedValues = [], multi: multi = true, ...props }) => {
+const Select: FC<SelectProps> = ({ multi = true, children, placeholder, values, selectedValues = [], ...props }) => {
     const [showOptions, setShowOptions] = useState(false);
     const [filteredValues, setFilteredValues] = useState(values);
     const [searchInput, setSearchInput] = useState("");
-    const [selectedOptions, setSelectedOptions] = useState(selectedValues);
+    //const [selectedOptions, setSelectedOptions] = useState(selectedValues);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         event.preventDefault();
@@ -63,26 +64,20 @@ const Select: FC<SelectProps> = ({ children, placeholder, values, selectedValues
 
     const resetInput = () => {
         setSearchInput("");
-        setSelectedOptions([]);
+        //setSelectedOptions([]);
         setFilteredValues(values);
-    };
-
-    const deleteSelectedOption = (elem: Option) => {
-        setSelectedOptions(selectedOptions?.filter((item: Option) => { 
-            return item.index !== elem.index;
-        }));
     };
 
     return(
         <Styles {...props}>
             <StyledContainer>
                 <StyledSearchContainer>
-                    {selectedOptions.length === 0 ? null :
+                    {selectedValues?.length === 0 ? null :
                         <StyledTagsContainer>
                             {selectedValues?.map((elem: Option) => {
                             return(
                                 <Tag 
-                                    onClick={() => {deleteSelectedOption(elem);}} 
+                                    onClick={() => {changeSelectedOptions(multi, selectedValues, elem);}} 
                                     value={elem} 
                                 />
                             );
