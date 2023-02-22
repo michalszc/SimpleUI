@@ -1,7 +1,7 @@
 import type { Units } from "./units";
 
 export interface ISizes {
-    [index: string | number]: 'max-content' | 'min-content' | `${number}${Units}`;
+    [index: string | number]: 'auto' | 'fit-content' | 'max-content' | 'min-content' | `${number}${Units}`;
 }
 
 /**

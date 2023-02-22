@@ -2,7 +2,7 @@ import type * as CSS from "csstype";
 
 export interface Color { 
     [index: string | number]: CSS.DataType.Color
-};
+}
 
 /**
  * Default red colors

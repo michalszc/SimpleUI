@@ -33,3 +33,5 @@ export type { IBreakpoints } from './Breakpoints';
 export type { AbsoluteUnits, RelativeUnits, Units } from './units';
 export { default as Sizes } from './Sizes';
 export type { ISizes } from './Sizes';
+export { default as Zindices } from './Zindices';
+export type { IZindices } from './Zindices';
