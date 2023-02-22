@@ -2,13 +2,13 @@ export interface BaseProps {
     /**
      * Palette modes: `light` (the default) or `dark`
      */
-    mode?: 'light' | 'dark',
+    mode?: 'light' | 'dark';
     /**
      * Variant of the component
      */
-    variant?: string,
+    variant?: string;
     /**
-     * Size of the component
+     * Variant of the typography
      */
-    size?: string
+    typography?: string;
 }
