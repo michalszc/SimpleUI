@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useEffect, useState, Children } from "react";
 import styled from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
 import { RxCross1 } from 'react-icons/rx';
@@ -29,9 +29,9 @@ export interface SelectProps extends StyleProps{
      */
     placeholder?: string;
     /**
-     * component's children -> should be SelectOption components
+     * component's children -> should be Option components
      */
-    children?: React.ReactNode;
+    children: React.ReactNode;
 }
 
 const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder, values, ...props }) => {
@@ -60,6 +60,7 @@ const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder
     useEffect(() => {
         onChange(selectedOptions);
     }, [selectedOptions]);
+
 
     const resetInput = () => {
         setSearchInput("");
@@ -107,16 +108,23 @@ const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder
             <StyledContainer>
 
                 <StyledSearchContainer>
-                    <StyledTagsContainer>
-                        {selectedOptions.map((elem) => {
-                            return(
+                    {selectedOptions.length === 0 ? null :
+                        <StyledTagsContainer>
+                            {selectedOptions.map((elem) => {
+                                return(
                                 <Tag value={elem} onClick={() => deleteSelectedOption(elem)}/>
-                            );
-                        })}
-                    </StyledTagsContainer>
+                                );
+                            })}
+                        </StyledTagsContainer>
+                    }
 
                     <StyledInputContainer>
-                        <StyledInput placeholder={placeholder} value={searchInput} onChange={handleChange}/>
+                        <StyledInput 
+                            placeholder={placeholder} 
+                            onFocus={() => setShowOptions(v => !v)}
+                            value={searchInput} 
+                            onChange={handleChange}
+                            />
                         {searchInput.length === 0 ? null :
                             <Cross onClick={resetInput}><RxCross1 /></Cross>
                         }
@@ -127,6 +135,10 @@ const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder
                 {showOptions ? 
                 <StyledOptionsContainer>
                     {children}
+                    {/* {Children.forEach(children, (child: React.ReactNode) => {
+                        // eslint-disable-next-line no-console
+                        console.log(child.props.value);
+                    })} */}
                 </StyledOptionsContainer>
                 : null}
 
@@ -157,6 +169,7 @@ const StyledSearchContainer = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    overflow-inline: auto;
     border: .5px solid #00000038;
     border-radius: 10px;
     box-shadow: 0px 0px 6px #00000037;
@@ -168,15 +181,16 @@ const StyledTagsContainer = styled.div`
     width: 100%;
     padding: 5px 10px; 
     display: flex;
-    padding: 5px 10px;
+    flex-wrap: wrap;
+    padding: 0px 10px;
     justify-content: flex-start;
-    align-items: center;
+    align-items: stretch;
 `;
 
 const StyledInputContainer = styled.div`
     height: 100%;
-    padding: 5px 10px;   
-     width: 100%;
+    padding: 5px;   
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -185,13 +199,12 @@ const StyledInputContainer = styled.div`
 
 
 const StyledInput = styled.input`
-    border: .3px solid #9e9e9e;
+    border: .3px solid #00000038;
     border-radius: 5px;
     height: 100%;
     width: 100%;
-    margin-left: 5px;
+    padding: 5px;
     font-size: 1em;
-    margin: 0px;
     color: #555555;
 
         
@@ -214,10 +227,26 @@ const StyledOptionsContainer = styled.div`
     margin-top: 10px;
     width: 100%;
     height: fit-content;
+    max-height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
     border: .5px solid #00000038;
     border-radius: 10px;
     box-shadow: 0px 0px 6px #00000037;
     padding: 5px 10px; 
     display: flex;
-    flex-direction: column;;
+    flex-direction: column;
+
+    &::-webkit-scrollbar {
+        background-color: #dedede88;
+        border-radius: 20px;
+        width: 8px;
+        -webkit-overflow-scrolling: auto !important;
+        background-clip: border-box;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #aedbff;
+        border-radius: 20px;
+    }
 `;

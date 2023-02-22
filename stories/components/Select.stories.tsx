@@ -42,7 +42,7 @@ MultipleSelect.decorators = [
         const [selected, setSelected] = useState<OptionValue[]>([data[0]]);
         
         return(
-            <Select onChange={(v) => setSelected(v)}>
+            <Select placeholder="Search value" onChange={(v) => setSelected(v)}>
                 <Option value={data[0]}/>
                 <Option value={data[1]}/>
                 <Option value={data[2]}/>
@@ -62,7 +62,7 @@ SingleSelect.decorators = [
         const [selected, setSelected] = useState<OptionValue[]>([]);
         
         return(
-            <Select onChange={(v) => setSelected(v)} multi={false}>
+            <Select width={'100px'} placeholder="Search value" onChange={(v) => setSelected(v)} multi={false}>
                 <Option value={data[0]}/>
                 <Option value={data[1]}/>
                 <Option value={data[2]}/>

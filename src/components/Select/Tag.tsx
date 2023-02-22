@@ -23,6 +23,7 @@ const StyledTag = styled.div`
     height: 40%;
     background-color: #3ea8ff9a;
     padding: 8px;
+    margin: 5px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
