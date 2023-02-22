@@ -22,6 +22,7 @@ function setupMatchMedia(matches: boolean) {
         })),
     });
 }
+
 describe("ThemeProvider", () => {
     afterEach(() => {
         cleanup();
