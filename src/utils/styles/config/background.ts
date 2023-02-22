@@ -1,5 +1,5 @@
 import * as CSS from "csstype";
-import type { Config } from "./config";
+import type { Config, Custom } from "./config";
 
 export const background: Config = {
     bg: 'background',
@@ -28,7 +28,7 @@ export interface BackgroundProps {
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/background)
      */
-    bg?: CSS.Property.Color;
+    bg?: CSS.Property.Background;
     /**
      * The CSS `background` property
      * 
@@ -52,13 +52,13 @@ export interface BackgroundProps {
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)
      */
-    bgColor?: CSS.Property.Color;
+    bgColor?: Custom<CSS.Property.BackgroundColor>;
     /**
      * The CSS `background-color` property
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color)
      */
-    backgroundColor?: CSS.Property.Color;
+    backgroundColor?: Custom<CSS.Property.BackgroundColor>;
     /**
      * The CSS `background-image` property
      * 

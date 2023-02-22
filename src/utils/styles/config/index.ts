@@ -14,4 +14,4 @@ export * from "./transform";
 export * from "./transition";
 export * from "./typography";
 export * from "./scroll";
-export type { Config } from "./config";
+export type { Config, Custom } from "./config";

@@ -1,5 +1,5 @@
 import * as CSS from "csstype";
-import type { Config } from "./config";
+import type { Config, Custom } from "./config";
 
 export const color: Config = {
     color: 'color',
@@ -12,11 +12,11 @@ export interface ColorProps {
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
      */
-    color?: CSS.Property.Color;
+    color?: Custom<CSS.Property.Color>;
     /**
      * The CSS `color` property
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
      */
-    textColor?: CSS.Property.Color;
+    textColor?: Custom<CSS.Property.Color>;
 }
