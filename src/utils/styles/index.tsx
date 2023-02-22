@@ -38,7 +38,7 @@ const Styles: FC<StylesComponentProps> = ({ children, ...props }) => {
         {
             style,
             theme,
-            isdark: isDark.toString() // as boolean
+            isDark
         }
     );
     
