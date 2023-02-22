@@ -1,6 +1,6 @@
 import Theme from "./theme";
 import {
-    Colors, Palette, Typography, Breakpoints, Sizes
+    Colors, Palette, Typography, Breakpoints, Sizes, Zindices
 } from "../../constants";
 
 export default {
@@ -9,5 +9,6 @@ export default {
     typography: Typography,
     breakpoints: Breakpoints,
     sizes: Sizes,
+    zindices: Zindices,
     components: {}
 } as Theme;

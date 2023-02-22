@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import ThemeContext from "./themeContext";
+import ThemeContext from "./themeContext"; // eslint-disable-next-line no-duplicate-imports
 import type { IThemeContext } from "./themeContext";
 
 const useTheme = () => {

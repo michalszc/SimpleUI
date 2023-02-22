@@ -20,7 +20,7 @@ export interface IThemeContext {
 export const initialState: IThemeContext = {
     isDark: false,
     theme: defaultTheme,
-    toggle: () => {}
+    toggle: () => {} // eslint-disable-line @typescript-eslint/no-empty-function
 };
 
 const ThemeContext = createContext<IThemeContext>(initialState);

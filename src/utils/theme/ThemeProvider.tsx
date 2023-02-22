@@ -1,10 +1,9 @@
 import React, { FC, useEffect, useState } from "react";
 import Theme from "./theme";
 import defaultTheme from "./defaultTheme";
-import isDarkTheme from "./isDarkTheme";
 import ThemeContext from "./themeContext";
 import { merge } from "lodash";
-import createCSSvariables from "./createCSSvariables";
+import { createCSSvariables, isDarkTheme } from "./themeHelpers";
 
 export interface ThemeProviderProps {
     /**
@@ -33,6 +32,7 @@ const ThemeProvider: FC<ThemeProviderProps> = ({
     // On mount, read system theme
     useEffect(() => {
         if (allowControl) {
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             const userDark = JSON.parse(localStorage.getItem('isDark')!) ?? isDarkTheme();
             setDark(userDark);
         }

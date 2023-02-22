@@ -1,9 +1,9 @@
-import type * as CSS from "csstype";
 import { StyleProps } from "../styles";
 import {
     IPalette, ITypography, IBreakpoints, ISizes
 } from "../../constants";
 
+// FUTURE
 export interface BreakpointsMethods {
     up: (key: string) => string; // media query
     down: (key: string) => string; // media query
