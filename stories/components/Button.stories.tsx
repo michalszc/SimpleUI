@@ -26,10 +26,6 @@ export const DefaultButton = Template.bind({});
 DefaultButton.args = {
   mode: 'filled',
   children: 'Filled Button',
-  onClick: () => {},
-  bg: 'red',
-  mt: '100px',
-  textColor: 'purple'
 };
 
 export const OutlinedButton = Template.bind({});
@@ -48,6 +44,13 @@ export const ElevatedButton = Template.bind({});
 ElevatedButton.args = {
   mode: 'elevated',
   children: 'Elevated Button',
+};
+
+export const DisabledButton = Template.bind({});
+DisabledButton.args = {
+  mode: 'filled',
+  isDisable: true,
+  children: 'Disabled Button',
 };
 
 export const IconButton = Template.bind({});
