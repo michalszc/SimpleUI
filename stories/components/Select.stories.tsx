@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Select } from "../../src/";
-import SelectOption from "../../src/components/Select/SelectOption";
-import { changeSelectedOptions, checkIfSelected } from "../../src/components/Select";
-import { Option } from '../../src/utils/types/option';
+import { OptionValue } from '../../src/utils/types/option';
+import Option from "../../src/components/Select/Option";
 
 export default {
     title: "SimpleUI/Select",
@@ -39,20 +38,14 @@ MultipleSelect.args = {
 };
 
 MultipleSelect.decorators = [
-    (Story) => {
-        const [selected, setSelected] = useState<Option[]>([]);
+    () => {
+        const [selected, setSelected] = useState<OptionValue[]>([data[0]]);
         
         return(
-            <Select selectedValues={selected}>
-                {data.map((elem) => {
-                    
-                    return(
-                        <SelectOption 
-                            isChecked={checkIfSelected(selected, elem)} 
-                            value={elem} 
-                            onClick={() => setSelected(changeSelectedOptions(true, selected, elem))}/>
-                    );
-                })}
+            <Select onChange={(v) => setSelected(v)}>
+                <Option value={data[0]}/>
+                <Option value={data[1]}/>
+                <Option value={data[2]}/>
             </Select>
         );
     }, 
@@ -65,20 +58,14 @@ SingleSelect.args = {
 };
 
 SingleSelect.decorators = [
-    (Story) => {
-        const [selected, setSelected] = useState<Option[]>([]);
+    () => {
+        const [selected, setSelected] = useState<OptionValue[]>([]);
         
         return(
-            <Select selectedValues={selected}>
-                {data.map((elem) => {
-                    
-                    return(
-                        <SelectOption 
-                            isChecked={checkIfSelected(selected, elem)} 
-                            value={elem} 
-                            onClick={() => setSelected(changeSelectedOptions(false, selected, elem))}/>
-                    );
-                })}
+            <Select onChange={(v) => setSelected(v)} multi={false}>
+                <Option value={data[0]}/>
+                <Option value={data[1]}/>
+                <Option value={data[2]}/>
             </Select>
         );
     }, 

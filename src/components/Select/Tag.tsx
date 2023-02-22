@@ -2,7 +2,7 @@ import React, { FC, MouseEventHandler } from "react";
 import styled from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
 import { RxCross1 } from 'react-icons/rx';
-import { Option } from ".";
+import { OptionValue } from "../../utils/types/option";
 
 export interface TagProps extends StyleProps {
     /**
@@ -11,7 +11,7 @@ export interface TagProps extends StyleProps {
      *  value: string
      * }
      */
-    value: Option;
+    value: OptionValue;
     /**
      * onClick event handler -> fire when 'x' icon has been clicked
      */

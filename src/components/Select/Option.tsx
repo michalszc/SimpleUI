@@ -1,13 +1,13 @@
 import React, { FC, MouseEventHandler } from "react";
 import styled, { css } from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
-import { Option } from ".";
+import { OptionValue } from "../../utils/types/option";
 
-export interface SelectOptionProps extends StyleProps {
+export interface OptionProps extends StyleProps {
     /**
      * Value of the option
      */
-    value: Option;
+    value: OptionValue;
    /**
     * If true -> option has been selected
     */
@@ -16,23 +16,20 @@ export interface SelectOptionProps extends StyleProps {
      * If true -> option can't be selected
      */
     isDisable?: boolean;
-    /**
-     * If true -> option must be selected
-     */
-    isRequired?: boolean;
-    onClick: MouseEventHandler<HTMLAnchorElement>;
+
+    onClick?: MouseEventHandler<HTMLAnchorElement>;
 }
 
-const StyledOptionContainer = styled.a<SelectOptionProps>`
+const StyledOptionContainer = styled.a<OptionProps>`
     font-family: sans-serif;
     color: #555555;
-    padding: 10px;
-    width: 95%;
+    padding: 10px 5px;
+    width: 100%;
     cursor: pointer;
     transition: transform .2s ease-in-out;
 
     &:hover {
-        transform: scale(1.03);
+        transform: scale(1.02);
     }
 
     ${({ isChecked }) => isChecked && css`
@@ -43,7 +40,7 @@ const StyledOptionContainer = styled.a<SelectOptionProps>`
 
 `;
 
-const SelectOption: FC<SelectOptionProps> = ({ onClick, value, isChecked, ...props }) => {
+const Option: FC<OptionProps> = ({ onClick, value, isChecked, ...props }) => {
     return(
         <Styles {...props}>
             <StyledOptionContainer 
@@ -57,4 +54,4 @@ const SelectOption: FC<SelectOptionProps> = ({ onClick, value, isChecked, ...pro
     );
 };
 
-export default SelectOption;
+export default Option;

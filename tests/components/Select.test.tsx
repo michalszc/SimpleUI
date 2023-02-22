@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react";
 import { Select } from "../../src";
-import { Option } from "../../src/components/Select";
+import { Option } from "../../src/utils/types/option";
 
 describe("Select", () => {
 

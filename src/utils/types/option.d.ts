@@ -1,4 +1,4 @@
-export type Option = {
+export type OptionValue = {
     index: string;
     value: string;
 }
