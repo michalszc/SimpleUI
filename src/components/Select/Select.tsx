@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useEffect } from "react";
 import styled from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
 import { RxCross1 } from 'react-icons/rx';
@@ -36,20 +36,19 @@ export interface SelectProps extends StyleProps{
 }
 
 const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder, ...props }) => {
-    const [showOptions, setShowOptions] = useState(false);
-    const [searchInput, setSearchInput] = useState("");
-    const [selectedOptions, setSelectedOptions] = useState<OptionValue[]>([]);
+    const [showOptions, setShowOptions] = React.useState<boolean>(false);
+    const [searchInput, setSearchInput] = React.useState<string>("");
+    const [selectedOptions, setSelectedOptions] = React.useState<OptionValue[]>([]);
+
+    useEffect(() => {
+        onChange(selectedOptions);
+    }, [selectedOptions]);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         event.preventDefault();
         setSearchInput(event.target.value);
         setShowOptions(true);
     };
-
-    useEffect(() => {
-        onChange(selectedOptions);
-    }, [selectedOptions]);
-
 
     const resetInput = () => {
         setSearchInput("");
@@ -89,8 +88,8 @@ const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder
                 addSelectedOption(elem);
             }
         }
+        setShowOptions(false);
     };
-
 
     return(
         <Styles {...props}>
@@ -99,9 +98,9 @@ const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder
                 <StyledSearchContainer>
                     {selectedOptions.length === 0 ? null :
                         <StyledTagsContainer>
-                            {selectedOptions.map((elem) => {
+                            {selectedOptions.map((elem, index) => {
                                 return(
-                                <Tag value={elem} onClick={() => deleteSelectedOption(elem)}/>
+                                <Tag key={index} value={elem} onClick={() => deleteSelectedOption(elem)}/>
                                 );
                             })}
                         </StyledTagsContainer>
@@ -110,7 +109,7 @@ const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder
                     <StyledInputContainer>
                         <StyledInput 
                             placeholder={placeholder} 
-                            onFocus={() => setShowOptions(v => !v)}
+                            onFocus={() => setShowOptions(true)}
                             value={searchInput} 
                             onChange={handleChange}
                             />
@@ -145,7 +144,6 @@ const StyledContainer = styled.div`
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    min-width: 300px;
     width: 400px;
     height: auto;
     margin: 0px;
@@ -219,7 +217,7 @@ const StyledOptionsContainer = styled.div`
     margin-top: 10px;
     width: 100%;
     height: fit-content;
-    max-height: 500px;
+    max-height: 200px;
     overflow-y: auto;
     overflow-x: hidden;
     border: .5px solid #00000038;

@@ -28,14 +28,22 @@ const data =  [
         index: '4',
         value: 'Fourth option',
     },
+    {
+        index: '5',
+        value: 'Fifth option',
+    },
+    {
+        index: '6',
+        value: 'Sixth option',
+    },
+    {
+        index: '7',
+        value: 'Seventh option',
+    },
 ];
 
 
 export const MultipleSelect = Template.bind({});
-MultipleSelect.args = {
-    multi: true,
-    placeholder: "Search value"
-};
 
 MultipleSelect.decorators = [
     () => {
@@ -47,16 +55,14 @@ MultipleSelect.decorators = [
                 <Option value={data[0]}/>
                 <Option value={data[1]}/>
                 <Option value={data[2]}/>
+                <Option value={data[3]}/>
+                <Option value={data[4]}/>
             </Select>
         );
     }, 
 ];
 
 export const SingleSelect = Template.bind({});
-SingleSelect.args = {
-    multi: false,
-    placeholder: "Search value",
-};
 
 SingleSelect.decorators = [
     () => {
@@ -64,10 +70,34 @@ SingleSelect.decorators = [
         const [selected, setSelected] = useState<OptionValue[]>([]);
         
         return(
-            <Select width={'100px'} placeholder="Search value" onChange={(v) => setSelected(v)}>
+            <Select placeholder="Search value" multi={false} onChange={(v) => setSelected(v)}>
                 <Option value={data[0]}/>
                 <Option value={data[1]}/>
                 <Option value={data[2]}/>
+                <Option value={data[3]}/>
+                <Option value={data[4]}/>
+            </Select>
+        );
+    }, 
+];
+
+
+export const ScrollSelect = Template.bind({});
+
+ScrollSelect.decorators = [
+    () => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const [selected, setSelected] = useState<OptionValue[]>([]);
+        
+        return(
+            <Select placeholder="Search value" onChange={(v) => setSelected(v)}>
+                <Option value={data[0]}/>
+                <Option value={data[1]}/>
+                <Option value={data[2]}/>
+                <Option value={data[3]}/>
+                <Option value={data[4]}/>
+                <Option value={data[5]}/>
+                <Option value={data[6]}/>
             </Select>
         );
     }, 
