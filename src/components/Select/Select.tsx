@@ -1,9 +1,10 @@
-import React, { FC, useEffect, useState, Children } from "react";
+import React, { FC, useEffect, useState } from "react";
 import styled from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
 import { RxCross1 } from 'react-icons/rx';
 import Tag from "./Tag";
 import { OptionValue } from '../../utils/types/option';
+import { OptionProps } from "./Option";
 
 export interface SelectProps extends StyleProps{
     /**
@@ -31,31 +32,19 @@ export interface SelectProps extends StyleProps{
     /**
      * component's children -> should be Option components
      */
-    children: React.ReactNode;
+    children: React.ReactElement<OptionProps> | Array<React.ReactElement<OptionProps>>;
 }
 
-const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder, values, ...props }) => {
+const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder, ...props }) => {
     const [showOptions, setShowOptions] = useState(false);
-    const [filteredValues, setFilteredValues] = useState(values);
     const [searchInput, setSearchInput] = useState("");
-    const [selectedOptions, setSelectedOptions] = useState<OptionValue[]>([{index: '5', value: 'test'}]);
+    const [selectedOptions, setSelectedOptions] = useState<OptionValue[]>([]);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         event.preventDefault();
         setSearchInput(event.target.value);
         setShowOptions(true);
     };
-
-    useEffect(()=> {
-        if (searchInput.length > 0) {
-            setFilteredValues(filteredValues?.filter((item) => {
-                return item.value.trim().toLowerCase().match(searchInput.trim().toLowerCase());
-            }));
-        }
-        else {
-            setFilteredValues(values);
-        }
-    }, [searchInput]);
 
     useEffect(() => {
         onChange(selectedOptions);
@@ -64,7 +53,6 @@ const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder
 
     const resetInput = () => {
         setSearchInput("");
-        setFilteredValues(values);
     };
 
     const checkIfSelected = (elem: OptionValue):boolean => {
@@ -103,6 +91,7 @@ const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder
         }
     };
 
+
     return(
         <Styles {...props}>
             <StyledContainer>
@@ -134,11 +123,14 @@ const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder
 
                 {showOptions ? 
                 <StyledOptionsContainer>
-                    {children}
-                    {/* {Children.forEach(children, (child: React.ReactNode) => {
-                        // eslint-disable-next-line no-console
-                        console.log(child.props.value);
-                    })} */}
+                    {React.Children.map(children, child => {
+                        if (child.props.value.value.trim().toLowerCase().match(searchInput.trim().toLowerCase())) {
+                            return React.cloneElement(child, {
+                                isChecked: checkIfSelected(child.props.value),
+                                onClick: () => changeSelectedOptions(child.props.value)
+                            });
+                        }
+                    })}
                 </StyledOptionsContainer>
                 : null}
 

@@ -39,7 +39,8 @@ MultipleSelect.args = {
 
 MultipleSelect.decorators = [
     () => {
-        const [selected, setSelected] = useState<OptionValue[]>([data[0]]);
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const [selected, setSelected] = useState<OptionValue[]>([]);
         
         return(
             <Select placeholder="Search value" onChange={(v) => setSelected(v)}>
@@ -59,10 +60,11 @@ SingleSelect.args = {
 
 SingleSelect.decorators = [
     () => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const [selected, setSelected] = useState<OptionValue[]>([]);
         
         return(
-            <Select width={'100px'} placeholder="Search value" onChange={(v) => setSelected(v)} multi={false}>
+            <Select width={'100px'} placeholder="Search value" onChange={(v) => setSelected(v)}>
                 <Option value={data[0]}/>
                 <Option value={data[1]}/>
                 <Option value={data[2]}/>

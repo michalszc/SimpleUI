@@ -20,6 +20,14 @@ export interface OptionProps extends StyleProps {
     onClick?: MouseEventHandler<HTMLAnchorElement>;
 }
 
+const defaultProps: OptionProps = {
+    value: {
+        index: '0',
+        value: 'default',
+    },
+    isChecked: false,
+};
+
 const StyledOptionContainer = styled.a<OptionProps>`
     font-family: sans-serif;
     color: #555555;
@@ -53,5 +61,7 @@ const Option: FC<OptionProps> = ({ onClick, value, isChecked, ...props }) => {
         </Styles>
     );
 };
+
+Option.defaultProps = defaultProps;
 
 export default Option;
