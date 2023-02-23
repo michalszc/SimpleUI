@@ -1,5 +1,5 @@
 import * as CSS from "csstype";
-import type { Config } from "./config";
+import type { Config, Custom } from "./config";
 
 export const layout: Config = {
     display: 'display',
@@ -53,13 +53,13 @@ export interface LayoutProps {
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/width)
      */
-    width?: CSS.Property.Width;
+    width?: Custom<CSS.Property.Width>;
     /**
      * The CSS `width` property
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/width)
      */
-    w?: CSS.Property.Width;
+    w?: Custom<CSS.Property.Width>;
     /**
      * The CSS `inline-size` property
      * 
@@ -83,13 +83,13 @@ export interface LayoutProps {
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width)
      */
-    maxWidth?: CSS.Property.MaxWidth;
+    maxWidth?: Custom<CSS.Property.MaxWidth>;
     /**
      * The CSS `max-width` property
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/max-width)
      */
-    maxW?: CSS.Property.MaxWidth;
+    maxW?: Custom<CSS.Property.MaxWidth>;
     /**
      * The CSS `max-inline-size` property
      * 
@@ -101,13 +101,13 @@ export interface LayoutProps {
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width)
      */
-    minWidth?: CSS.Property.MinWidth;
+    minWidth?: Custom<CSS.Property.MinWidth>;
     /**
      * The CSS `min-width` property
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/min-width)
      */
-    minW?: CSS.Property.MinWidth;
+    minW?: Custom<CSS.Property.MinWidth>;
     /**
      * The CSS `min-inline-size` property
      * 
@@ -119,13 +119,13 @@ export interface LayoutProps {
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/height)
      */
-    height?: CSS.Property.Height;
+    height?: Custom<CSS.Property.Height>;
     /**
      * The CSS `height` property
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/appearance)
      */
-    h?: CSS.Property.Height;
+    h?: Custom<CSS.Property.Height>;
     /**
      * The CSS `block-size` property
      * 
@@ -137,13 +137,13 @@ export interface LayoutProps {
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height)
      */
-    maxHeight?: CSS.Property.MaxHeight;
+    maxHeight?: Custom<CSS.Property.MaxHeight>;
     /**
      * The CSS `max-height` property
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/max-height)
      */
-    maxH?: CSS.Property.MaxHeight;
+    maxH?: Custom<CSS.Property.MaxHeight>;
     /**
      * The CSS `max-block-size` property
      * 
@@ -155,13 +155,13 @@ export interface LayoutProps {
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/min-height)
      */
-    minHeight?: CSS.Property.MinHeight;
+    minHeight?: Custom<CSS.Property.MinHeight>;
     /**
      * The CSS `min-height` property
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/min-height)
      */
-    minH?: CSS.Property.MinHeight;
+    minH?: Custom<CSS.Property.MinHeight>;
     /**
      * The CSS `min-block-size` property
      * 

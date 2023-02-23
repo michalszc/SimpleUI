@@ -24,6 +24,7 @@
             "ignoreRegExpLiterals": true
         }],
         "no-duplicate-imports": 2,
-        "eol-last": ["error", "always"]
+        "eol-last": ["error", "always"],
+        "object-curly-spacing": ["error", "always"]
     }
   }

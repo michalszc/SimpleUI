@@ -1,5 +1,5 @@
 import * as CSS from "csstype";
-import type { Config } from "./config";
+import type { Config, Custom } from "./config";
 
 export const border: Config = {
     border: 'border',
@@ -89,7 +89,7 @@ export interface BorderProps {
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/border-color)
      */
-    borderColor?: CSS.Property.BorderTopColor;
+    borderColor?: Custom<CSS.Property.BorderColor>;
     /**
      * The CSS `border-radius` property
      * 

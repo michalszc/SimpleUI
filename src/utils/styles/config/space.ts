@@ -1,5 +1,5 @@
 import * as CSS from "csstype";
-import type { Config } from "./config";
+import type { Config, Custom } from "./config";
 
 export const space: Config = {
     m: 'margin',
@@ -170,25 +170,25 @@ export interface SpaceProps {
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
      */
-    p?: CSS.Property.Padding;
+    p?: Custom<CSS.Property.Padding>;
     /**
      * The CSS `padding` property
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)
      */
-    padding?: CSS.Property.Padding;
+    padding?: Custom<CSS.Property.Padding>;
     /**
      * The CSS `padding-top` property
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/padding-top)
      */
-    pt?: CSS.Property.PaddingTop;
+    pt?: Custom<CSS.Property.PaddingTop>;
     /**
      * The CSS `padding-top` property
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/padding-top)
      */
-    paddingTop?: CSS.Property.PaddingTop;
+    paddingTop?: Custom<CSS.Property.PaddingTop>;
     /**
      * The CSS `padding-block-start` property
      * 
@@ -200,13 +200,13 @@ export interface SpaceProps {
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/padding-right)
      */
-    pr?: CSS.Property.PaddingRight;
+    pr?: Custom<CSS.Property.PaddingRight>;
     /**
      * The CSS `padding-right` property
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/padding-right)
      */
-    paddingRight?: CSS.Property.PaddingRight;
+    paddingRight?: Custom<CSS.Property.PaddingRight>;
     /**
      * The CSS `padding-inline-end` property
      * 
@@ -230,13 +230,13 @@ export interface SpaceProps {
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/padding-bottom)
      */
-    pb?: CSS.Property.PaddingBottom;
+    pb?: Custom<CSS.Property.PaddingBottom>;
     /**
      * The CSS `padding-bottom` property
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/padding-bottom)
      */
-    paddingBottom?: CSS.Property.PaddingBottom;
+    paddingBottom?: Custom<CSS.Property.PaddingBottom>;
     /**
      * The CSS `padding-block-end` property
      * 
@@ -248,13 +248,13 @@ export interface SpaceProps {
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/padding-left)
      */
-    pl?: CSS.Property.PaddingLeft;
+    pl?: Custom<CSS.Property.PaddingLeft>;
     /**
      * The CSS `padding-left` property
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/padding-left)
      */
-    paddingLeft?: CSS.Property.PaddingLeft;
+    paddingLeft?: Custom<CSS.Property.PaddingLeft>;
     /**
      * The CSS `padding-inline-start` property
      * 
