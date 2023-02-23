@@ -1,5 +1,5 @@
 import * as CSS from "csstype";
-import type { Config } from "./config";
+import type { Config, Custom } from "./config";
 
 export const position: Config = {
     zIndex: 'zIndex',
@@ -24,13 +24,13 @@ export interface PositionProps {
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index)
      */
-    zIndex?: CSS.Property.ZIndex;
+    zIndex?: Custom<CSS.Property.ZIndex>;
     /**
      * The CSS `top` property
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/top)
      */
-    top?: CSS.Property.Top;
+    top?: Custom<CSS.Property.Top>;
     /**
      * The CSS `inset-block-start` property
      * 
@@ -42,7 +42,7 @@ export interface PositionProps {
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/right)
      */
-    right?: CSS.Property.Right;
+    right?: Custom<CSS.Property.Right>;
     /**
      * The CSS `inset-inline-end` property
      * 
@@ -54,7 +54,7 @@ export interface PositionProps {
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/bottom)
      */
-    bottom?: CSS.Property.Bottom;
+    bottom?: Custom<CSS.Property.Bottom>;
     /**
      * The CSS `inset-block-end` property
      * 
@@ -66,7 +66,7 @@ export interface PositionProps {
      * 
      * @see [Mozilla Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/left)
      */
-    left?: CSS.Property.Left;
+    left?: Custom<CSS.Property.Left>;
     /**
      * The CSS `inset-inline-start` property
      * 
