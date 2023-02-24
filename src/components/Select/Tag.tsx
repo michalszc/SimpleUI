@@ -5,10 +5,7 @@ import { RxCross1 } from 'react-icons/rx';
 
 export interface TagProps extends StyleProps {
     /**
-     * Object of Option type {
-     *  index: string
-     *  value: string
-     * }
+     * Value of selected option
      */
     value: string;
     /**

@@ -4,24 +4,23 @@ import Styles, { StyleProps } from "../../utils/styles";
 import { RxCross1 } from 'react-icons/rx';
 import Tag from "./Tag";
 import { OptionProps } from "./Option";
+import type * as CSS from "csstype";
 
 export interface SelectProps extends StyleProps{
     /**
      * All available options 
-     * [{ index: string, value: string }]
      */
     values?: string[];
     /**
-     * If true -> you can select multiple values
+     * If true, you can select multiple values
      */
     multi?: boolean;
     /**
      * activated everytime the component is rendered
-     * @returns 
      */
     onChange: (v: string[]) => void;
     /**
-     * If true -> option shows as unselected/selected and can't be select/unselect
+     * If true, option shows as unselected/selected and can't be select/unselect
      */
     isReadOnly?: boolean;
     /**
@@ -29,12 +28,16 @@ export interface SelectProps extends StyleProps{
      */
     placeholder?: string;
     /**
-     * component's children -> should be Option components
+     * costum bg color for tags
+     */
+    tagBgColor?: CSS.DataType.Color;
+    /**
+     * component's children, should be Option components
      */
     children: React.ReactElement<OptionProps> | Array<React.ReactElement<OptionProps>>;
 }
 
-const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder, ...props }) => {
+const Select: FC<SelectProps> = ({ tagBgColor, multi = true, onChange, children, placeholder, ...props }) => {
     const [showOptions, setShowOptions] = React.useState<boolean>(false);
     const [searchInput, setSearchInput] = React.useState<string>("");
     const [selectedOptions, setSelectedOptions] = React.useState<string[]>([]);
@@ -98,7 +101,7 @@ const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder
                     { selectedOptions.length !== 0 &&
                         <StyledTagsContainer>
                             {selectedOptions.map((elem) => 
-                                <Tag value={elem} onClick={() => deleteSelectedOption(elem)}/>
+                                <Tag bg={tagBgColor} value={elem} onClick={() => deleteSelectedOption(elem)}/>
                             )}
                         </StyledTagsContainer>
                     }
