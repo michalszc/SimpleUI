@@ -1,24 +1,14 @@
 import React from "react";
 import { fireEvent, render } from "@testing-library/react";
 import { Select } from "../../src";
-import { OptionValue } from "../../src/utils/types/option";
 import Option from "../../src/components/Select/Option";
 
 describe("Select", () => {
 
-    const data: OptionValue[] = [
-        {
-            index: '1',
-            value: 'First option',
-        },
-        {
-            index: '2',
-            value: 'Second option',
-        },
-        {
-            index: '3',
-            value: 'Third option',
-        },
+    const data =  [
+        'First option', 
+        'Second option',
+        'Third option',
     ];
 
     const mockSetState = jest.fn();

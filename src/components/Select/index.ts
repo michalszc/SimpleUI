@@ -1,2 +1,2 @@
 export { default as Select } from './Select';
-export { default as Option } from './Select/Option';
+export { default as Option } from './Option';

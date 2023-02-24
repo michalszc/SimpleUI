@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
 import { RxCross1 } from 'react-icons/rx';
 import Tag from "./Tag";
-import { OptionValue } from '../../utils/types/option';
 import { OptionProps } from "./Option";
 
 export interface SelectProps extends StyleProps{
@@ -11,7 +10,7 @@ export interface SelectProps extends StyleProps{
      * All available options 
      * [{ index: string, value: string }]
      */
-    values?: OptionValue[];
+    values?: string[];
     /**
      * If true -> you can select multiple values
      */
@@ -20,7 +19,7 @@ export interface SelectProps extends StyleProps{
      * activated everytime the component is rendered
      * @returns 
      */
-    onChange: (v: OptionValue[]) => void;
+    onChange: (v: string[]) => void;
     /**
      * If true -> option shows as unselected/selected and can't be select/unselect
      */
@@ -38,7 +37,7 @@ export interface SelectProps extends StyleProps{
 const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder, ...props }) => {
     const [showOptions, setShowOptions] = React.useState<boolean>(false);
     const [searchInput, setSearchInput] = React.useState<string>("");
-    const [selectedOptions, setSelectedOptions] = React.useState<OptionValue[]>([]);
+    const [selectedOptions, setSelectedOptions] = React.useState<string[]>([]);
 
     useEffect(() => {
         onChange(selectedOptions);
@@ -54,9 +53,9 @@ const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder
         setSearchInput("");
     };
 
-    const checkIfSelected = (elem: OptionValue):boolean => {
+    const checkIfSelected = (elem: string):boolean => {
         const e = selectedOptions.filter((item) => {
-           return elem.index === item.index;
+           return elem === item;
         });
     
         if (e.length === 0 ) {
@@ -66,17 +65,17 @@ const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder
         return true;
     };
 
-    const deleteSelectedOption = (elem: OptionValue) => {
-        setSelectedOptions(selectedOptions?.filter((item: OptionValue) => { 
-            return item.index !== elem.index;
+    const deleteSelectedOption = (elem: string) => {
+        setSelectedOptions(selectedOptions?.filter((item: string) => { 
+            return item !== elem;
         }));
     };
 
-    const addSelectedOption = (elem: OptionValue) => {
+    const addSelectedOption = (elem: string) => {
         setSelectedOptions((selected) => [...selected, elem]);
     };
 
-    const changeSelectedOptions = (elem: OptionValue) => {
+    const changeSelectedOptions = (elem: string) => {
         if (checkIfSelected(elem)) {
             deleteSelectedOption(elem);
         } 
@@ -96,34 +95,32 @@ const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder
             <StyledContainer>
 
                 <StyledSearchContainer>
-                    {selectedOptions.length === 0 ? null :
+                    { selectedOptions.length !== 0 &&
                         <StyledTagsContainer>
-                            {selectedOptions.map((elem, index) => {
-                                return(
-                                <Tag key={index} value={elem} onClick={() => deleteSelectedOption(elem)}/>
-                                );
-                            })}
+                            {selectedOptions.map((elem) => 
+                                <Tag value={elem} onClick={() => deleteSelectedOption(elem)}/>
+                            )}
                         </StyledTagsContainer>
                     }
-
                     <StyledInputContainer>
                         <StyledInput 
                             placeholder={placeholder} 
                             onFocus={() => setShowOptions(true)}
                             value={searchInput} 
                             onChange={handleChange}
-                            />
-                        {searchInput.length === 0 ? null :
+                        />
+                        {
+                            searchInput.length !== 0 &&
                             <Cross onClick={resetInput}><RxCross1 /></Cross>
                         }
                     </StyledInputContainer>
 
                 </StyledSearchContainer>
 
-                {showOptions ? 
+                {showOptions && 
                 <StyledOptionsContainer>
                     {React.Children.map(children, child => {
-                        if (child.props.value.value.trim().toLowerCase().match(searchInput.trim().toLowerCase())) {
+                        if (child.props.value.trim().toLowerCase().match(searchInput.trim().toLowerCase())) {
                             return React.cloneElement(child, {
                                 isChecked: checkIfSelected(child.props.value),
                                 onClick: () => changeSelectedOptions(child.props.value)
@@ -131,7 +128,7 @@ const Select: FC<SelectProps> = ({ multi = true, onChange, children, placeholder
                         }
                     })}
                 </StyledOptionsContainer>
-                : null}
+                }
 
             </StyledContainer>
         </Styles>

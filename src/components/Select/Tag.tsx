@@ -2,7 +2,6 @@ import React, { FC, MouseEventHandler } from "react";
 import styled from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
 import { RxCross1 } from 'react-icons/rx';
-import { OptionValue } from "../../utils/types/option";
 
 export interface TagProps extends StyleProps {
     /**
@@ -11,9 +10,9 @@ export interface TagProps extends StyleProps {
      *  value: string
      * }
      */
-    value: OptionValue;
+    value: string;
     /**
-     * onClick event handler -> fire when 'x' icon has been clicked
+     * onClick event handler, fired when 'x' icon is clicked
      */
     onClick: MouseEventHandler<HTMLAnchorElement>;
 }
@@ -42,8 +41,8 @@ const Cross = styled.a`
 const Tag: FC<TagProps> = ({ value, onClick , ...props }) => {
     return(
         <Styles {...props}>
-            <StyledTag key={value.index}>
-                {value.value}
+            <StyledTag>
+                {value}
                 <Cross onClick={onClick}><RxCross1 color="white" /></Cross>
             </StyledTag>
         </Styles>
