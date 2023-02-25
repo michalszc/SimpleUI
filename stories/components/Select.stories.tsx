@@ -47,7 +47,7 @@ SingleSelect.decorators = [
         const [selected, setSelected] = useState<string[]>([]);
         
         return(
-            <Select placeholder="Search value" multi={false} onChange={(v) => setSelected(v)}>
+            <Select tagBgColor='red' placeholder="Search value" multi={false} onChange={(v) => setSelected(v)}>
                 <Option value={data[0]}/>
                 <Option value={data[1]}/>
                 <Option value={data[2]}/>

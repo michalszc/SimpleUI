@@ -15,7 +15,9 @@ export interface OptionProps extends StyleProps {
      * If true, this option can't be selected
      */
     isDisable?: boolean;
-
+    /**
+     * onClick event handler, fired when Option is clicked
+     */
     onClick?: MouseEventHandler<HTMLAnchorElement>;
 }
 
@@ -23,7 +25,7 @@ export interface OptionProps extends StyleProps {
 const StyledOptionContainer = styled.a<OptionProps>`
     font-family: sans-serif;
     color: #555555;
-    padding: 10px 5px;
+    padding: 10px 0 10px 15px;
     width: 100%;
     cursor: pointer;
     transition: transform .2s ease-in-out;
@@ -34,7 +36,7 @@ const StyledOptionContainer = styled.a<OptionProps>`
 
     ${({ isChecked }) => isChecked && css`
         font-size: 1.05em;
-        color: #1d99ff;
+        color: #2196f3;
 
     `}
 

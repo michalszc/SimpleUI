@@ -7,17 +7,17 @@ export interface TagProps extends StyleProps {
     /**
      * Value of selected option
      */
-    value: string;
+    value?: string;
     /**
      * onClick event handler, fired when 'x' icon is clicked
      */
-    onClick: MouseEventHandler<HTMLAnchorElement>;
+    onClick?: MouseEventHandler<HTMLAnchorElement>;
 }
 
-const StyledTag = styled.div`
+const StyledTag = styled.div<TagProps>`
     width: auto;
     height: 40%;
-    background-color: #3ea8ff9a;
+    background-color: #2196f3;
     padding: 8px;
     margin: 5px 0px;
     display: flex;

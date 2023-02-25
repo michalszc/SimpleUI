@@ -93,6 +93,8 @@ const Select: FC<SelectProps> = ({ tagBgColor, multi = true, onChange, children,
         setShowOptions(false);
     };
 
+    const tagColor = tagBgColor === undefined ? (multi === false ? '#f62156k' : '#2196f3') : tagBgColor ;
+
     return(
         <Styles {...props}>
             <StyledContainer>
@@ -101,7 +103,7 @@ const Select: FC<SelectProps> = ({ tagBgColor, multi = true, onChange, children,
                     { selectedOptions.length !== 0 &&
                         <StyledTagsContainer>
                             {selectedOptions.map((elem) => 
-                                <Tag bg={tagBgColor} value={elem} onClick={() => deleteSelectedOption(elem)}/>
+                                <Tag backgroundColor={tagColor} value={elem} onClick={() => deleteSelectedOption(elem)}/>
                             )}
                         </StyledTagsContainer>
                     }
@@ -142,37 +144,36 @@ export default Select;
 
 const StyledContainer = styled.div`
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
     width: 400px;
+    box-sizing: border-box;
     height: auto;
     margin: 0px;
-    z-index: 2;
+    z-index: 10;
 `;
 
 const StyledSearchContainer = styled.div`
-    background-color: white;
+    background-color: #eeeeee;
     width: 100%;
     height: fit-content;
     padding: 5px 10px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     overflow-inline: auto;
-    border: .5px solid #00000038;
+    border: .5px solid #e0e0e0;
     border-radius: 10px;
-    box-shadow: 0px 0px 6px #00000037;
-
 `;
 
 const StyledTagsContainer = styled.div`
     height: 100%;
     width: 100%;
-    padding: 5px 10px; 
     display: flex;
     flex-wrap: wrap;
-    padding: 0px 10px;
+    padding: 0 10px;
     justify-content: flex-start;
     align-items: stretch;
 `;
@@ -189,7 +190,7 @@ const StyledInputContainer = styled.div`
 
 
 const StyledInput = styled.input`
-    border: .3px solid #00000038;
+    border: .3px solid #e0e0e0;
     border-radius: 5px;
     height: 100%;
     width: 100%;
@@ -199,11 +200,11 @@ const StyledInput = styled.input`
 
         
     &:hover {
-        border: .3px solid #3ea8ff9a;
+        border: .3px solid #2196f3;
     }
 
     &:focus {
-        border: .3px solid #3ea8ff9a;
+        border: .3px solid #2196f3;
         outline: none;
     }
 `;
@@ -220,23 +221,23 @@ const StyledOptionsContainer = styled.div`
     max-height: 200px;
     overflow-y: auto;
     overflow-x: hidden;
-    border: .5px solid #00000038;
+    background-color: #eeeeee;
+    border: .5px solid #e0e0e0;
     border-radius: 10px;
-    box-shadow: 0px 0px 6px #00000037;
-    padding: 5px 10px; 
+    padding: 5px 0px; 
     display: flex;
     flex-direction: column;
 
     &::-webkit-scrollbar {
         background-color: #dedede88;
         border-radius: 20px;
-        width: 8px;
+        width: 6px;
         -webkit-overflow-scrolling: auto !important;
         background-clip: border-box;
     }
 
     &::-webkit-scrollbar-thumb {
-        background: #aedbff;
+        background: #64b5f6;
         border-radius: 20px;
     }
 `;
