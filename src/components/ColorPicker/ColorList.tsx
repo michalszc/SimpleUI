@@ -22,6 +22,8 @@ const List = styled.div<IList>`
     gap: ${ ({ theme }) => theme.sizes[1.5] };
     grid-template-rows: ${ ({ size }) => 'auto '.repeat(size.at(0)!)};
     grid-template-columns: ${ ({ size }) => 'auto '.repeat(size.at(1)!)};
+    align-items: center;
+    justify-items: center;
 `;
 
 const ColorList: FC<ColorListProps> = ({
@@ -31,8 +33,8 @@ const ColorList: FC<ColorListProps> = ({
         <List size={size}>
             {
                 colors
-                    .map((color: CSS.DataType.Color, i: number) =>
-                        <ColorSelector key={i} color={color} shape={shape} setColor={setColor} />
+                    .map((color: CSS.DataType.Color) =>
+                        <ColorSelector key={color} color={color} shape={shape} setColor={setColor} />
                     )
             }
         </List>

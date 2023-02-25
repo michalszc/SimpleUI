@@ -4,8 +4,9 @@ import { StyleProps } from "../../utils";
 import { Colors } from "../../constants";
 import Header from "./Header";
 import Container from "./Container";
-import { ceil, isUndefined } from "lodash";
+import { ceil, floor, isUndefined } from "lodash";
 import ColorList from "./ColorList";
+import { ColorInput } from "./ColorInput";
 
 export const predefinedColors = [
     Colors.red[500],
@@ -27,8 +28,7 @@ export const predefinedColors = [
     Colors.brown[500],
     Colors.grey[500],
     Colors.blueGrey[500],
-    Colors.black,
-    Colors.white
+    Colors.black
 ];
 
 export interface ColorPickerProps extends StyleProps {
@@ -53,9 +53,9 @@ export interface ColorPickerProps extends StyleProps {
      */
     column?: number;
     /**
-     *  Number of elements in a row and a column - [row, column]
+     *  Number of elements in a row and a column
      */
-    size?: [number, number];
+    size?: [row: number, column: number];
     /**
      * Position of the pointer. The default is `top`.
      */
@@ -65,6 +65,10 @@ export interface ColorPickerProps extends StyleProps {
      */
     header?: boolean;
     /**
+     * Specify whether to display the input. The default is `hex`.
+     */
+    input?: 'hex' | 'hsl' | 'hsla' | 'rgb' | 'rgba' | 'hide';
+    /**
      * Function called on change selected color.
      */
     onChange?: (value: CSS.DataType.Color) => void;
@@ -73,19 +77,47 @@ export interface ColorPickerProps extends StyleProps {
 const ColorPicker: FC<ColorPickerProps> = ({
     colors = predefinedColors, selectedColor = colors.at(0), 
     shape = 'circle', row, column, size, 
-    pointer, header = false, 
+    pointer, header = false, input = 'hex',
     onChange = () => {}, ...props
 }) => {
     const [color, setColor] = useState<CSS.DataType.Color>(selectedColor!);
     const arraySize = useMemo(() => {
+
+        const _size: number[] = [];
         if (!isUndefined(size)) {
-            return size;
+            _size.push(size.at(0)! > 0 ? floor(size.at(0)!) : 4);
+            _size.push(size.at(1)! > 0 ? floor(size.at(1)!) : 4);
+            if (size.some((v: number) => v <= 0)) {
+                console.error('Size should contain numbers greater than 0');
+            }
+        }
+
+        let _row: number = 4;
+        if (!isUndefined(row)) {
+            if (row > 0) {
+                _row = floor(row);
+            } else {
+                console.error('Row should be greater than 0');
+            }
+        }
+
+        let _column: number = 4;
+        if (!isUndefined(column)) {
+            if (column > 0) {
+                _column = floor(column);
+            } else {
+                console.error('Column should be greater than 0');
+            }
+        }
+
+        if (!isUndefined(size)) {
+            return _size;
         } else if (!isUndefined(row) && !isUndefined(column)) {
-            return [row, column];
+            return [_row, _column];
         } else if (!isUndefined(row)) {
-            return [row, ceil(colors.length / row)];
+            return [_row, ceil(colors.length / _row)];
         } else if (!isUndefined(column)) {
-            return [ceil(colors.length / column), column];
+            return [ceil(colors.length / _column), _column];
         } else {
             return [4, ceil(colors.length / 4)];
         }
@@ -99,6 +131,7 @@ const ColorPicker: FC<ColorPickerProps> = ({
         <Container {...props}>
             {header && <Header color={color} />}
             <ColorList colors={colors} shape={shape} size={arraySize} setColor={setColor} />
+            {input !== 'hide' && <ColorInput type={input} color={color} setColor={setColor}/>}
         </Container>
     )
 }

@@ -27,6 +27,7 @@ const ColorPickerHeader = styled.div<IColorPickerHeader>`
     font-size: ${ props => props.theme.sizes[6] };
     font-weight: bold;
     font-family: monospace;
+    text-transform: uppercase;
 `;
 
 const Header: FC<HeaderProps> = ({
