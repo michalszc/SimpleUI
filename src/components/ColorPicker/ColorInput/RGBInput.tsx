@@ -2,7 +2,7 @@ import React, { FC, useCallback, useMemo } from "react";
 import * as CSS from "csstype";
 import CustomInput from "./CustomInput";
 import styled from "styled-components";
-import { hexToRGB, RGBToHex } from "../../../utils";
+import { hexToRgb, rgbToHex } from "../../../utils";
 import { floor, isNil, mapValues } from "lodash";
 import Styles from "../../../utils/styles";
 
@@ -33,18 +33,18 @@ const RGBContainer = styled.div`
     }
 `;
 
-const RGBInput: FC<RGBInputProps> = ({
+const RGBAInput: FC<RGBInputProps> = ({
     color, setColor
 }) => {
     const rgbColor = useMemo(
         () => {
-            const _rgb = hexToRGB(color);
+            const _rgb = hexToRgb(color);
             if (isNil(_rgb)) {
                 return {
                     r: '0',
                     g: '0',
                     b: '0'
-                }
+                };
             } else {
                 return mapValues(_rgb, (v: number) => v.toString());
             }
@@ -54,21 +54,14 @@ const RGBInput: FC<RGBInputProps> = ({
 
     const setNewColor = useCallback(
         (rgb: RGB) => {
-            console.log(rgb);
             const _rgb = {
                 ...mapValues(rgbColor, (v: string) => Number(v)),
                 ...mapValues(rgb, (v: number) => 
                     (v > 255) ? floor(v / 10) : v
                 ) as RGB
-            }
-            console.log(_rgb);
-            console.log(RGBToHex(
-                _rgb.r,
-                _rgb.g,
-                _rgb.b,
-            ));
+            };
             setColor(
-                RGBToHex(
+                rgbToHex(
                     _rgb.r,
                     _rgb.g,
                     _rgb.b,
@@ -90,7 +83,7 @@ const RGBInput: FC<RGBInputProps> = ({
                 })} />
             </RGBContainer>
         </Styles>
-    )
-}
+    );
+};
 
-export default RGBInput;
+export default RGBAInput;

@@ -2,6 +2,9 @@ import React, { FC } from "react";
 import * as CSS from "csstype";
 import HexInput from "./HexInput";
 import RGBInput from "./RGBInput";
+import RGBAInput from "./RGBAInput";
+import HSLAInput from "./HSLAInput";
+import HSLInput from "./HSLInput";
 
 export interface ColorInputProps {
     type: 'hex' | 'hsl' | 'hsla' | 'rgb' | 'rgba';
@@ -24,9 +27,27 @@ const ColorInput: FC<ColorInputProps> = ({
         );
     }
 
+    if (type === 'rgba') {
+        return (
+            <RGBAInput color={color} setColor={setColor} />
+        );
+    }
+
+    if (type === 'hsl') {
+        return (
+            <HSLInput color={color} setColor={setColor} />
+        );
+    }
+
+    if (type === 'hsla') {
+        return (
+            <HSLAInput color={color} setColor={setColor} />
+        );
+    }
+
     return (
         <></>
     );
-}
+};
 
 export default ColorInput;

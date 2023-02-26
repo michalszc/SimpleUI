@@ -45,6 +45,10 @@ const Input = styled.input`
     outline: none;
 `;
 
+type HTMLElementEvent<T extends HTMLElement> = React.FormEvent<T> & {
+    target: T; 
+}
+
 const CustomInput: FC<CustomInputProps> = ({
     prefix, value, onChange
 }) => (
@@ -53,7 +57,11 @@ const CustomInput: FC<CustomInputProps> = ({
             <InputPrefix className="simpleui-colorpicker-input-prefix">
                 { prefix }
             </InputPrefix>
-            <Input value={value} onChange={(e) => onChange(e.target.value)} className="simpleui-colorpicker-input"/>
+            <Input 
+                value={value}
+                onInput={(e: HTMLElementEvent<HTMLInputElement>) => onChange(e.target.value)}
+                className="simpleui-colorpicker-input"
+            />
         </InputContainer>
     </Styles>
 );
