@@ -17,17 +17,16 @@ export interface TagProps extends StyleProps {
 const StyledTag = styled.div<TagProps>`
     width: auto;
     height: 40%;
-    background-color: #2196f3;
     padding: 8px;
-    margin: 5px 0px;
+    margin: 5px 0;
+    margin-right: 5px;
+    border-radius: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 5px;
     font-family: sans-serif;
     font-size: .9em;
     color: white;
-    margin-right: 5px;
 `;
 
 const Cross = styled.a`

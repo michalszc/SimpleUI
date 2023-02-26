@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { Select } from "../../src/";
-import Option from "../../src/components/Select/Option";
+import { Option } from "../../src/components/Select";
 
 export default {
     title: "SimpleUI/Select",
@@ -28,7 +28,7 @@ MultipleSelect.decorators = [
         const [selected, setSelected] = useState<string[]>([]);
         
         return(
-            <Select placeholder="Search value" onChange={(v) => setSelected(v)}>
+            <Select placeholder="Select values" onChange={(v) => setSelected(v)}>
                 <Option value={data[0]}/>
                 <Option value={data[1]}/>
                 <Option value={data[2]}/>
@@ -47,7 +47,7 @@ SingleSelect.decorators = [
         const [selected, setSelected] = useState<string[]>([]);
         
         return(
-            <Select tagBgColor='red' placeholder="Search value" multi={false} onChange={(v) => setSelected(v)}>
+            <Select placeholder="Select value" multi={false} onChange={(v) => setSelected(v)}>
                 <Option value={data[0]}/>
                 <Option value={data[1]}/>
                 <Option value={data[2]}/>

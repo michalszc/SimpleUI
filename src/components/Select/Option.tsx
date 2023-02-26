@@ -36,8 +36,7 @@ const StyledOptionContainer = styled.a<OptionProps>`
 
     ${({ isChecked }) => isChecked && css`
         font-size: 1.05em;
-        color: #2196f3;
-
+        font-weight: bold;
     `}
 
 `;

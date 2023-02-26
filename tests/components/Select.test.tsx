@@ -30,7 +30,7 @@ describe("Select", () => {
         expect(select).toBeTruthy();
     });
 
-    test("options list appears", () => {
+    test("shows options list", () => {
         const { getByRole, getByText } = render(
             <Select placeholder="Search value" onChange={(v) => mockSetState(v)}>
                 <Option value={data[0]}/>
@@ -66,4 +66,11 @@ describe("Select", () => {
 
     });
 
+    test("Option component ", () => {
+        const { getByText } = render(
+            <Option value="test"/>
+        );
+
+        expect(getByText('test')).toBeTruthy();
+    });
 });

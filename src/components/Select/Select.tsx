@@ -37,7 +37,7 @@ export interface SelectProps extends StyleProps{
     children: React.ReactElement<OptionProps> | Array<React.ReactElement<OptionProps>>;
 }
 
-const Select: FC<SelectProps> = ({ tagBgColor, multi = true, onChange, children, placeholder, ...props }) => {
+const Select: FC<SelectProps> = ({ multi=true, tagBgColor, onChange, children, placeholder, ...props }) => {
     const [showOptions, setShowOptions] = React.useState<boolean>(false);
     const [searchInput, setSearchInput] = React.useState<string>("");
     const [selectedOptions, setSelectedOptions] = React.useState<string[]>([]);
@@ -93,7 +93,8 @@ const Select: FC<SelectProps> = ({ tagBgColor, multi = true, onChange, children,
         setShowOptions(false);
     };
 
-    const tagColor = tagBgColor === undefined ? (multi === false ? '#f62156k' : '#2196f3') : tagBgColor ;
+   // const isMulti =  ;
+    const tagColor = tagBgColor !== undefined ? tagBgColor : (multi === true ? '#2196f3' : '#ab47bc');
 
     return(
         <Styles {...props}>
@@ -103,7 +104,7 @@ const Select: FC<SelectProps> = ({ tagBgColor, multi = true, onChange, children,
                     { selectedOptions.length !== 0 &&
                         <StyledTagsContainer>
                             {selectedOptions.map((elem) => 
-                                <Tag backgroundColor={tagColor} value={elem} onClick={() => deleteSelectedOption(elem)}/>
+                                <Tag bg={tagColor} value={elem} onClick={() => deleteSelectedOption(elem)}/>
                             )}
                         </StyledTagsContainer>
                     }
@@ -197,14 +198,20 @@ const StyledInput = styled.input`
     padding: 5px;
     font-size: 1em;
     color: #555555;
+    
+    background-color: transparent;
+    border-radius: 0px;
+    border: none;
+    //border-bottom: .5px solid black;
+    color: black;
 
         
-    &:hover {
-        border: .3px solid #2196f3;
-    }
+    /* &:hover {
+        border: .3px solid #c4c4c4;
+    } */
 
     &:focus {
-        border: .3px solid #2196f3;
+        //border: .3px solid #e0e0e0;
         outline: none;
     }
 `;
@@ -237,7 +244,7 @@ const StyledOptionsContainer = styled.div`
     }
 
     &::-webkit-scrollbar-thumb {
-        background: #64b5f6;
+        background: #555;
         border-radius: 20px;
     }
 `;
