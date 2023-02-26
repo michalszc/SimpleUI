@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import * as CSS from "csstype";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { IStyledTheme } from "../../utils/theme/theme";
 import Styles from "../../utils/styles";
 
@@ -35,7 +35,7 @@ const Color = styled.div<IColor>`
     transition: transform .2s ease-in-out;
 
     &:hover, &:focus {
-        transform: scale(1.1);
+        transform: scale(1.15);
     }
 `;
 

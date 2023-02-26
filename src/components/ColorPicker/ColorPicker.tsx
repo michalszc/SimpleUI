@@ -57,13 +57,15 @@ export interface ColorPickerProps extends StyleProps {
      */
     size?: [row: number, column: number];
     /**
-     * Position of the pointer. The default is `top`.
-     */
-    pointer?: string;
-    /**
      * Specify whether to display the header.
      */
     header?: boolean;
+    /**
+     * Specify whether the eyedropper tool should be displayed.
+     * 
+     * **NOTE**, if the browser doesn't support it, it won't be displayed even if you set this variable to true.
+     */
+    eyeDropper?: boolean;
     /**
      * Specify whether to display the input. The default is `hex`.
      */
@@ -75,38 +77,38 @@ export interface ColorPickerProps extends StyleProps {
 }
 
 const ColorPicker: FC<ColorPickerProps> = ({
-    colors = predefinedColors, selectedColor = colors.at(0), 
-    shape = 'circle', row, column, size, 
-    pointer, header = false, input = 'hex',
-    onChange = () => {}, ...props
+    colors = predefinedColors, selectedColor = colors[0], 
+    shape = 'circle', row, column, size,
+    eyeDropper = false, header = false, input = 'hex',
+    onChange = () => {}, ...props // eslint-disable-line @typescript-eslint/no-empty-function
 }) => {
-    const [color, setColor] = useState<CSS.DataType.Color>(selectedColor!);
+    const [color, setColor] = useState<CSS.DataType.Color>(selectedColor);
     const arraySize = useMemo(() => {
 
         const _size: number[] = [];
         if (!isUndefined(size)) {
-            _size.push(size.at(0)! > 0 ? floor(size.at(0)!) : 4);
-            _size.push(size.at(1)! > 0 ? floor(size.at(1)!) : 4);
+            _size.push(size[0] > 0 ? floor(size[0]) : 4);
+            _size.push(size[1] > 0 ? floor(size[1]) : 4);
             if (size.some((v: number) => v <= 0)) {
-                console.error('Size should contain numbers greater than 0');
+                console.error('Size should contain numbers greater than 0'); // eslint-disable-line no-console
             }
         }
 
-        let _row: number = 4;
+        let _row = 4;
         if (!isUndefined(row)) {
             if (row > 0) {
                 _row = floor(row);
             } else {
-                console.error('Row should be greater than 0');
+                console.error('Row should be greater than 0'); // eslint-disable-line no-console
             }
         }
 
-        let _column: number = 4;
+        let _column = 4;
         if (!isUndefined(column)) {
             if (column > 0) {
                 _column = floor(column);
             } else {
-                console.error('Column should be greater than 0');
+                console.error('Column should be greater than 0'); // eslint-disable-line no-console
             }
         }
 
@@ -130,10 +132,10 @@ const ColorPicker: FC<ColorPickerProps> = ({
     return (
         <Container {...props}>
             {header && <Header color={color} />}
-            <ColorList colors={colors} shape={shape} size={arraySize} setColor={setColor} />
+            <ColorList colors={colors} shape={shape} size={arraySize} setColor={setColor} eyeDropper={eyeDropper}/>
             {input !== 'hide' && <ColorInput type={input} color={color} setColor={setColor}/>}
         </Container>
-    )
-}
+    );
+};
 
 export default ColorPicker;
