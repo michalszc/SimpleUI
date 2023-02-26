@@ -1,9 +1,9 @@
 import { round, isNil } from "lodash";
 
-export const RGBToHex = (r: number, g: number, b: number) => 
+export const rgbToHex = (r: number, g: number, b: number) => 
     "#" + (1 << 24 | r << 16 | g << 8 | b).toString(16).slice(1);
 
-export function hexToRGB(h: string) {
+export function hexToRgb(h: string) {
   // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
   const hex = h.replace(shorthandRegex, (m, r, g, b) => r + r + g + g + b + b);
@@ -16,10 +16,10 @@ export function hexToRGB(h: string) {
   };
 }
 
-export const RGBAToHexa = (r: number, g: number, b: number, a: number) => 
-  RGBToHex(r,g,b) + (round(255 * a / 100) | 1 << 8).toString(16).slice(1);
+export const rgbaToHex = (r: number, g: number, b: number, a: number) => 
+  rgbToHex(r,g,b) + (round(255 * a / 100) | 1 << 8).toString(16).slice(1);
 
-export function hexToRGBA(h: string) {
+export function hexToRgba(h: string) {
     // remove invalid characters
     let hex = h.replace(/[^0-9a-fA-F]/g, '');
 
@@ -38,38 +38,127 @@ export function hexToRGBA(h: string) {
     };
 }
 
-export const RGBToHsl = (r: number, g: number, b: number) => {
-  const _r = r / 255;
-  const _g = g / 255;
-  const _b = b / 255;
+export const rgbToHsl = (r: number, g: number, b: number) => {
+    const _r = r / 255;
+    const _g = g / 255;
+    const _b = b / 255;
 
-  const max = Math.max(_r, _g, _b);
-  const min = Math.min(_r, _g, _b);
+    const cmin = Math.min(_r, _g, _b);
+    const cmax = Math.max(_r, _g, _b);
+    const delta = cmax - cmin;
+    let h = 0;
+    let s = 0;
+    let l = 0;
 
-  let h = 0;
-  let s = 0;
-  const l = ((max + min) / 2) * 100;
-
-  if (max !== min) {
-    const d = max - min;
-    s = (l > 50 ? d / (2 - max - min) : d / (max + min)) * 100;
-    switch (max) {
-      case _r:
-        h = ((_g - _b) / d + (_g < _b ? 6 : 0)) * 360;
-        break;
-      case _g:
-        h = ((_b - _r) / d + 2) * 360;
-        break;
-      case _b:
-        h = ((_r - _g) / d + 4) * 360;
-        break;
+    if (delta === 0) {
+       h = 0;
+    } else if (cmax === _r) {
+      h = ((_g - _b) / delta) % 6;
+    } else if (cmax === _g) {
+      h = (_b - _r) / delta + 2;
+    } else {
+      h = (_r - _g) / delta + 4;
     }
-    h /= 6;
+
+    h = Math.round(h * 60);
+    
+    if (h < 0)
+      h += 360;			
+
+    l = (cmax + cmin) / 2;
+
+    s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
+
+    s = Number((s * 100).toFixed(1));
+    l = Number((l * 100).toFixed(1));
+
+    return {
+      h, l, s
+    };
+};
+
+export const hslToRgb = (h: number, s: number, l: number) => {
+  const _s = s / 100;
+  const _l = l / 100;
+
+  const c = (1 - Math.abs(2 * _l - 1)) * _s;
+  const x = c * (1 - Math.abs((h / 60) % 2 - 1));
+  const m = _l - c/2;
+  let r = 0;
+  let g = 0;
+  let b = 0;
+
+  if (0 <= h && h < 60) {
+    r = c;
+    g = x;
+    b = 0;  
+  } else if (60 <= h && h < 120) {
+    r = x;
+    g = c; 
+    b = 0;
+  } else if (120 <= h && h < 180) {
+    r = 0;
+    g = c;
+    b = x;
+  } else if (180 <= h && h < 240) {
+    r = 0;
+    g = x;
+    b = c;
+  } else if (240 <= h && h < 300) {
+    r = x;
+    g = 0;
+    b = c;
+  } else if (300 <= h && h < 360) {
+    r = c;
+    g = 0;
+    b = x;
   }
-  
+
+  r = Math.round((r + m) * 255);
+  g = Math.round((g + m) * 255);
+  b = Math.round((b + m) * 255);
+
   return {
-    h: round(h),
-    s: round(s, 1),
-    l: round(l, 1)
+    r, g, b
   };
-}
+};
+
+export const hexToHsl = (h: string) => {
+  const { r, g, b } = hexToRgb(h)!; // eslint-disable-line @typescript-eslint/no-non-null-assertion
+
+  return rgbToHsl(r,g,b);
+};
+
+export const hslToHex = (h: number, s: number, l: number) => {
+  const { r, g, b } = hslToRgb(h, s, l)!; // eslint-disable-line @typescript-eslint/no-non-null-assertion
+
+  return rgbToHex(r, g, b);
+};
+
+export const rgbaToHsla = (r: number, g: number, b: number, a: number) => {
+  const { h, s, l } = rgbToHsl(r,g,b);
+
+  return {
+    h, s, l, a
+  };
+};
+
+export const hslaToRgba = (h: number, s: number, l: number, a: number) => {
+  const { r, g, b } = hslToRgb(h, s, l)!; // eslint-disable-line @typescript-eslint/no-non-null-assertion
+
+  return {
+    r, g, b, a
+  };
+};
+
+export const hexToHsla = (h: string) => {
+  const { r, g, b, a } = hexToRgba(h)!; // eslint-disable-line @typescript-eslint/no-non-null-assertion
+
+  return rgbaToHsla(r, g, b, a);
+};
+
+export const hslaToHex = (h: number, s: number, l: number, a: number) => {
+  const { r, g, b, a: _a } = hslaToRgba(h, s, l, a)!; // eslint-disable-line @typescript-eslint/no-non-null-assertion
+
+  return rgbaToHex(r, g, b, _a);
+};
