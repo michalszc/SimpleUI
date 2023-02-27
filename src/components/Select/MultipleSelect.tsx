@@ -1,7 +1,8 @@
 import React, { FC, useEffect } from "react";
 import styled from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
-import { RxCross1 } from 'react-icons/rx';
+import { RxCross2 } from 'react-icons/rx';
+import { RiArrowDownSLine } from 'react-icons/ri';
 import Tag from "./Tag";
 import { OptionProps } from "./Option";
 import type * as CSS from "csstype";
@@ -12,13 +13,13 @@ export interface SelectProps extends StyleProps{
      */
     values?: string[];
     /**
-     * If true, you can select multiple values
-     */
-    multi?: boolean;
-    /**
      * activated everytime the component is rendered
      */
     onChange: (v: string[]) => void;
+    /**
+     * label of Single Select
+     */
+    label?: string;
     /**
      * If true, option shows as unselected/selected and can't be select/unselect
      */
@@ -37,8 +38,8 @@ export interface SelectProps extends StyleProps{
     children: React.ReactElement<OptionProps> | Array<React.ReactElement<OptionProps>>;
 }
 
-const Select: FC<SelectProps> = ({ multi=true, tagBgColor, onChange, children, placeholder, ...props }) => {
-    const [showOptions, setShowOptions] = React.useState<boolean>(false);
+const MultipleSelect: FC<SelectProps> = ({ tagBgColor, label, onChange, children, placeholder, ...props }) => {
+    const [show, setShow] = React.useState<boolean>(false);
     const [searchInput, setSearchInput] = React.useState<string>("");
     const [selectedOptions, setSelectedOptions] = React.useState<string[]>([]);
 
@@ -49,7 +50,6 @@ const Select: FC<SelectProps> = ({ multi=true, tagBgColor, onChange, children, p
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         event.preventDefault();
         setSearchInput(event.target.value);
-        setShowOptions(true);
     };
 
     const resetInput = () => {
@@ -83,23 +83,17 @@ const Select: FC<SelectProps> = ({ multi=true, tagBgColor, onChange, children, p
             deleteSelectedOption(elem);
         } 
         else {
-            if(!multi) {
-                setSelectedOptions(() => [elem]);
-            }
-            else{
-                addSelectedOption(elem);
-            }
+            addSelectedOption(elem);
         }
-        setShowOptions(false);
+        setShow(false);
     };
 
-   // const isMulti =  ;
-    const tagColor = tagBgColor !== undefined ? tagBgColor : (multi === true ? '#2196f3' : '#ab47bc');
+    const tagColor = tagBgColor !== undefined ? tagBgColor : '#2196f3';
 
     return(
         <Styles {...props}>
             <StyledContainer>
-
+                <Label>{label}</Label>
                 <StyledSearchContainer>
                     { selectedOptions.length !== 0 &&
                         <StyledTagsContainer>
@@ -111,19 +105,25 @@ const Select: FC<SelectProps> = ({ multi=true, tagBgColor, onChange, children, p
                     <StyledInputContainer>
                         <StyledInput 
                             placeholder={placeholder} 
-                            onFocus={() => setShowOptions(true)}
+                            onFocus={() => setShow(true)}
                             value={searchInput} 
                             onChange={handleChange}
                         />
                         {
-                            searchInput.length !== 0 &&
-                            <Cross onClick={resetInput}><RxCross1 /></Cross>
+                            searchInput.length !== 0 ?
+                            <Icon onClick={resetInput}><RxCross2 size='1.2rem' /></Icon>
+                            : 
+                            (show ? 
+                            <Icon style={{ rotate: 'x 180deg' }} onClick={() => setShow(v => !v)}><RiArrowDownSLine size='1.5rem'/></Icon>
+                            :
+                            <Icon onClick={() => setShow(v => !v)}><RiArrowDownSLine size='1.5rem'/></Icon>
+                            )                        
                         }
                     </StyledInputContainer>
 
                 </StyledSearchContainer>
 
-                {showOptions && 
+                {show && 
                 <StyledOptionsContainer>
                     {React.Children.map(children, child => {
                         if (child.props.value.trim().toLowerCase().match(searchInput.trim().toLowerCase())) {
@@ -141,13 +141,19 @@ const Select: FC<SelectProps> = ({ multi=true, tagBgColor, onChange, children, p
     );
 };
 
-export default Select;
+export default MultipleSelect;
+
+const Label = styled.h3`
+    font-family: sans-serif;
+    color: #555;
+    margin: 5px 0;
+`;
 
 const StyledContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 400px;
+    width: 350px;
     box-sizing: border-box;
     height: auto;
     margin: 0px;
@@ -155,7 +161,7 @@ const StyledContainer = styled.div`
 `;
 
 const StyledSearchContainer = styled.div`
-    background-color: #eeeeee;
+    background-color: #ffffff;
     width: 100%;
     height: fit-content;
     padding: 5px 10px;
@@ -165,7 +171,8 @@ const StyledSearchContainer = styled.div`
     justify-content: flex-start;
     align-items: center;
     overflow-inline: auto;
-    border: .5px solid #e0e0e0;
+
+    border: 3px solid #2196f3;
     border-radius: 10px;
 `;
 
@@ -202,49 +209,41 @@ const StyledInput = styled.input`
     background-color: transparent;
     border-radius: 0px;
     border: none;
-    //border-bottom: .5px solid black;
     color: black;
 
-        
-    /* &:hover {
-        border: .3px solid #c4c4c4;
-    } */
-
     &:focus {
-        //border: .3px solid #e0e0e0;
         outline: none;
     }
 `;
 
-const Cross = styled.a`
+const Icon = styled.a`
     cursor: pointer;
-    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    padding-left: 5px;
 `;
 
 const StyledOptionsContainer = styled.div`
-    margin-top: 10px;
     width: 100%;
-    height: fit-content;
     max-height: 200px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    background-color: #eeeeee;
-    border: .5px solid #e0e0e0;
-    border-radius: 10px;
-    padding: 5px 0px; 
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 2px 2px #cfcfcf;
+    border-radius: 5px;
 
     &::-webkit-scrollbar {
         background-color: #dedede88;
-        border-radius: 20px;
-        width: 6px;
+        width: 10px;
         -webkit-overflow-scrolling: auto !important;
         background-clip: border-box;
     }
 
     &::-webkit-scrollbar-thumb {
-        background: #555;
+        background: #a0a0a0;
         border-radius: 20px;
     }
 `;

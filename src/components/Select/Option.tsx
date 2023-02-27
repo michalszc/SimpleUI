@@ -27,16 +27,15 @@ const StyledOptionContainer = styled.a<OptionProps>`
     color: #555555;
     padding: 10px 0 10px 15px;
     width: 100%;
+    font-size: 1.1rem;
     cursor: pointer;
-    transition: transform .2s ease-in-out;
 
-    &:hover {
-        transform: scale(1.02);
+    &:hover{
+        background-color: #d8d8d84e;
     }
 
     ${({ isChecked }) => isChecked && css`
-        font-size: 1.05em;
-        font-weight: bold;
+        color: #2196f3;
     `}
 
 `;
