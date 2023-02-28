@@ -43,7 +43,7 @@ const ColorSelector: FC<ColorSelectorProps> = ({
     color, shape, setColor
 }) => (
     <Styles>
-        <Color color={color} shape={shape} onClick={() => setColor(color)} title={color}/>
+        <Color color={color} shape={shape} onClick={() => setColor(color)} title={color} data-testid={'test-colorselector'}/>
     </Styles>
 );
 

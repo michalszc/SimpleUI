@@ -4,7 +4,7 @@ import { StyleProps } from "../../utils";
 import { Colors } from "../../constants";
 import Header from "./Header";
 import Container from "./Container";
-import { ceil, floor, isUndefined } from "lodash";
+import { ceil, floor, isEmpty, isUndefined } from "lodash";
 import ColorList from "./ColorList";
 import { ColorInput } from "./ColorInput";
 
@@ -82,7 +82,15 @@ const ColorPicker: FC<ColorPickerProps> = ({
     eyeDropper = false, header = false, input = 'hex',
     onChange = () => {}, ...props // eslint-disable-line @typescript-eslint/no-empty-function
 }) => {
-    const [color, setColor] = useState<CSS.DataType.Color>(selectedColor);
+    
+    if (isEmpty(colors)) {
+        console.error('Colors array should contain at least one item'); // eslint-disable-line no-console
+        return <></>;
+    }
+
+    const [color, setColor] = useState<CSS.DataType.Color>(
+        colors.includes(selectedColor) ? selectedColor : colors[0]
+    );
     const arraySize = useMemo(() => {
 
         const _size: number[] = [];
