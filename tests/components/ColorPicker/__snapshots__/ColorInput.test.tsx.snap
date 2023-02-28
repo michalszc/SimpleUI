@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorInput should properly render ColorInput component - type hex 1`] = `
+<div>
+  <div
+    class="sc-hLBbgP hbVVJF"
+  >
+    <div
+      class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+    >
+      <div
+        class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
+      >
+        #
+      </div>
+      <input
+        class="sc-dkrFOg dGsRDm simpleui-colorpicker-input"
+        value="FFF"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ColorInput should properly render ColorInput component - type hsl 1`] = `
+<div>
+  <div
+    class="sc-iBYQkv boYHRO"
+  >
+    <div
+      class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+    >
+      <div
+        class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
+      >
+        H
+      </div>
+      <input
+        class="sc-dkrFOg dGsRDm simpleui-colorpicker-input"
+        value="0"
+      />
+    </div>
+    <div
+      class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+    >
+      <div
+        class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
+      >
+        S
+      </div>
+      <input
+        class="sc-dkrFOg dGsRDm simpleui-colorpicker-input"
+        value="0"
+      />
+    </div>
+    <div
+      class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+    >
+      <div
+        class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
+      >
+        L
+      </div>
+      <input
+        class="sc-dkrFOg dGsRDm simpleui-colorpicker-input"
+        value="100"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ColorInput should properly render ColorInput component - type hsla 1`] = `
+<div>
+  <div
+    class="sc-gKPRtg hDVxWN"
+  >
+    <div
+      class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+    >
+      <div
+        class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
+      >
+        H
+      </div>
+      <input
+        class="sc-dkrFOg dGsRDm simpleui-colorpicker-input"
+        value="0"
+      />
+    </div>
+    <div
+      class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+    >
+      <div
+        class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
+      >
+        S
+      </div>
+      <input
+        class="sc-dkrFOg dGsRDm simpleui-colorpicker-input"
+        value="0"
+      />
+    </div>
+    <div
+      class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+    >
+      <div
+        class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
+      >
+        L
+      </div>
+      <input
+        class="sc-dkrFOg dGsRDm simpleui-colorpicker-input"
+        value="100"
+      />
+    </div>
+    <div
+      class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+    >
+      <div
+        class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
+      >
+        A
+      </div>
+      <input
+        class="sc-dkrFOg dGsRDm simpleui-colorpicker-input"
+        value="100"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ColorInput should properly render ColorInput component - type rgb 1`] = `
+<div>
+  <div
+    class="sc-eDvSVe eJvcwf"
+  >
+    <div
+      class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+    >
+      <div
+        class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
+      >
+        R
+      </div>
+      <input
+        class="sc-dkrFOg dGsRDm simpleui-colorpicker-input"
+        value="255"
+      />
+    </div>
+    <div
+      class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+    >
+      <div
+        class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
+      >
+        G
+      </div>
+      <input
+        class="sc-dkrFOg dGsRDm simpleui-colorpicker-input"
+        value="255"
+      />
+    </div>
+    <div
+      class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+    >
+      <div
+        class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
+      >
+        B
+      </div>
+      <input
+        class="sc-dkrFOg dGsRDm simpleui-colorpicker-input"
+        value="255"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ColorInput should properly render ColorInput component - type rgba 1`] = `
+<div>
+  <div
+    class="sc-jSUZER ggHwA-d"
+  >
+    <div
+      class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+    >
+      <div
+        class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
+      >
+        R
+      </div>
+      <input
+        class="sc-dkrFOg dGsRDm simpleui-colorpicker-input"
+        value="255"
+      />
+    </div>
+    <div
+      class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+    >
+      <div
+        class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
+      >
+        G
+      </div>
+      <input
+        class="sc-dkrFOg dGsRDm simpleui-colorpicker-input"
+        value="255"
+      />
+    </div>
+    <div
+      class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+    >
+      <div
+        class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
+      >
+        B
+      </div>
+      <input
+        class="sc-dkrFOg dGsRDm simpleui-colorpicker-input"
+        value="255"
+      />
+    </div>
+    <div
+      class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+    >
+      <div
+        class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
+      >
+        A
+      </div>
+      <input
+        class="sc-dkrFOg dGsRDm simpleui-colorpicker-input"
+        value="100"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -89,8 +89,8 @@ describe("Convert Colors", () => {
     test("should properly convert color from RGB to HSL", () => {
         expect(rgbToHsl(127, 17, 224)).toMatchObject({
             h: 272,
-            s: 86,
-            l: 47
+            s: 85.9,
+            l: 47.3
         });
         expect(rgbToHsl(238, 51, 255)).toMatchObject({
             h: 295,
@@ -99,13 +99,13 @@ describe("Convert Colors", () => {
         });
         expect(rgbToHsl(69, 239, 124)).toMatchObject({
             h: 139,
-            s: 84,
-            l: 60
+            s: 84.2,
+            l: 60.4
         });
         expect(rgbToHsl(167, 184, 211)).toMatchObject({
             h: 217,
-            s: 33,
-            l: 74
+            s: 33.3,
+            l: 74.1
         });
     });
     test("should properly convert color from HSL to RGB", () => {
@@ -133,8 +133,8 @@ describe("Convert Colors", () => {
     test("should properly convert color from HEX to HSL", () => {
         expect(hexToHsl('#7f11e0')).toMatchObject({
             h: 272,
-            s: 86,
-            l: 47
+            s: 85.9,
+            l: 47.3
         });
         expect(hexToHsl('#e3f')).toMatchObject({
             h: 295,
@@ -143,13 +143,13 @@ describe("Convert Colors", () => {
         });
         expect(hexToHsl('#45ef7c')).toMatchObject({
             h: 139,
-            s: 84,
-            l: 60
+            s: 84.2,
+            l: 60.4
         });
         expect(hexToHsl('#a7b8d3')).toMatchObject({
             h: 217,
-            s: 33,
-            l: 74
+            s: 33.3,
+            l: 74.1
         });
     });
     test("should properly convert color from HSL to HEX", () => {
@@ -199,14 +199,14 @@ describe("Convert Colors", () => {
     test("should properly convert color from RGBA to HSLA", () => {
         expect(rgbaToHsla(128, 17, 224, 100)).toMatchObject({
             h: 272,
-            s: 86,
-            l: 47,
+            s: 85.9,
+            l: 47.3,
             a: 100
         });
         expect(rgbaToHsla(128, 17, 224, 60)).toMatchObject({
             h: 272,
-            s: 86,
-            l: 47,
+            s: 85.9,
+            l: 47.3,
             a: 60
         });
         expect(rgbaToHsla(238, 51, 255, 100)).toMatchObject({
@@ -223,14 +223,14 @@ describe("Convert Colors", () => {
         });
         expect(rgbaToHsla(69, 239, 123, 84)).toMatchObject({
             h: 139,
-            s: 84,
-            l: 60,
+            s: 84.2,
+            l: 60.4,
             a: 84
         });
         expect(rgbaToHsla(167, 184, 211, 91)).toMatchObject({
             h: 217,
-            s: 33,
-            l: 74,
+            s: 33.3,
+            l: 74.1,
             a: 91
         });
     });
@@ -244,14 +244,14 @@ describe("Convert Colors", () => {
     test("should properly convert color from HEX to HSLA", () => {
         expect(hexToHsla('#8011e0ff')).toMatchObject({
             h: 272,
-            s: 86,
-            l: 47,
+            s: 85.9,
+            l: 47.3,
             a: 100
         });
         expect(hexToHsla('#8011e099')).toMatchObject({
             h: 272,
-            s: 86,
-            l: 47,
+            s: 85.9,
+            l: 47.3,
             a: 60
         });
         expect(hexToHsla('#ee33ff66')).toMatchObject({
@@ -262,14 +262,14 @@ describe("Convert Colors", () => {
         });
         expect(hexToHsla('#45ef7bd6')).toMatchObject({
             h: 139,
-            s: 84,
-            l: 60,
+            s: 84.2,
+            l: 60.4,
             a: 84
         });
         expect(hexToHsla('#a7b8d3e8')).toMatchObject({
             h: 217,
-            s: 33,
-            l: 74,
+            s: 33.3,
+            l: 74.1,
             a: 91
         });
     });
