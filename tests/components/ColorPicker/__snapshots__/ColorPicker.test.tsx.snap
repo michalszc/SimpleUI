@@ -1,0 +1,1324 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorPicker should properly render ColorPicker component with custom size 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="sc-gswNZR cUahRX"
+      >
+        <div
+          class="sc-eDvSVe enjHDS"
+        >
+          <div
+            class="sc-dkrFOg kATToL"
+            color="#f44336"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#f44336"
+          />
+          <div
+            class="sc-dkrFOg flZVnC"
+            color="#e91e63"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#e91e63"
+          />
+          <div
+            class="sc-dkrFOg dZuRky"
+            color="#9c27b0"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#9c27b0"
+          />
+          <div
+            class="sc-dkrFOg dLzigJ"
+            color="#673ab7"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#673ab7"
+          />
+          <div
+            class="sc-dkrFOg cIKPeB"
+            color="#3f51b5"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#3f51b5"
+          />
+          <div
+            class="sc-dkrFOg iaOTIm"
+            color="#2196f3"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#2196f3"
+          />
+          <div
+            class="sc-dkrFOg gkaFDa"
+            color="#03a9f4"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#03a9f4"
+          />
+          <div
+            class="sc-dkrFOg hntGBW"
+            color="#00bcd4"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#00bcd4"
+          />
+          <div
+            class="sc-dkrFOg cxeLKY"
+            color="#009688"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#009688"
+          />
+          <div
+            class="sc-dkrFOg ittzWy"
+            color="#4caf50"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#4caf50"
+          />
+          <div
+            class="sc-dkrFOg hVhUrU"
+            color="#8bc34a"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#8bc34a"
+          />
+          <div
+            class="sc-dkrFOg OxhhB"
+            color="#cddc39"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#cddc39"
+          />
+          <div
+            class="sc-dkrFOg jvkZeR"
+            color="#ffeb3b"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#ffeb3b"
+          />
+          <div
+            class="sc-dkrFOg itDwZm"
+            color="#ffc107"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#ffc107"
+          />
+          <div
+            class="sc-dkrFOg eUaFzy"
+            color="#ff9800"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#ff9800"
+          />
+          <div
+            class="sc-dkrFOg eMlMmp"
+            color="#ff5722"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#ff5722"
+          />
+          <div
+            class="sc-dkrFOg gwIDOp"
+            color="#795548"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#795548"
+          />
+          <div
+            class="sc-dkrFOg hyAkPn"
+            color="#9e9e9e"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#9e9e9e"
+          />
+          <div
+            class="sc-dkrFOg kMvvYA"
+            color="#607d8b"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#607d8b"
+          />
+          <div
+            class="sc-dkrFOg bHKOmn"
+            color="#000000"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#000000"
+          />
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="sc-gswNZR cUahRX"
+    >
+      <div
+        class="sc-eDvSVe enjHDS"
+      >
+        <div
+          class="sc-dkrFOg kATToL"
+          color="#f44336"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#f44336"
+        />
+        <div
+          class="sc-dkrFOg flZVnC"
+          color="#e91e63"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#e91e63"
+        />
+        <div
+          class="sc-dkrFOg dZuRky"
+          color="#9c27b0"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#9c27b0"
+        />
+        <div
+          class="sc-dkrFOg dLzigJ"
+          color="#673ab7"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#673ab7"
+        />
+        <div
+          class="sc-dkrFOg cIKPeB"
+          color="#3f51b5"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#3f51b5"
+        />
+        <div
+          class="sc-dkrFOg iaOTIm"
+          color="#2196f3"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#2196f3"
+        />
+        <div
+          class="sc-dkrFOg gkaFDa"
+          color="#03a9f4"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#03a9f4"
+        />
+        <div
+          class="sc-dkrFOg hntGBW"
+          color="#00bcd4"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#00bcd4"
+        />
+        <div
+          class="sc-dkrFOg cxeLKY"
+          color="#009688"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#009688"
+        />
+        <div
+          class="sc-dkrFOg ittzWy"
+          color="#4caf50"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#4caf50"
+        />
+        <div
+          class="sc-dkrFOg hVhUrU"
+          color="#8bc34a"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#8bc34a"
+        />
+        <div
+          class="sc-dkrFOg OxhhB"
+          color="#cddc39"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#cddc39"
+        />
+        <div
+          class="sc-dkrFOg jvkZeR"
+          color="#ffeb3b"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#ffeb3b"
+        />
+        <div
+          class="sc-dkrFOg itDwZm"
+          color="#ffc107"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#ffc107"
+        />
+        <div
+          class="sc-dkrFOg eUaFzy"
+          color="#ff9800"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#ff9800"
+        />
+        <div
+          class="sc-dkrFOg eMlMmp"
+          color="#ff5722"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#ff5722"
+        />
+        <div
+          class="sc-dkrFOg gwIDOp"
+          color="#795548"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#795548"
+        />
+        <div
+          class="sc-dkrFOg hyAkPn"
+          color="#9e9e9e"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#9e9e9e"
+        />
+        <div
+          class="sc-dkrFOg kMvvYA"
+          color="#607d8b"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#607d8b"
+        />
+        <div
+          class="sc-dkrFOg bHKOmn"
+          color="#000000"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#000000"
+        />
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`ColorPicker should properly render ColorPicker component with default props 1`] = `
+<div>
+  <div
+    class="sc-gswNZR cUahRX"
+  >
+    <div
+      class="sc-eDvSVe liHQaa"
+    >
+      <div
+        class="sc-dkrFOg kATToL"
+        color="#f44336"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#f44336"
+      />
+      <div
+        class="sc-dkrFOg flZVnC"
+        color="#e91e63"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#e91e63"
+      />
+      <div
+        class="sc-dkrFOg dZuRky"
+        color="#9c27b0"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#9c27b0"
+      />
+      <div
+        class="sc-dkrFOg dLzigJ"
+        color="#673ab7"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#673ab7"
+      />
+      <div
+        class="sc-dkrFOg cIKPeB"
+        color="#3f51b5"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#3f51b5"
+      />
+      <div
+        class="sc-dkrFOg iaOTIm"
+        color="#2196f3"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#2196f3"
+      />
+      <div
+        class="sc-dkrFOg gkaFDa"
+        color="#03a9f4"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#03a9f4"
+      />
+      <div
+        class="sc-dkrFOg hntGBW"
+        color="#00bcd4"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#00bcd4"
+      />
+      <div
+        class="sc-dkrFOg cxeLKY"
+        color="#009688"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#009688"
+      />
+      <div
+        class="sc-dkrFOg ittzWy"
+        color="#4caf50"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#4caf50"
+      />
+      <div
+        class="sc-dkrFOg hVhUrU"
+        color="#8bc34a"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#8bc34a"
+      />
+      <div
+        class="sc-dkrFOg OxhhB"
+        color="#cddc39"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#cddc39"
+      />
+      <div
+        class="sc-dkrFOg jvkZeR"
+        color="#ffeb3b"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#ffeb3b"
+      />
+      <div
+        class="sc-dkrFOg itDwZm"
+        color="#ffc107"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#ffc107"
+      />
+      <div
+        class="sc-dkrFOg eUaFzy"
+        color="#ff9800"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#ff9800"
+      />
+      <div
+        class="sc-dkrFOg eMlMmp"
+        color="#ff5722"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#ff5722"
+      />
+      <div
+        class="sc-dkrFOg gwIDOp"
+        color="#795548"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#795548"
+      />
+      <div
+        class="sc-dkrFOg hyAkPn"
+        color="#9e9e9e"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#9e9e9e"
+      />
+      <div
+        class="sc-dkrFOg kMvvYA"
+        color="#607d8b"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#607d8b"
+      />
+      <div
+        class="sc-dkrFOg bHKOmn"
+        color="#000000"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#000000"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ColorPicker should properly render ColorPicker component with eyeDropper 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="sc-gswNZR cUahRX"
+      >
+        <div
+          class="sc-eDvSVe liHQaa"
+        >
+          <div
+            class="sc-dkrFOg kATToL"
+            color="#f44336"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#f44336"
+          />
+          <div
+            class="sc-dkrFOg flZVnC"
+            color="#e91e63"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#e91e63"
+          />
+          <div
+            class="sc-dkrFOg dZuRky"
+            color="#9c27b0"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#9c27b0"
+          />
+          <div
+            class="sc-dkrFOg dLzigJ"
+            color="#673ab7"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#673ab7"
+          />
+          <div
+            class="sc-dkrFOg cIKPeB"
+            color="#3f51b5"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#3f51b5"
+          />
+          <div
+            class="sc-dkrFOg iaOTIm"
+            color="#2196f3"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#2196f3"
+          />
+          <div
+            class="sc-dkrFOg gkaFDa"
+            color="#03a9f4"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#03a9f4"
+          />
+          <div
+            class="sc-dkrFOg hntGBW"
+            color="#00bcd4"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#00bcd4"
+          />
+          <div
+            class="sc-dkrFOg cxeLKY"
+            color="#009688"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#009688"
+          />
+          <div
+            class="sc-dkrFOg ittzWy"
+            color="#4caf50"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#4caf50"
+          />
+          <div
+            class="sc-dkrFOg hVhUrU"
+            color="#8bc34a"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#8bc34a"
+          />
+          <div
+            class="sc-dkrFOg OxhhB"
+            color="#cddc39"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#cddc39"
+          />
+          <div
+            class="sc-dkrFOg jvkZeR"
+            color="#ffeb3b"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#ffeb3b"
+          />
+          <div
+            class="sc-dkrFOg itDwZm"
+            color="#ffc107"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#ffc107"
+          />
+          <div
+            class="sc-dkrFOg eUaFzy"
+            color="#ff9800"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#ff9800"
+          />
+          <div
+            class="sc-dkrFOg eMlMmp"
+            color="#ff5722"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#ff5722"
+          />
+          <div
+            class="sc-dkrFOg gwIDOp"
+            color="#795548"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#795548"
+          />
+          <div
+            class="sc-dkrFOg hyAkPn"
+            color="#9e9e9e"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#9e9e9e"
+          />
+          <div
+            class="sc-dkrFOg kMvvYA"
+            color="#607d8b"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#607d8b"
+          />
+          <div
+            class="sc-dkrFOg bHKOmn"
+            color="#000000"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#000000"
+          />
+          <div
+            class="sc-hLBbgP fcmBod"
+            data-testid="test-eyedropper"
+            shape="circle"
+            title="EyeDropper"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M50.75 333.25c-12 12-18.75 28.28-18.75 45.26V424L0 480l32 32 56-32h45.49c16.97 0 33.25-6.74 45.25-18.74l126.64-126.62-128-128L50.75 333.25zM483.88 28.12c-37.47-37.5-98.28-37.5-135.75 0l-77.09 77.09-13.1-13.1c-9.44-9.44-24.65-9.31-33.94 0l-40.97 40.97c-9.37 9.37-9.37 24.57 0 33.94l161.94 161.94c9.44 9.44 24.65 9.31 33.94 0L419.88 288c9.37-9.37 9.37-24.57 0-33.94l-13.1-13.1 77.09-77.09c37.51-37.48 37.51-98.26.01-135.75z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="sc-gswNZR cUahRX"
+    >
+      <div
+        class="sc-eDvSVe liHQaa"
+      >
+        <div
+          class="sc-dkrFOg kATToL"
+          color="#f44336"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#f44336"
+        />
+        <div
+          class="sc-dkrFOg flZVnC"
+          color="#e91e63"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#e91e63"
+        />
+        <div
+          class="sc-dkrFOg dZuRky"
+          color="#9c27b0"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#9c27b0"
+        />
+        <div
+          class="sc-dkrFOg dLzigJ"
+          color="#673ab7"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#673ab7"
+        />
+        <div
+          class="sc-dkrFOg cIKPeB"
+          color="#3f51b5"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#3f51b5"
+        />
+        <div
+          class="sc-dkrFOg iaOTIm"
+          color="#2196f3"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#2196f3"
+        />
+        <div
+          class="sc-dkrFOg gkaFDa"
+          color="#03a9f4"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#03a9f4"
+        />
+        <div
+          class="sc-dkrFOg hntGBW"
+          color="#00bcd4"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#00bcd4"
+        />
+        <div
+          class="sc-dkrFOg cxeLKY"
+          color="#009688"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#009688"
+        />
+        <div
+          class="sc-dkrFOg ittzWy"
+          color="#4caf50"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#4caf50"
+        />
+        <div
+          class="sc-dkrFOg hVhUrU"
+          color="#8bc34a"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#8bc34a"
+        />
+        <div
+          class="sc-dkrFOg OxhhB"
+          color="#cddc39"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#cddc39"
+        />
+        <div
+          class="sc-dkrFOg jvkZeR"
+          color="#ffeb3b"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#ffeb3b"
+        />
+        <div
+          class="sc-dkrFOg itDwZm"
+          color="#ffc107"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#ffc107"
+        />
+        <div
+          class="sc-dkrFOg eUaFzy"
+          color="#ff9800"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#ff9800"
+        />
+        <div
+          class="sc-dkrFOg eMlMmp"
+          color="#ff5722"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#ff5722"
+        />
+        <div
+          class="sc-dkrFOg gwIDOp"
+          color="#795548"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#795548"
+        />
+        <div
+          class="sc-dkrFOg hyAkPn"
+          color="#9e9e9e"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#9e9e9e"
+        />
+        <div
+          class="sc-dkrFOg kMvvYA"
+          color="#607d8b"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#607d8b"
+        />
+        <div
+          class="sc-dkrFOg bHKOmn"
+          color="#000000"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#000000"
+        />
+        <div
+          class="sc-hLBbgP fcmBod"
+          data-testid="test-eyedropper"
+          shape="circle"
+          title="EyeDropper"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 512 512"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M50.75 333.25c-12 12-18.75 28.28-18.75 45.26V424L0 480l32 32 56-32h45.49c16.97 0 33.25-6.74 45.25-18.74l126.64-126.62-128-128L50.75 333.25zM483.88 28.12c-37.47-37.5-98.28-37.5-135.75 0l-77.09 77.09-13.1-13.1c-9.44-9.44-24.65-9.31-33.94 0l-40.97 40.97c-9.37 9.37-9.37 24.57 0 33.94l161.94 161.94c9.44 9.44 24.65 9.31 33.94 0L419.88 288c9.37-9.37 9.37-24.57 0-33.94l-13.1-13.1 77.09-77.09c37.51-37.48 37.51-98.26.01-135.75z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`ColorPicker should properly render ColorPicker component with header 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="sc-gswNZR cUahRX"
+      >
+        <div
+          class="sc-bcXHqe jWRxcD"
+          color="#f44336"
+        >
+          #f44336
+        </div>
+        <div
+          class="sc-eDvSVe liHQaa"
+        >
+          <div
+            class="sc-dkrFOg kATToL"
+            color="#f44336"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#f44336"
+          />
+          <div
+            class="sc-dkrFOg flZVnC"
+            color="#e91e63"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#e91e63"
+          />
+          <div
+            class="sc-dkrFOg dZuRky"
+            color="#9c27b0"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#9c27b0"
+          />
+          <div
+            class="sc-dkrFOg dLzigJ"
+            color="#673ab7"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#673ab7"
+          />
+          <div
+            class="sc-dkrFOg cIKPeB"
+            color="#3f51b5"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#3f51b5"
+          />
+          <div
+            class="sc-dkrFOg iaOTIm"
+            color="#2196f3"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#2196f3"
+          />
+          <div
+            class="sc-dkrFOg gkaFDa"
+            color="#03a9f4"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#03a9f4"
+          />
+          <div
+            class="sc-dkrFOg hntGBW"
+            color="#00bcd4"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#00bcd4"
+          />
+          <div
+            class="sc-dkrFOg cxeLKY"
+            color="#009688"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#009688"
+          />
+          <div
+            class="sc-dkrFOg ittzWy"
+            color="#4caf50"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#4caf50"
+          />
+          <div
+            class="sc-dkrFOg hVhUrU"
+            color="#8bc34a"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#8bc34a"
+          />
+          <div
+            class="sc-dkrFOg OxhhB"
+            color="#cddc39"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#cddc39"
+          />
+          <div
+            class="sc-dkrFOg jvkZeR"
+            color="#ffeb3b"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#ffeb3b"
+          />
+          <div
+            class="sc-dkrFOg itDwZm"
+            color="#ffc107"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#ffc107"
+          />
+          <div
+            class="sc-dkrFOg eUaFzy"
+            color="#ff9800"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#ff9800"
+          />
+          <div
+            class="sc-dkrFOg eMlMmp"
+            color="#ff5722"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#ff5722"
+          />
+          <div
+            class="sc-dkrFOg gwIDOp"
+            color="#795548"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#795548"
+          />
+          <div
+            class="sc-dkrFOg hyAkPn"
+            color="#9e9e9e"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#9e9e9e"
+          />
+          <div
+            class="sc-dkrFOg kMvvYA"
+            color="#607d8b"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#607d8b"
+          />
+          <div
+            class="sc-dkrFOg bHKOmn"
+            color="#000000"
+            data-testid="test-colorselector"
+            shape="circle"
+            title="#000000"
+          />
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="sc-gswNZR cUahRX"
+    >
+      <div
+        class="sc-bcXHqe jWRxcD"
+        color="#f44336"
+      >
+        #f44336
+      </div>
+      <div
+        class="sc-eDvSVe liHQaa"
+      >
+        <div
+          class="sc-dkrFOg kATToL"
+          color="#f44336"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#f44336"
+        />
+        <div
+          class="sc-dkrFOg flZVnC"
+          color="#e91e63"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#e91e63"
+        />
+        <div
+          class="sc-dkrFOg dZuRky"
+          color="#9c27b0"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#9c27b0"
+        />
+        <div
+          class="sc-dkrFOg dLzigJ"
+          color="#673ab7"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#673ab7"
+        />
+        <div
+          class="sc-dkrFOg cIKPeB"
+          color="#3f51b5"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#3f51b5"
+        />
+        <div
+          class="sc-dkrFOg iaOTIm"
+          color="#2196f3"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#2196f3"
+        />
+        <div
+          class="sc-dkrFOg gkaFDa"
+          color="#03a9f4"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#03a9f4"
+        />
+        <div
+          class="sc-dkrFOg hntGBW"
+          color="#00bcd4"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#00bcd4"
+        />
+        <div
+          class="sc-dkrFOg cxeLKY"
+          color="#009688"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#009688"
+        />
+        <div
+          class="sc-dkrFOg ittzWy"
+          color="#4caf50"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#4caf50"
+        />
+        <div
+          class="sc-dkrFOg hVhUrU"
+          color="#8bc34a"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#8bc34a"
+        />
+        <div
+          class="sc-dkrFOg OxhhB"
+          color="#cddc39"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#cddc39"
+        />
+        <div
+          class="sc-dkrFOg jvkZeR"
+          color="#ffeb3b"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#ffeb3b"
+        />
+        <div
+          class="sc-dkrFOg itDwZm"
+          color="#ffc107"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#ffc107"
+        />
+        <div
+          class="sc-dkrFOg eUaFzy"
+          color="#ff9800"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#ff9800"
+        />
+        <div
+          class="sc-dkrFOg eMlMmp"
+          color="#ff5722"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#ff5722"
+        />
+        <div
+          class="sc-dkrFOg gwIDOp"
+          color="#795548"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#795548"
+        />
+        <div
+          class="sc-dkrFOg hyAkPn"
+          color="#9e9e9e"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#9e9e9e"
+        />
+        <div
+          class="sc-dkrFOg kMvvYA"
+          color="#607d8b"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#607d8b"
+        />
+        <div
+          class="sc-dkrFOg bHKOmn"
+          color="#000000"
+          data-testid="test-colorselector"
+          shape="circle"
+          title="#000000"
+        />
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`ColorPicker should properly render ColorPicker component with own colors 1`] = `
+<div>
+  <div
+    class="sc-gswNZR cUahRX"
+  >
+    <div
+      class="sc-eDvSVe bPxyte"
+    >
+      <div
+        class="sc-dkrFOg kcJYXv"
+        color="#b2dfdb"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#b2dfdb"
+      />
+      <div
+        class="sc-dkrFOg ifMpXO"
+        color="#ffcdd2"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#ffcdd2"
+      />
+      <div
+        class="sc-dkrFOg iglSob"
+        color="#b3e5fc"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#b3e5fc"
+      />
+      <div
+        class="sc-dkrFOg XrKv"
+        color="#d7ccc8"
+        data-testid="test-colorselector"
+        shape="circle"
+        title="#d7ccc8"
+      />
+    </div>
+  </div>
+</div>
+`;

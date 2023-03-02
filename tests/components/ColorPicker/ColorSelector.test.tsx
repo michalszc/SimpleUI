@@ -1,6 +1,6 @@
 import React from "react";
 import '@testing-library/jest-dom';
-import { render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import ColorSelector from "../../../src/components/ColorPicker/ColorSelector";
 
 describe("ColorSelector", () => {
@@ -29,5 +29,13 @@ describe("ColorSelector", () => {
             <ColorSelector color={color} shape={'circle'} setColor={mockFn} />
         );
         expect(getByTestId('test-colorselector')).toHaveStyle(`background-color: ${color}`);
+    });
+    test("should properly trigger setColor function on click", () => {
+        const { getByTestId } = render(
+            <ColorSelector color={color} shape={'circle'} setColor={mockFn} />
+        );
+        const colorSelector =  getByTestId('test-colorselector');
+        fireEvent.click(colorSelector);
+        expect(mockFn).toBeCalled();
     });
 });
