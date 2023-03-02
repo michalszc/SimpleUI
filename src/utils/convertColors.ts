@@ -1,8 +1,20 @@
 import { round, isNil } from "lodash";
 
+/**
+ * Converts rgb to hex
+ * @param r - red
+ * @param g - green
+ * @param b - blue 
+ * @returns hex value
+ */
 export const rgbToHex = (r: number, g: number, b: number) => 
     "#" + (1 << 24 | r << 16 | g << 8 | b).toString(16).slice(1);
 
+/**
+ * Converts hex to rgb
+ * @param h - hex
+ * @returns rgb value
+ */
 export function hexToRgb(h: string) {
   // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
@@ -16,9 +28,22 @@ export function hexToRgb(h: string) {
   };
 }
 
+/**
+ * Converts rgba to hex
+ * @param r - red
+ * @param g - green
+ * @param b - blue 
+ * @param a - alpha
+ * @returns hex value
+ */
 export const rgbaToHex = (r: number, g: number, b: number, a: number) => 
   rgbToHex(r,g,b) + (round(255 * a / 100) | 1 << 8).toString(16).slice(1);
 
+/**
+ * Converts hex to rgba 
+ * @param h - hex 
+ * @returns rgba value
+ */
 export function hexToRgba(h: string) {
     // remove invalid characters
     let hex = h.replace(/[^0-9a-fA-F]/g, '');
@@ -38,6 +63,13 @@ export function hexToRgba(h: string) {
     };
 }
 
+/**
+ * Converts rgb to hsl
+ * @param r - red
+ * @param g - green
+ * @param b - blue 
+ * @returns hsl value
+ */
 export const rgbToHsl = (r: number, g: number, b: number) => {
     const _r = r / 255;
     const _g = g / 255;
@@ -77,6 +109,13 @@ export const rgbToHsl = (r: number, g: number, b: number) => {
     };
 };
 
+/**
+ * Converts hsl to rgb
+ * @param h - hue 
+ * @param s - saturation 
+ * @param l - lightness
+ * @returns rgb value
+ */
 export const hslToRgb = (h: number, s: number, l: number) => {
   const _s = s / 100;
   const _l = l / 100;
@@ -123,18 +162,38 @@ export const hslToRgb = (h: number, s: number, l: number) => {
   };
 };
 
+/**
+ * Converts hex to hsl
+ * @param h - hex
+ * @returns hsl value
+ */
 export const hexToHsl = (h: string) => {
   const { r, g, b } = hexToRgb(h)!; // eslint-disable-line @typescript-eslint/no-non-null-assertion
 
   return rgbToHsl(r,g,b);
 };
 
+/**
+ * Converts hsl to hex
+ * @param h - hue 
+ * @param s - saturation 
+ * @param l - lightness
+ * @returns hex value
+ */
 export const hslToHex = (h: number, s: number, l: number) => {
   const { r, g, b } = hslToRgb(h, s, l)!; // eslint-disable-line @typescript-eslint/no-non-null-assertion
 
   return rgbToHex(r, g, b);
 };
 
+/**
+ * Converts rgba to hsla
+ * @param r - red
+ * @param g - green
+ * @param b - blue 
+ * @param a - alpha 
+ * @returns hsla value
+ */
 export const rgbaToHsla = (r: number, g: number, b: number, a: number) => {
   const { h, s, l } = rgbToHsl(r,g,b);
 
@@ -143,6 +202,14 @@ export const rgbaToHsla = (r: number, g: number, b: number, a: number) => {
   };
 };
 
+/**
+ * Converts hsla to rgba
+ * @param h - hue 
+ * @param s - saturation 
+ * @param l - lightness
+ * @param a - alpha 
+ * @returns rgba value
+ */
 export const hslaToRgba = (h: number, s: number, l: number, a: number) => {
   const { r, g, b } = hslToRgb(h, s, l)!; // eslint-disable-line @typescript-eslint/no-non-null-assertion
 
@@ -151,12 +218,25 @@ export const hslaToRgba = (h: number, s: number, l: number, a: number) => {
   };
 };
 
+/**
+ * Converts hex to hsla
+ * @param h - hex 
+ * @returns hex value
+ */
 export const hexToHsla = (h: string) => {
   const { r, g, b, a } = hexToRgba(h)!; // eslint-disable-line @typescript-eslint/no-non-null-assertion
 
   return rgbaToHsla(r, g, b, a);
 };
 
+/**
+ * Converts hsla to hex
+ * @param h - hue 
+ * @param s - saturation 
+ * @param l - lightness
+ * @param a - alpha 
+ * @returns hex value
+ */
 export const hslaToHex = (h: number, s: number, l: number, a: number) => {
   const { r, g, b, a: _a } = hslaToRgba(h, s, l, a)!; // eslint-disable-line @typescript-eslint/no-non-null-assertion
 
