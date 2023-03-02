@@ -196,7 +196,6 @@ const StyledInputContainer = styled.div`
     align-items: center;
 `;
 
-
 const StyledInput = styled.input`
     border: .3px solid #e0e0e0;
     border-radius: 5px;

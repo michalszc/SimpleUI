@@ -1,11 +1,9 @@
 import React, { FC, useEffect } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
 import { OptionProps } from "./Option";
 import { RxCross2 } from 'react-icons/rx';
 import { RiArrowDownSLine } from 'react-icons/ri';
-import type * as CSS from "csstype";
-import Tag from "./Tag";
 
 export interface SelectProps extends StyleProps{
     /**
@@ -25,11 +23,6 @@ export interface SelectProps extends StyleProps{
      */
     placeholder?: string;
     /**
-     * costum bg color for tags
-     */
-
-    tagBgColor?: CSS.DataType.Color;
-    /**
      * activated everytime the component is rendered
      */
     onChange: (v: string) => void;
@@ -39,7 +32,7 @@ export interface SelectProps extends StyleProps{
     children: React.ReactElement<OptionProps> | Array<React.ReactElement<OptionProps>>;
 }
 
-const SingleSelect: FC<SelectProps> = ({ onChange, tagBgColor, placeholder, children, label,  ...props }) => {
+const SingleSelect: FC<SelectProps> = ({ onChange, placeholder, children, label,  ...props }) => {
     const [searchInput, setSearchInput] = React.useState<string>("");
     const [selectedOption, setSelectedOption] = React.useState<string>("");
     const [show, setShow] = React.useState<boolean>(false);
@@ -55,6 +48,7 @@ const SingleSelect: FC<SelectProps> = ({ onChange, tagBgColor, placeholder, chil
 
     const resetInput = () => {
         setSearchInput("");
+        deleteSelectedOption();
     };
 
     const checkIfSelected = (elem: string):boolean => {
@@ -69,6 +63,7 @@ const SingleSelect: FC<SelectProps> = ({ onChange, tagBgColor, placeholder, chil
 
     const addSelectedOption = (elem: string) => {
         setSelectedOption(elem);
+        setSearchInput(elem);
     };
 
     const changeSelectedOptions = (elem: string) => {
@@ -81,20 +76,13 @@ const SingleSelect: FC<SelectProps> = ({ onChange, tagBgColor, placeholder, chil
         setShow(v => !v);
     };
 
-    const tagColor = tagBgColor !== undefined ? tagBgColor : '#2196f3';
-
     return(
         <Styles {...props}>
 
             <MainContainer>
                 <Label>{label}</Label>
                 <SelectOptionContainer>
-                {
-                    selectedOption.length > 0 ?
-                    <StyledInputContainer>
-                        <Tag marginLeft={'5px'} bg={tagColor} value={selectedOption} onClick={() => deleteSelectedOption()}/>
-                    </StyledInputContainer>
-                    :   
+
                     <StyledInputContainer>
                         <StyledInput 
                             placeholder={placeholder} 
@@ -102,33 +90,31 @@ const SingleSelect: FC<SelectProps> = ({ onChange, tagBgColor, placeholder, chil
                             value={searchInput} 
                             onChange={handleChange}
                         />
+                        {   
+                            searchInput.length !== 0 && 
+                            <Icon onClick={resetInput}><RxCross2 size='1.2rem' /></Icon> 
+                        }
                         {
-                            searchInput.length !== 0 ?
-                            <Icon onClick={resetInput}><RxCross2 size='1.2rem' /></Icon>
-                            : 
-                            (show ? 
+                            show ? 
                             <Icon style={{ rotate: 'x 180deg' }} onClick={() => setShow(v => !v)}><RiArrowDownSLine size='1.5rem'/></Icon>
                             :
                             <Icon onClick={() => setShow(v => !v)}><RiArrowDownSLine size='1.5rem'/></Icon>
-                            )                        
-                        }
+                        }                        
+                       
                     </StyledInputContainer>
-                }
+
                 </SelectOptionContainer>
 
-                {
-                    show &&
-                    <OptionsList>
-                        {React.Children.map(children, child => {
-                            if (child.props.value.trim().toLowerCase().match(searchInput.trim().toLowerCase())) {
-                                return React.cloneElement(child, {
-                                    isChecked: checkIfSelected(child.props.value),
-                                    onClick: () => changeSelectedOptions(child.props.value)
-                                });
-                            }
-                        })}
-                    </OptionsList>
-                }
+                <OptionsList hidden={!show}>
+                    {React.Children.map(children, child => {
+                        if (child.props.value.trim().toLowerCase().match(searchInput.trim().toLowerCase())) {
+                            return React.cloneElement(child, {
+                                isChecked: checkIfSelected(child.props.value),
+                                onClick: () => changeSelectedOptions(child.props.value)
+                            }); 
+                        }
+                    })}
+                </OptionsList>
 
             </MainContainer>
 
@@ -216,6 +202,11 @@ const OptionsList = styled.div`
     overflow-x: hidden;
     box-shadow: 0 2px 2px #cfcfcf;
     border-radius: 5px;
+
+    ${({ hidden }) => hidden && css`
+        display: none;
+
+    `}
 
     &::-webkit-scrollbar {
         background-color: #dedede88;
