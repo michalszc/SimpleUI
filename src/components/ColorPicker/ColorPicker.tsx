@@ -67,7 +67,7 @@ export interface ColorPickerProps extends StyleProps {
      */
     eyeDropper?: boolean;
     /**
-     * Specify whether to display the input. The default is `hex`.
+     * Specify whether to display the input. The default is `hide`.
      */
     input?: 'hex' | 'hsl' | 'hsla' | 'rgb' | 'rgba' | 'hide';
     /**
@@ -79,13 +79,12 @@ export interface ColorPickerProps extends StyleProps {
 const ColorPicker: FC<ColorPickerProps> = ({
     colors = predefinedColors, selectedColor = colors[0], 
     shape = 'circle', row, column, size,
-    eyeDropper = false, header = false, input = 'hex',
+    eyeDropper = false, header = false, input = 'hide',
     onChange = () => {}, ...props // eslint-disable-line @typescript-eslint/no-empty-function
 }) => {
     
     if (isEmpty(colors)) {
-        console.error('Colors array should contain at least one item'); // eslint-disable-line no-console
-        return <></>;
+        throw new Error('Colors array should contain at least one item');
     }
 
     const [color, setColor] = useState<CSS.DataType.Color>(
@@ -98,7 +97,7 @@ const ColorPicker: FC<ColorPickerProps> = ({
             _size.push(size[0] > 0 ? floor(size[0]) : 4);
             _size.push(size[1] > 0 ? floor(size[1]) : 4);
             if (size.some((v: number) => v <= 0)) {
-                console.error('Size should contain numbers greater than 0'); // eslint-disable-line no-console
+                throw new Error('Size should contain numbers greater than 0');
             }
         }
 
@@ -107,7 +106,7 @@ const ColorPicker: FC<ColorPickerProps> = ({
             if (row > 0) {
                 _row = floor(row);
             } else {
-                console.error('Row should be greater than 0'); // eslint-disable-line no-console
+                throw new Error('Row should be greater than 0');
             }
         }
 
@@ -116,7 +115,7 @@ const ColorPicker: FC<ColorPickerProps> = ({
             if (column > 0) {
                 _column = floor(column);
             } else {
-                console.error('Column should be greater than 0'); // eslint-disable-line no-console
+                throw new Error('Column should be greater than 0');
             }
         }
 
