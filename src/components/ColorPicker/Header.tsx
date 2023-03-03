@@ -34,7 +34,7 @@ const Header: FC<HeaderProps> = ({
     color
 }) => (
     <Styles>
-        <ColorPickerHeader color={color}>
+        <ColorPickerHeader color={color} className={"simpleui-colorpicker-header"}>
             {color}
         </ColorPickerHeader>
     </Styles>

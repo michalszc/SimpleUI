@@ -7,6 +7,7 @@ exports[`CustomInput should properly render CustomInput component 1`] = `
     <div>
       <div
         class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+        mode="light"
       >
         <div
           class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -23,6 +24,7 @@ exports[`CustomInput should properly render CustomInput component 1`] = `
   "container": <div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      mode="light"
     >
       <div
         class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"

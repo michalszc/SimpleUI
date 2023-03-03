@@ -6,10 +6,12 @@ exports[`HSLInput should properly render HSLInput component 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="sc-hLBbgP DwPCz"
+        class="sc-hLBbgP DwPCz simpleui-colorpicker-hslcontainer"
+        mode="light"
       >
         <div
           class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+          mode="light"
         >
           <div
             class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -23,6 +25,7 @@ exports[`HSLInput should properly render HSLInput component 1`] = `
         </div>
         <div
           class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+          mode="light"
         >
           <div
             class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -36,6 +39,7 @@ exports[`HSLInput should properly render HSLInput component 1`] = `
         </div>
         <div
           class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+          mode="light"
         >
           <div
             class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -52,10 +56,12 @@ exports[`HSLInput should properly render HSLInput component 1`] = `
   </body>,
   "container": <div>
     <div
-      class="sc-hLBbgP DwPCz"
+      class="sc-hLBbgP DwPCz simpleui-colorpicker-hslcontainer"
+      mode="light"
     >
       <div
         class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+        mode="light"
       >
         <div
           class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -69,6 +75,7 @@ exports[`HSLInput should properly render HSLInput component 1`] = `
       </div>
       <div
         class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+        mode="light"
       >
         <div
           class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -82,6 +89,7 @@ exports[`HSLInput should properly render HSLInput component 1`] = `
       </div>
       <div
         class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+        mode="light"
       >
         <div
           class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"

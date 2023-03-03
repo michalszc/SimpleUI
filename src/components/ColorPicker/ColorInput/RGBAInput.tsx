@@ -78,7 +78,7 @@ const RGBAInput: FC<RGBAInputProps> = ({
 
     return (
         <Styles>
-            <RGBAContainer>
+            <RGBAContainer className={"simpleui-colorpicker-rgbacontainer"}>
                 <CustomInput prefix={'R'} value={rgbaColor.r} onChange={(v: string) => setNewColor({
                     r: Number(v)
                 })} />

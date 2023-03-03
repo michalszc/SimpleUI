@@ -3,10 +3,11 @@
 exports[`ColorInput should properly render ColorInput component - type hex 1`] = `
 <div>
   <div
-    class="sc-hLBbgP hbVVJF"
+    class="sc-hLBbgP hbVVJF simpleui-colorpicker-hexcontainer"
   >
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      mode="light"
     >
       <div
         class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -25,10 +26,12 @@ exports[`ColorInput should properly render ColorInput component - type hex 1`] =
 exports[`ColorInput should properly render ColorInput component - type hsl 1`] = `
 <div>
   <div
-    class="sc-iBYQkv boYHRO"
+    class="sc-iBYQkv boYHRO simpleui-colorpicker-hslcontainer"
+    mode="light"
   >
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      mode="light"
     >
       <div
         class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -42,6 +45,7 @@ exports[`ColorInput should properly render ColorInput component - type hsl 1`] =
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      mode="light"
     >
       <div
         class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -55,6 +59,7 @@ exports[`ColorInput should properly render ColorInput component - type hsl 1`] =
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      mode="light"
     >
       <div
         class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -73,10 +78,12 @@ exports[`ColorInput should properly render ColorInput component - type hsl 1`] =
 exports[`ColorInput should properly render ColorInput component - type hsla 1`] = `
 <div>
   <div
-    class="sc-gKPRtg hDVxWN"
+    class="sc-gKPRtg hDVxWN simpleui-colorpicker-hslacontainer"
+    mode="light"
   >
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      mode="light"
     >
       <div
         class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -90,6 +97,7 @@ exports[`ColorInput should properly render ColorInput component - type hsla 1`] 
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      mode="light"
     >
       <div
         class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -103,6 +111,7 @@ exports[`ColorInput should properly render ColorInput component - type hsla 1`] 
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      mode="light"
     >
       <div
         class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -116,6 +125,7 @@ exports[`ColorInput should properly render ColorInput component - type hsla 1`] 
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      mode="light"
     >
       <div
         class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -134,10 +144,12 @@ exports[`ColorInput should properly render ColorInput component - type hsla 1`] 
 exports[`ColorInput should properly render ColorInput component - type rgb 1`] = `
 <div>
   <div
-    class="sc-eDvSVe eJvcwf"
+    class="sc-eDvSVe eJvcwf simpleui-colorpicker-rgbcontainer"
+    mode="light"
   >
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      mode="light"
     >
       <div
         class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -151,6 +163,7 @@ exports[`ColorInput should properly render ColorInput component - type rgb 1`] =
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      mode="light"
     >
       <div
         class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -164,6 +177,7 @@ exports[`ColorInput should properly render ColorInput component - type rgb 1`] =
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      mode="light"
     >
       <div
         class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -182,10 +196,12 @@ exports[`ColorInput should properly render ColorInput component - type rgb 1`] =
 exports[`ColorInput should properly render ColorInput component - type rgba 1`] = `
 <div>
   <div
-    class="sc-jSUZER ggHwA-d"
+    class="sc-jSUZER ggHwA-d simpleui-colorpicker-rgbacontainer"
+    mode="light"
   >
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      mode="light"
     >
       <div
         class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -199,6 +215,7 @@ exports[`ColorInput should properly render ColorInput component - type rgba 1`] 
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      mode="light"
     >
       <div
         class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -212,6 +229,7 @@ exports[`ColorInput should properly render ColorInput component - type rgba 1`] 
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      mode="light"
     >
       <div
         class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -225,6 +243,7 @@ exports[`ColorInput should properly render ColorInput component - type rgba 1`] 
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      mode="light"
     >
       <div
         class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"

@@ -6,13 +6,15 @@ exports[`Container should properly render Container component 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="sc-bcXHqe essumT"
+        class="sc-bcXHqe essumT simpleui-colorpicker-container"
+        mode="light"
       />
     </div>
   </body>,
   "container": <div>
     <div
-      class="sc-bcXHqe essumT"
+      class="sc-bcXHqe essumT simpleui-colorpicker-container"
+      mode="light"
     />
   </div>,
   "debug": [Function],
@@ -75,7 +77,8 @@ exports[`Container should properly render Container component with children 1`] 
   "baseElement": <body>
     <div>
       <div
-        class="sc-bcXHqe essumT"
+        class="sc-bcXHqe essumT simpleui-colorpicker-container"
+        mode="light"
       >
         <div />
       </div>
@@ -83,7 +86,8 @@ exports[`Container should properly render Container component with children 1`] 
   </body>,
   "container": <div>
     <div
-      class="sc-bcXHqe essumT"
+      class="sc-bcXHqe essumT simpleui-colorpicker-container"
+      mode="light"
     >
       <div />
     </div>

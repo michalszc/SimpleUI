@@ -6,10 +6,11 @@ exports[`HSLAInput should properly render HexInput component 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="sc-hLBbgP hbVVJF"
+        class="sc-hLBbgP hbVVJF simpleui-colorpicker-hexcontainer"
       >
         <div
           class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+          mode="light"
         >
           <div
             class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"
@@ -26,10 +27,11 @@ exports[`HSLAInput should properly render HexInput component 1`] = `
   </body>,
   "container": <div>
     <div
-      class="sc-hLBbgP hbVVJF"
+      class="sc-hLBbgP hbVVJF simpleui-colorpicker-hexcontainer"
     >
       <div
         class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+        mode="light"
       >
         <div
           class="sc-gswNZR icpVtD simpleui-colorpicker-input-prefix"

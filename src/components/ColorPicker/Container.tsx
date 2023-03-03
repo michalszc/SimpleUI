@@ -20,7 +20,7 @@ const Container: FC<ContainerProps> = ({
     children, ...props
 }) => (
     <Styles {...props}>
-        <ColorPickerContainer>
+        <ColorPickerContainer className={"simpleui-colorpicker-container"}>
             {children}
         </ColorPickerContainer>
     </Styles>

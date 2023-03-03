@@ -6,8 +6,9 @@ exports[`Header should properly render Header component 1`] = `
   "baseElement": <body>
     <div>
       <div
-        class="sc-bcXHqe hDjTQR"
+        class="sc-bcXHqe hDjTQR simpleui-colorpicker-header"
         color="#FFF"
+        mode="light"
       >
         #FFF
       </div>
@@ -15,8 +16,9 @@ exports[`Header should properly render Header component 1`] = `
   </body>,
   "container": <div>
     <div
-      class="sc-bcXHqe hDjTQR"
+      class="sc-bcXHqe hDjTQR simpleui-colorpicker-header"
       color="#FFF"
+      mode="light"
     >
       #FFF
     </div>

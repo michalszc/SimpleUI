@@ -19,7 +19,7 @@ const HexContainer = styled.div`
 const HexInput: FC<HexInputProps> = ({
     color, setColor
 }) => (
-    <HexContainer>
+    <HexContainer className={"simpleui-colorpicker-hexcontainer"}>
         <CustomInput prefix={'#'} value={color.replace('#', '')} onChange={(value: string) => setColor(`#${value}`)} />
     </HexContainer>
 );

@@ -6,9 +6,10 @@ exports[`ColorSelector should properly render ColorSelector component - shape ci
   "baseElement": <body>
     <div>
       <div
-        class="sc-bcXHqe esTXWD"
+        class="sc-bcXHqe esTXWD simpleui-colorpicker-colorselector"
         color="#FFF"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#FFF"
       />
@@ -16,9 +17,10 @@ exports[`ColorSelector should properly render ColorSelector component - shape ci
   </body>,
   "container": <div>
     <div
-      class="sc-bcXHqe esTXWD"
+      class="sc-bcXHqe esTXWD simpleui-colorpicker-colorselector"
       color="#FFF"
       data-testid="test-colorselector"
+      mode="light"
       shape="circle"
       title="#FFF"
     />
@@ -83,9 +85,10 @@ exports[`ColorSelector should properly render ColorSelector component - shape ro
   "baseElement": <body>
     <div>
       <div
-        class="sc-bcXHqe gSmhYw"
+        class="sc-bcXHqe gSmhYw simpleui-colorpicker-colorselector"
         color="#FFF"
         data-testid="test-colorselector"
+        mode="light"
         shape="roundedSquare"
         title="#FFF"
       />
@@ -93,9 +96,10 @@ exports[`ColorSelector should properly render ColorSelector component - shape ro
   </body>,
   "container": <div>
     <div
-      class="sc-bcXHqe gSmhYw"
+      class="sc-bcXHqe gSmhYw simpleui-colorpicker-colorselector"
       color="#FFF"
       data-testid="test-colorselector"
+      mode="light"
       shape="roundedSquare"
       title="#FFF"
     />
@@ -160,9 +164,10 @@ exports[`ColorSelector should properly render ColorSelector component - shape sq
   "baseElement": <body>
     <div>
       <div
-        class="sc-bcXHqe iYJEST"
+        class="sc-bcXHqe iYJEST simpleui-colorpicker-colorselector"
         color="#FFF"
         data-testid="test-colorselector"
+        mode="light"
         shape="square"
         title="#FFF"
       />
@@ -170,9 +175,10 @@ exports[`ColorSelector should properly render ColorSelector component - shape sq
   </body>,
   "container": <div>
     <div
-      class="sc-bcXHqe iYJEST"
+      class="sc-bcXHqe iYJEST simpleui-colorpicker-colorselector"
       color="#FFF"
       data-testid="test-colorselector"
+      mode="light"
       shape="square"
       title="#FFF"
     />

@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useMemo, useState } from "react";
 import * as CSS from "csstype";
-import { StyleProps } from "../../utils";
+import { BaseProps, StyleProps } from "../../utils";
 import { Colors } from "../../constants";
 import Header from "./Header";
 import Container from "./Container";
@@ -31,7 +31,7 @@ export const predefinedColors = [
     Colors.black
 ];
 
-export interface ColorPickerProps extends StyleProps {
+export interface ColorPickerProps extends StyleProps, BaseProps {
     /**
      * Array of colors to display.
      */

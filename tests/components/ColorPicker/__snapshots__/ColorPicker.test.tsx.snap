@@ -6,148 +6,170 @@ exports[`ColorPicker should properly render ColorPicker component with custom si
   "baseElement": <body>
     <div>
       <div
-        class="sc-gswNZR cUahRX"
+        class="sc-gswNZR cUahRX simpleui-colorpicker-container"
+        mode="light"
       >
         <div
-          class="sc-eDvSVe enjHDS"
+          class="sc-eDvSVe enjHDS simpleui-colorpicker-list"
+          mode="light"
         >
           <div
-            class="sc-dkrFOg kATToL"
+            class="sc-dkrFOg kATToL simpleui-colorpicker-colorselector"
             color="#f44336"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#f44336"
           />
           <div
-            class="sc-dkrFOg flZVnC"
+            class="sc-dkrFOg flZVnC simpleui-colorpicker-colorselector"
             color="#e91e63"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#e91e63"
           />
           <div
-            class="sc-dkrFOg dZuRky"
+            class="sc-dkrFOg dZuRky simpleui-colorpicker-colorselector"
             color="#9c27b0"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#9c27b0"
           />
           <div
-            class="sc-dkrFOg dLzigJ"
+            class="sc-dkrFOg dLzigJ simpleui-colorpicker-colorselector"
             color="#673ab7"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#673ab7"
           />
           <div
-            class="sc-dkrFOg cIKPeB"
+            class="sc-dkrFOg cIKPeB simpleui-colorpicker-colorselector"
             color="#3f51b5"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#3f51b5"
           />
           <div
-            class="sc-dkrFOg iaOTIm"
+            class="sc-dkrFOg iaOTIm simpleui-colorpicker-colorselector"
             color="#2196f3"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#2196f3"
           />
           <div
-            class="sc-dkrFOg gkaFDa"
+            class="sc-dkrFOg gkaFDa simpleui-colorpicker-colorselector"
             color="#03a9f4"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#03a9f4"
           />
           <div
-            class="sc-dkrFOg hntGBW"
+            class="sc-dkrFOg hntGBW simpleui-colorpicker-colorselector"
             color="#00bcd4"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#00bcd4"
           />
           <div
-            class="sc-dkrFOg cxeLKY"
+            class="sc-dkrFOg cxeLKY simpleui-colorpicker-colorselector"
             color="#009688"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#009688"
           />
           <div
-            class="sc-dkrFOg ittzWy"
+            class="sc-dkrFOg ittzWy simpleui-colorpicker-colorselector"
             color="#4caf50"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#4caf50"
           />
           <div
-            class="sc-dkrFOg hVhUrU"
+            class="sc-dkrFOg hVhUrU simpleui-colorpicker-colorselector"
             color="#8bc34a"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#8bc34a"
           />
           <div
-            class="sc-dkrFOg OxhhB"
+            class="sc-dkrFOg OxhhB simpleui-colorpicker-colorselector"
             color="#cddc39"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#cddc39"
           />
           <div
-            class="sc-dkrFOg jvkZeR"
+            class="sc-dkrFOg jvkZeR simpleui-colorpicker-colorselector"
             color="#ffeb3b"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#ffeb3b"
           />
           <div
-            class="sc-dkrFOg itDwZm"
+            class="sc-dkrFOg itDwZm simpleui-colorpicker-colorselector"
             color="#ffc107"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#ffc107"
           />
           <div
-            class="sc-dkrFOg eUaFzy"
+            class="sc-dkrFOg eUaFzy simpleui-colorpicker-colorselector"
             color="#ff9800"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#ff9800"
           />
           <div
-            class="sc-dkrFOg eMlMmp"
+            class="sc-dkrFOg eMlMmp simpleui-colorpicker-colorselector"
             color="#ff5722"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#ff5722"
           />
           <div
-            class="sc-dkrFOg gwIDOp"
+            class="sc-dkrFOg gwIDOp simpleui-colorpicker-colorselector"
             color="#795548"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#795548"
           />
           <div
-            class="sc-dkrFOg hyAkPn"
+            class="sc-dkrFOg hyAkPn simpleui-colorpicker-colorselector"
             color="#9e9e9e"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#9e9e9e"
           />
           <div
-            class="sc-dkrFOg kMvvYA"
+            class="sc-dkrFOg kMvvYA simpleui-colorpicker-colorselector"
             color="#607d8b"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#607d8b"
           />
           <div
-            class="sc-dkrFOg bHKOmn"
+            class="sc-dkrFOg bHKOmn simpleui-colorpicker-colorselector"
             color="#000000"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#000000"
           />
@@ -157,148 +179,170 @@ exports[`ColorPicker should properly render ColorPicker component with custom si
   </body>,
   "container": <div>
     <div
-      class="sc-gswNZR cUahRX"
+      class="sc-gswNZR cUahRX simpleui-colorpicker-container"
+      mode="light"
     >
       <div
-        class="sc-eDvSVe enjHDS"
+        class="sc-eDvSVe enjHDS simpleui-colorpicker-list"
+        mode="light"
       >
         <div
-          class="sc-dkrFOg kATToL"
+          class="sc-dkrFOg kATToL simpleui-colorpicker-colorselector"
           color="#f44336"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#f44336"
         />
         <div
-          class="sc-dkrFOg flZVnC"
+          class="sc-dkrFOg flZVnC simpleui-colorpicker-colorselector"
           color="#e91e63"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#e91e63"
         />
         <div
-          class="sc-dkrFOg dZuRky"
+          class="sc-dkrFOg dZuRky simpleui-colorpicker-colorselector"
           color="#9c27b0"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#9c27b0"
         />
         <div
-          class="sc-dkrFOg dLzigJ"
+          class="sc-dkrFOg dLzigJ simpleui-colorpicker-colorselector"
           color="#673ab7"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#673ab7"
         />
         <div
-          class="sc-dkrFOg cIKPeB"
+          class="sc-dkrFOg cIKPeB simpleui-colorpicker-colorselector"
           color="#3f51b5"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#3f51b5"
         />
         <div
-          class="sc-dkrFOg iaOTIm"
+          class="sc-dkrFOg iaOTIm simpleui-colorpicker-colorselector"
           color="#2196f3"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#2196f3"
         />
         <div
-          class="sc-dkrFOg gkaFDa"
+          class="sc-dkrFOg gkaFDa simpleui-colorpicker-colorselector"
           color="#03a9f4"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#03a9f4"
         />
         <div
-          class="sc-dkrFOg hntGBW"
+          class="sc-dkrFOg hntGBW simpleui-colorpicker-colorselector"
           color="#00bcd4"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#00bcd4"
         />
         <div
-          class="sc-dkrFOg cxeLKY"
+          class="sc-dkrFOg cxeLKY simpleui-colorpicker-colorselector"
           color="#009688"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#009688"
         />
         <div
-          class="sc-dkrFOg ittzWy"
+          class="sc-dkrFOg ittzWy simpleui-colorpicker-colorselector"
           color="#4caf50"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#4caf50"
         />
         <div
-          class="sc-dkrFOg hVhUrU"
+          class="sc-dkrFOg hVhUrU simpleui-colorpicker-colorselector"
           color="#8bc34a"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#8bc34a"
         />
         <div
-          class="sc-dkrFOg OxhhB"
+          class="sc-dkrFOg OxhhB simpleui-colorpicker-colorselector"
           color="#cddc39"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#cddc39"
         />
         <div
-          class="sc-dkrFOg jvkZeR"
+          class="sc-dkrFOg jvkZeR simpleui-colorpicker-colorselector"
           color="#ffeb3b"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#ffeb3b"
         />
         <div
-          class="sc-dkrFOg itDwZm"
+          class="sc-dkrFOg itDwZm simpleui-colorpicker-colorselector"
           color="#ffc107"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#ffc107"
         />
         <div
-          class="sc-dkrFOg eUaFzy"
+          class="sc-dkrFOg eUaFzy simpleui-colorpicker-colorselector"
           color="#ff9800"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#ff9800"
         />
         <div
-          class="sc-dkrFOg eMlMmp"
+          class="sc-dkrFOg eMlMmp simpleui-colorpicker-colorselector"
           color="#ff5722"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#ff5722"
         />
         <div
-          class="sc-dkrFOg gwIDOp"
+          class="sc-dkrFOg gwIDOp simpleui-colorpicker-colorselector"
           color="#795548"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#795548"
         />
         <div
-          class="sc-dkrFOg hyAkPn"
+          class="sc-dkrFOg hyAkPn simpleui-colorpicker-colorselector"
           color="#9e9e9e"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#9e9e9e"
         />
         <div
-          class="sc-dkrFOg kMvvYA"
+          class="sc-dkrFOg kMvvYA simpleui-colorpicker-colorselector"
           color="#607d8b"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#607d8b"
         />
         <div
-          class="sc-dkrFOg bHKOmn"
+          class="sc-dkrFOg bHKOmn simpleui-colorpicker-colorselector"
           color="#000000"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#000000"
         />
@@ -362,148 +406,170 @@ exports[`ColorPicker should properly render ColorPicker component with custom si
 exports[`ColorPicker should properly render ColorPicker component with default props 1`] = `
 <div>
   <div
-    class="sc-gswNZR cUahRX"
+    class="sc-gswNZR cUahRX simpleui-colorpicker-container"
+    mode="light"
   >
     <div
-      class="sc-eDvSVe liHQaa"
+      class="sc-eDvSVe liHQaa simpleui-colorpicker-list"
+      mode="light"
     >
       <div
-        class="sc-dkrFOg kATToL"
+        class="sc-dkrFOg kATToL simpleui-colorpicker-colorselector"
         color="#f44336"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#f44336"
       />
       <div
-        class="sc-dkrFOg flZVnC"
+        class="sc-dkrFOg flZVnC simpleui-colorpicker-colorselector"
         color="#e91e63"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#e91e63"
       />
       <div
-        class="sc-dkrFOg dZuRky"
+        class="sc-dkrFOg dZuRky simpleui-colorpicker-colorselector"
         color="#9c27b0"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#9c27b0"
       />
       <div
-        class="sc-dkrFOg dLzigJ"
+        class="sc-dkrFOg dLzigJ simpleui-colorpicker-colorselector"
         color="#673ab7"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#673ab7"
       />
       <div
-        class="sc-dkrFOg cIKPeB"
+        class="sc-dkrFOg cIKPeB simpleui-colorpicker-colorselector"
         color="#3f51b5"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#3f51b5"
       />
       <div
-        class="sc-dkrFOg iaOTIm"
+        class="sc-dkrFOg iaOTIm simpleui-colorpicker-colorselector"
         color="#2196f3"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#2196f3"
       />
       <div
-        class="sc-dkrFOg gkaFDa"
+        class="sc-dkrFOg gkaFDa simpleui-colorpicker-colorselector"
         color="#03a9f4"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#03a9f4"
       />
       <div
-        class="sc-dkrFOg hntGBW"
+        class="sc-dkrFOg hntGBW simpleui-colorpicker-colorselector"
         color="#00bcd4"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#00bcd4"
       />
       <div
-        class="sc-dkrFOg cxeLKY"
+        class="sc-dkrFOg cxeLKY simpleui-colorpicker-colorselector"
         color="#009688"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#009688"
       />
       <div
-        class="sc-dkrFOg ittzWy"
+        class="sc-dkrFOg ittzWy simpleui-colorpicker-colorselector"
         color="#4caf50"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#4caf50"
       />
       <div
-        class="sc-dkrFOg hVhUrU"
+        class="sc-dkrFOg hVhUrU simpleui-colorpicker-colorselector"
         color="#8bc34a"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#8bc34a"
       />
       <div
-        class="sc-dkrFOg OxhhB"
+        class="sc-dkrFOg OxhhB simpleui-colorpicker-colorselector"
         color="#cddc39"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#cddc39"
       />
       <div
-        class="sc-dkrFOg jvkZeR"
+        class="sc-dkrFOg jvkZeR simpleui-colorpicker-colorselector"
         color="#ffeb3b"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#ffeb3b"
       />
       <div
-        class="sc-dkrFOg itDwZm"
+        class="sc-dkrFOg itDwZm simpleui-colorpicker-colorselector"
         color="#ffc107"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#ffc107"
       />
       <div
-        class="sc-dkrFOg eUaFzy"
+        class="sc-dkrFOg eUaFzy simpleui-colorpicker-colorselector"
         color="#ff9800"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#ff9800"
       />
       <div
-        class="sc-dkrFOg eMlMmp"
+        class="sc-dkrFOg eMlMmp simpleui-colorpicker-colorselector"
         color="#ff5722"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#ff5722"
       />
       <div
-        class="sc-dkrFOg gwIDOp"
+        class="sc-dkrFOg gwIDOp simpleui-colorpicker-colorselector"
         color="#795548"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#795548"
       />
       <div
-        class="sc-dkrFOg hyAkPn"
+        class="sc-dkrFOg hyAkPn simpleui-colorpicker-colorselector"
         color="#9e9e9e"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#9e9e9e"
       />
       <div
-        class="sc-dkrFOg kMvvYA"
+        class="sc-dkrFOg kMvvYA simpleui-colorpicker-colorselector"
         color="#607d8b"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#607d8b"
       />
       <div
-        class="sc-dkrFOg bHKOmn"
+        class="sc-dkrFOg bHKOmn simpleui-colorpicker-colorselector"
         color="#000000"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#000000"
       />
@@ -518,154 +584,177 @@ exports[`ColorPicker should properly render ColorPicker component with eyeDroppe
   "baseElement": <body>
     <div>
       <div
-        class="sc-gswNZR cUahRX"
+        class="sc-gswNZR cUahRX simpleui-colorpicker-container"
+        mode="light"
       >
         <div
-          class="sc-eDvSVe liHQaa"
+          class="sc-eDvSVe liHQaa simpleui-colorpicker-list"
+          mode="light"
         >
           <div
-            class="sc-dkrFOg kATToL"
+            class="sc-dkrFOg kATToL simpleui-colorpicker-colorselector"
             color="#f44336"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#f44336"
           />
           <div
-            class="sc-dkrFOg flZVnC"
+            class="sc-dkrFOg flZVnC simpleui-colorpicker-colorselector"
             color="#e91e63"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#e91e63"
           />
           <div
-            class="sc-dkrFOg dZuRky"
+            class="sc-dkrFOg dZuRky simpleui-colorpicker-colorselector"
             color="#9c27b0"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#9c27b0"
           />
           <div
-            class="sc-dkrFOg dLzigJ"
+            class="sc-dkrFOg dLzigJ simpleui-colorpicker-colorselector"
             color="#673ab7"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#673ab7"
           />
           <div
-            class="sc-dkrFOg cIKPeB"
+            class="sc-dkrFOg cIKPeB simpleui-colorpicker-colorselector"
             color="#3f51b5"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#3f51b5"
           />
           <div
-            class="sc-dkrFOg iaOTIm"
+            class="sc-dkrFOg iaOTIm simpleui-colorpicker-colorselector"
             color="#2196f3"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#2196f3"
           />
           <div
-            class="sc-dkrFOg gkaFDa"
+            class="sc-dkrFOg gkaFDa simpleui-colorpicker-colorselector"
             color="#03a9f4"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#03a9f4"
           />
           <div
-            class="sc-dkrFOg hntGBW"
+            class="sc-dkrFOg hntGBW simpleui-colorpicker-colorselector"
             color="#00bcd4"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#00bcd4"
           />
           <div
-            class="sc-dkrFOg cxeLKY"
+            class="sc-dkrFOg cxeLKY simpleui-colorpicker-colorselector"
             color="#009688"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#009688"
           />
           <div
-            class="sc-dkrFOg ittzWy"
+            class="sc-dkrFOg ittzWy simpleui-colorpicker-colorselector"
             color="#4caf50"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#4caf50"
           />
           <div
-            class="sc-dkrFOg hVhUrU"
+            class="sc-dkrFOg hVhUrU simpleui-colorpicker-colorselector"
             color="#8bc34a"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#8bc34a"
           />
           <div
-            class="sc-dkrFOg OxhhB"
+            class="sc-dkrFOg OxhhB simpleui-colorpicker-colorselector"
             color="#cddc39"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#cddc39"
           />
           <div
-            class="sc-dkrFOg jvkZeR"
+            class="sc-dkrFOg jvkZeR simpleui-colorpicker-colorselector"
             color="#ffeb3b"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#ffeb3b"
           />
           <div
-            class="sc-dkrFOg itDwZm"
+            class="sc-dkrFOg itDwZm simpleui-colorpicker-colorselector"
             color="#ffc107"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#ffc107"
           />
           <div
-            class="sc-dkrFOg eUaFzy"
+            class="sc-dkrFOg eUaFzy simpleui-colorpicker-colorselector"
             color="#ff9800"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#ff9800"
           />
           <div
-            class="sc-dkrFOg eMlMmp"
+            class="sc-dkrFOg eMlMmp simpleui-colorpicker-colorselector"
             color="#ff5722"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#ff5722"
           />
           <div
-            class="sc-dkrFOg gwIDOp"
+            class="sc-dkrFOg gwIDOp simpleui-colorpicker-colorselector"
             color="#795548"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#795548"
           />
           <div
-            class="sc-dkrFOg hyAkPn"
+            class="sc-dkrFOg hyAkPn simpleui-colorpicker-colorselector"
             color="#9e9e9e"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#9e9e9e"
           />
           <div
-            class="sc-dkrFOg kMvvYA"
+            class="sc-dkrFOg kMvvYA simpleui-colorpicker-colorselector"
             color="#607d8b"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#607d8b"
           />
           <div
-            class="sc-dkrFOg bHKOmn"
+            class="sc-dkrFOg bHKOmn simpleui-colorpicker-colorselector"
             color="#000000"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#000000"
           />
           <div
-            class="sc-hLBbgP fcmBod"
+            class="sc-hLBbgP fcmBod simpleui-colorpicker-eyedropper"
             data-testid="test-eyedropper"
+            mode="light"
             shape="circle"
             title="EyeDropper"
           >
@@ -689,154 +778,177 @@ exports[`ColorPicker should properly render ColorPicker component with eyeDroppe
   </body>,
   "container": <div>
     <div
-      class="sc-gswNZR cUahRX"
+      class="sc-gswNZR cUahRX simpleui-colorpicker-container"
+      mode="light"
     >
       <div
-        class="sc-eDvSVe liHQaa"
+        class="sc-eDvSVe liHQaa simpleui-colorpicker-list"
+        mode="light"
       >
         <div
-          class="sc-dkrFOg kATToL"
+          class="sc-dkrFOg kATToL simpleui-colorpicker-colorselector"
           color="#f44336"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#f44336"
         />
         <div
-          class="sc-dkrFOg flZVnC"
+          class="sc-dkrFOg flZVnC simpleui-colorpicker-colorselector"
           color="#e91e63"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#e91e63"
         />
         <div
-          class="sc-dkrFOg dZuRky"
+          class="sc-dkrFOg dZuRky simpleui-colorpicker-colorselector"
           color="#9c27b0"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#9c27b0"
         />
         <div
-          class="sc-dkrFOg dLzigJ"
+          class="sc-dkrFOg dLzigJ simpleui-colorpicker-colorselector"
           color="#673ab7"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#673ab7"
         />
         <div
-          class="sc-dkrFOg cIKPeB"
+          class="sc-dkrFOg cIKPeB simpleui-colorpicker-colorselector"
           color="#3f51b5"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#3f51b5"
         />
         <div
-          class="sc-dkrFOg iaOTIm"
+          class="sc-dkrFOg iaOTIm simpleui-colorpicker-colorselector"
           color="#2196f3"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#2196f3"
         />
         <div
-          class="sc-dkrFOg gkaFDa"
+          class="sc-dkrFOg gkaFDa simpleui-colorpicker-colorselector"
           color="#03a9f4"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#03a9f4"
         />
         <div
-          class="sc-dkrFOg hntGBW"
+          class="sc-dkrFOg hntGBW simpleui-colorpicker-colorselector"
           color="#00bcd4"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#00bcd4"
         />
         <div
-          class="sc-dkrFOg cxeLKY"
+          class="sc-dkrFOg cxeLKY simpleui-colorpicker-colorselector"
           color="#009688"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#009688"
         />
         <div
-          class="sc-dkrFOg ittzWy"
+          class="sc-dkrFOg ittzWy simpleui-colorpicker-colorselector"
           color="#4caf50"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#4caf50"
         />
         <div
-          class="sc-dkrFOg hVhUrU"
+          class="sc-dkrFOg hVhUrU simpleui-colorpicker-colorselector"
           color="#8bc34a"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#8bc34a"
         />
         <div
-          class="sc-dkrFOg OxhhB"
+          class="sc-dkrFOg OxhhB simpleui-colorpicker-colorselector"
           color="#cddc39"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#cddc39"
         />
         <div
-          class="sc-dkrFOg jvkZeR"
+          class="sc-dkrFOg jvkZeR simpleui-colorpicker-colorselector"
           color="#ffeb3b"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#ffeb3b"
         />
         <div
-          class="sc-dkrFOg itDwZm"
+          class="sc-dkrFOg itDwZm simpleui-colorpicker-colorselector"
           color="#ffc107"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#ffc107"
         />
         <div
-          class="sc-dkrFOg eUaFzy"
+          class="sc-dkrFOg eUaFzy simpleui-colorpicker-colorselector"
           color="#ff9800"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#ff9800"
         />
         <div
-          class="sc-dkrFOg eMlMmp"
+          class="sc-dkrFOg eMlMmp simpleui-colorpicker-colorselector"
           color="#ff5722"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#ff5722"
         />
         <div
-          class="sc-dkrFOg gwIDOp"
+          class="sc-dkrFOg gwIDOp simpleui-colorpicker-colorselector"
           color="#795548"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#795548"
         />
         <div
-          class="sc-dkrFOg hyAkPn"
+          class="sc-dkrFOg hyAkPn simpleui-colorpicker-colorselector"
           color="#9e9e9e"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#9e9e9e"
         />
         <div
-          class="sc-dkrFOg kMvvYA"
+          class="sc-dkrFOg kMvvYA simpleui-colorpicker-colorselector"
           color="#607d8b"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#607d8b"
         />
         <div
-          class="sc-dkrFOg bHKOmn"
+          class="sc-dkrFOg bHKOmn simpleui-colorpicker-colorselector"
           color="#000000"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#000000"
         />
         <div
-          class="sc-hLBbgP fcmBod"
+          class="sc-hLBbgP fcmBod simpleui-colorpicker-eyedropper"
           data-testid="test-eyedropper"
+          mode="light"
           shape="circle"
           title="EyeDropper"
         >
@@ -917,154 +1029,177 @@ exports[`ColorPicker should properly render ColorPicker component with header 1`
   "baseElement": <body>
     <div>
       <div
-        class="sc-gswNZR cUahRX"
+        class="sc-gswNZR cUahRX simpleui-colorpicker-container"
+        mode="light"
       >
         <div
-          class="sc-bcXHqe jWRxcD"
+          class="sc-bcXHqe jWRxcD simpleui-colorpicker-header"
           color="#f44336"
+          mode="light"
         >
           #f44336
         </div>
         <div
-          class="sc-eDvSVe liHQaa"
+          class="sc-eDvSVe liHQaa simpleui-colorpicker-list"
+          mode="light"
         >
           <div
-            class="sc-dkrFOg kATToL"
+            class="sc-dkrFOg kATToL simpleui-colorpicker-colorselector"
             color="#f44336"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#f44336"
           />
           <div
-            class="sc-dkrFOg flZVnC"
+            class="sc-dkrFOg flZVnC simpleui-colorpicker-colorselector"
             color="#e91e63"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#e91e63"
           />
           <div
-            class="sc-dkrFOg dZuRky"
+            class="sc-dkrFOg dZuRky simpleui-colorpicker-colorselector"
             color="#9c27b0"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#9c27b0"
           />
           <div
-            class="sc-dkrFOg dLzigJ"
+            class="sc-dkrFOg dLzigJ simpleui-colorpicker-colorselector"
             color="#673ab7"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#673ab7"
           />
           <div
-            class="sc-dkrFOg cIKPeB"
+            class="sc-dkrFOg cIKPeB simpleui-colorpicker-colorselector"
             color="#3f51b5"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#3f51b5"
           />
           <div
-            class="sc-dkrFOg iaOTIm"
+            class="sc-dkrFOg iaOTIm simpleui-colorpicker-colorselector"
             color="#2196f3"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#2196f3"
           />
           <div
-            class="sc-dkrFOg gkaFDa"
+            class="sc-dkrFOg gkaFDa simpleui-colorpicker-colorselector"
             color="#03a9f4"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#03a9f4"
           />
           <div
-            class="sc-dkrFOg hntGBW"
+            class="sc-dkrFOg hntGBW simpleui-colorpicker-colorselector"
             color="#00bcd4"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#00bcd4"
           />
           <div
-            class="sc-dkrFOg cxeLKY"
+            class="sc-dkrFOg cxeLKY simpleui-colorpicker-colorselector"
             color="#009688"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#009688"
           />
           <div
-            class="sc-dkrFOg ittzWy"
+            class="sc-dkrFOg ittzWy simpleui-colorpicker-colorselector"
             color="#4caf50"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#4caf50"
           />
           <div
-            class="sc-dkrFOg hVhUrU"
+            class="sc-dkrFOg hVhUrU simpleui-colorpicker-colorselector"
             color="#8bc34a"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#8bc34a"
           />
           <div
-            class="sc-dkrFOg OxhhB"
+            class="sc-dkrFOg OxhhB simpleui-colorpicker-colorselector"
             color="#cddc39"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#cddc39"
           />
           <div
-            class="sc-dkrFOg jvkZeR"
+            class="sc-dkrFOg jvkZeR simpleui-colorpicker-colorselector"
             color="#ffeb3b"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#ffeb3b"
           />
           <div
-            class="sc-dkrFOg itDwZm"
+            class="sc-dkrFOg itDwZm simpleui-colorpicker-colorselector"
             color="#ffc107"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#ffc107"
           />
           <div
-            class="sc-dkrFOg eUaFzy"
+            class="sc-dkrFOg eUaFzy simpleui-colorpicker-colorselector"
             color="#ff9800"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#ff9800"
           />
           <div
-            class="sc-dkrFOg eMlMmp"
+            class="sc-dkrFOg eMlMmp simpleui-colorpicker-colorselector"
             color="#ff5722"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#ff5722"
           />
           <div
-            class="sc-dkrFOg gwIDOp"
+            class="sc-dkrFOg gwIDOp simpleui-colorpicker-colorselector"
             color="#795548"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#795548"
           />
           <div
-            class="sc-dkrFOg hyAkPn"
+            class="sc-dkrFOg hyAkPn simpleui-colorpicker-colorselector"
             color="#9e9e9e"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#9e9e9e"
           />
           <div
-            class="sc-dkrFOg kMvvYA"
+            class="sc-dkrFOg kMvvYA simpleui-colorpicker-colorselector"
             color="#607d8b"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#607d8b"
           />
           <div
-            class="sc-dkrFOg bHKOmn"
+            class="sc-dkrFOg bHKOmn simpleui-colorpicker-colorselector"
             color="#000000"
             data-testid="test-colorselector"
+            mode="light"
             shape="circle"
             title="#000000"
           />
@@ -1074,154 +1209,177 @@ exports[`ColorPicker should properly render ColorPicker component with header 1`
   </body>,
   "container": <div>
     <div
-      class="sc-gswNZR cUahRX"
+      class="sc-gswNZR cUahRX simpleui-colorpicker-container"
+      mode="light"
     >
       <div
-        class="sc-bcXHqe jWRxcD"
+        class="sc-bcXHqe jWRxcD simpleui-colorpicker-header"
         color="#f44336"
+        mode="light"
       >
         #f44336
       </div>
       <div
-        class="sc-eDvSVe liHQaa"
+        class="sc-eDvSVe liHQaa simpleui-colorpicker-list"
+        mode="light"
       >
         <div
-          class="sc-dkrFOg kATToL"
+          class="sc-dkrFOg kATToL simpleui-colorpicker-colorselector"
           color="#f44336"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#f44336"
         />
         <div
-          class="sc-dkrFOg flZVnC"
+          class="sc-dkrFOg flZVnC simpleui-colorpicker-colorselector"
           color="#e91e63"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#e91e63"
         />
         <div
-          class="sc-dkrFOg dZuRky"
+          class="sc-dkrFOg dZuRky simpleui-colorpicker-colorselector"
           color="#9c27b0"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#9c27b0"
         />
         <div
-          class="sc-dkrFOg dLzigJ"
+          class="sc-dkrFOg dLzigJ simpleui-colorpicker-colorselector"
           color="#673ab7"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#673ab7"
         />
         <div
-          class="sc-dkrFOg cIKPeB"
+          class="sc-dkrFOg cIKPeB simpleui-colorpicker-colorselector"
           color="#3f51b5"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#3f51b5"
         />
         <div
-          class="sc-dkrFOg iaOTIm"
+          class="sc-dkrFOg iaOTIm simpleui-colorpicker-colorselector"
           color="#2196f3"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#2196f3"
         />
         <div
-          class="sc-dkrFOg gkaFDa"
+          class="sc-dkrFOg gkaFDa simpleui-colorpicker-colorselector"
           color="#03a9f4"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#03a9f4"
         />
         <div
-          class="sc-dkrFOg hntGBW"
+          class="sc-dkrFOg hntGBW simpleui-colorpicker-colorselector"
           color="#00bcd4"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#00bcd4"
         />
         <div
-          class="sc-dkrFOg cxeLKY"
+          class="sc-dkrFOg cxeLKY simpleui-colorpicker-colorselector"
           color="#009688"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#009688"
         />
         <div
-          class="sc-dkrFOg ittzWy"
+          class="sc-dkrFOg ittzWy simpleui-colorpicker-colorselector"
           color="#4caf50"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#4caf50"
         />
         <div
-          class="sc-dkrFOg hVhUrU"
+          class="sc-dkrFOg hVhUrU simpleui-colorpicker-colorselector"
           color="#8bc34a"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#8bc34a"
         />
         <div
-          class="sc-dkrFOg OxhhB"
+          class="sc-dkrFOg OxhhB simpleui-colorpicker-colorselector"
           color="#cddc39"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#cddc39"
         />
         <div
-          class="sc-dkrFOg jvkZeR"
+          class="sc-dkrFOg jvkZeR simpleui-colorpicker-colorselector"
           color="#ffeb3b"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#ffeb3b"
         />
         <div
-          class="sc-dkrFOg itDwZm"
+          class="sc-dkrFOg itDwZm simpleui-colorpicker-colorselector"
           color="#ffc107"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#ffc107"
         />
         <div
-          class="sc-dkrFOg eUaFzy"
+          class="sc-dkrFOg eUaFzy simpleui-colorpicker-colorselector"
           color="#ff9800"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#ff9800"
         />
         <div
-          class="sc-dkrFOg eMlMmp"
+          class="sc-dkrFOg eMlMmp simpleui-colorpicker-colorselector"
           color="#ff5722"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#ff5722"
         />
         <div
-          class="sc-dkrFOg gwIDOp"
+          class="sc-dkrFOg gwIDOp simpleui-colorpicker-colorselector"
           color="#795548"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#795548"
         />
         <div
-          class="sc-dkrFOg hyAkPn"
+          class="sc-dkrFOg hyAkPn simpleui-colorpicker-colorselector"
           color="#9e9e9e"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#9e9e9e"
         />
         <div
-          class="sc-dkrFOg kMvvYA"
+          class="sc-dkrFOg kMvvYA simpleui-colorpicker-colorselector"
           color="#607d8b"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#607d8b"
         />
         <div
-          class="sc-dkrFOg bHKOmn"
+          class="sc-dkrFOg bHKOmn simpleui-colorpicker-colorselector"
           color="#000000"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#000000"
         />
@@ -1285,36 +1443,42 @@ exports[`ColorPicker should properly render ColorPicker component with header 1`
 exports[`ColorPicker should properly render ColorPicker component with own colors 1`] = `
 <div>
   <div
-    class="sc-gswNZR cUahRX"
+    class="sc-gswNZR cUahRX simpleui-colorpicker-container"
+    mode="light"
   >
     <div
-      class="sc-eDvSVe bPxyte"
+      class="sc-eDvSVe bPxyte simpleui-colorpicker-list"
+      mode="light"
     >
       <div
-        class="sc-dkrFOg kcJYXv"
+        class="sc-dkrFOg kcJYXv simpleui-colorpicker-colorselector"
         color="#b2dfdb"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#b2dfdb"
       />
       <div
-        class="sc-dkrFOg ifMpXO"
+        class="sc-dkrFOg ifMpXO simpleui-colorpicker-colorselector"
         color="#ffcdd2"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#ffcdd2"
       />
       <div
-        class="sc-dkrFOg iglSob"
+        class="sc-dkrFOg iglSob simpleui-colorpicker-colorselector"
         color="#b3e5fc"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#b3e5fc"
       />
       <div
-        class="sc-dkrFOg XrKv"
+        class="sc-dkrFOg XrKv simpleui-colorpicker-colorselector"
         color="#d7ccc8"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#d7ccc8"
       />

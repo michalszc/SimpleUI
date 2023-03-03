@@ -59,7 +59,7 @@ const EyeDropper: FC<EyeDropperProps> = ({
                     .open()
                     .then((result) => setColor(result.sRGBHex))
                     .catch((e) => console.error('EyeDropper: ', e)); // eslint-disable-line no-console
-            }} title={'EyeDropper'} data-testid={'test-eyedropper'} >
+            }} title={'EyeDropper'} className={"simpleui-colorpicker-eyedropper"} data-testid={'test-eyedropper'} >
                 <FaEyeDropper />
             </Dropper>
         </Styles>

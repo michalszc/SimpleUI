@@ -6,33 +6,38 @@ exports[`ColorList should properly render ColorList component - shape circle 1`]
   "baseElement": <body>
     <div>
       <div
-        class="sc-dkrFOg bgZgCB"
+        class="sc-dkrFOg bgZgCB simpleui-colorpicker-list"
+        mode="light"
       >
         <div
-          class="sc-bcXHqe evoygh"
+          class="sc-bcXHqe evoygh simpleui-colorpicker-colorselector"
           color="#b2dfdb"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#b2dfdb"
         />
         <div
-          class="sc-bcXHqe jxHNVE"
+          class="sc-bcXHqe jxHNVE simpleui-colorpicker-colorselector"
           color="#ffcdd2"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#ffcdd2"
         />
         <div
-          class="sc-bcXHqe ldIywx"
+          class="sc-bcXHqe ldIywx simpleui-colorpicker-colorselector"
           color="#b3e5fc"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#b3e5fc"
         />
         <div
-          class="sc-bcXHqe jRrVxh"
+          class="sc-bcXHqe jRrVxh simpleui-colorpicker-colorselector"
           color="#d7ccc8"
           data-testid="test-colorselector"
+          mode="light"
           shape="circle"
           title="#d7ccc8"
         />
@@ -41,33 +46,38 @@ exports[`ColorList should properly render ColorList component - shape circle 1`]
   </body>,
   "container": <div>
     <div
-      class="sc-dkrFOg bgZgCB"
+      class="sc-dkrFOg bgZgCB simpleui-colorpicker-list"
+      mode="light"
     >
       <div
-        class="sc-bcXHqe evoygh"
+        class="sc-bcXHqe evoygh simpleui-colorpicker-colorselector"
         color="#b2dfdb"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#b2dfdb"
       />
       <div
-        class="sc-bcXHqe jxHNVE"
+        class="sc-bcXHqe jxHNVE simpleui-colorpicker-colorselector"
         color="#ffcdd2"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#ffcdd2"
       />
       <div
-        class="sc-bcXHqe ldIywx"
+        class="sc-bcXHqe ldIywx simpleui-colorpicker-colorselector"
         color="#b3e5fc"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#b3e5fc"
       />
       <div
-        class="sc-bcXHqe jRrVxh"
+        class="sc-bcXHqe jRrVxh simpleui-colorpicker-colorselector"
         color="#d7ccc8"
         data-testid="test-colorselector"
+        mode="light"
         shape="circle"
         title="#d7ccc8"
       />
@@ -133,33 +143,38 @@ exports[`ColorList should properly render ColorList component - shape roundedSqu
   "baseElement": <body>
     <div>
       <div
-        class="sc-dkrFOg bgZgCB"
+        class="sc-dkrFOg bgZgCB simpleui-colorpicker-list"
+        mode="light"
       >
         <div
-          class="sc-bcXHqe kaVimm"
+          class="sc-bcXHqe kaVimm simpleui-colorpicker-colorselector"
           color="#b2dfdb"
           data-testid="test-colorselector"
+          mode="light"
           shape="roundedSquare"
           title="#b2dfdb"
         />
         <div
-          class="sc-bcXHqe junUgb"
+          class="sc-bcXHqe junUgb simpleui-colorpicker-colorselector"
           color="#ffcdd2"
           data-testid="test-colorselector"
+          mode="light"
           shape="roundedSquare"
           title="#ffcdd2"
         />
         <div
-          class="sc-bcXHqe inHKGm"
+          class="sc-bcXHqe inHKGm simpleui-colorpicker-colorselector"
           color="#b3e5fc"
           data-testid="test-colorselector"
+          mode="light"
           shape="roundedSquare"
           title="#b3e5fc"
         />
         <div
-          class="sc-bcXHqe bRjGSW"
+          class="sc-bcXHqe bRjGSW simpleui-colorpicker-colorselector"
           color="#d7ccc8"
           data-testid="test-colorselector"
+          mode="light"
           shape="roundedSquare"
           title="#d7ccc8"
         />
@@ -168,33 +183,38 @@ exports[`ColorList should properly render ColorList component - shape roundedSqu
   </body>,
   "container": <div>
     <div
-      class="sc-dkrFOg bgZgCB"
+      class="sc-dkrFOg bgZgCB simpleui-colorpicker-list"
+      mode="light"
     >
       <div
-        class="sc-bcXHqe kaVimm"
+        class="sc-bcXHqe kaVimm simpleui-colorpicker-colorselector"
         color="#b2dfdb"
         data-testid="test-colorselector"
+        mode="light"
         shape="roundedSquare"
         title="#b2dfdb"
       />
       <div
-        class="sc-bcXHqe junUgb"
+        class="sc-bcXHqe junUgb simpleui-colorpicker-colorselector"
         color="#ffcdd2"
         data-testid="test-colorselector"
+        mode="light"
         shape="roundedSquare"
         title="#ffcdd2"
       />
       <div
-        class="sc-bcXHqe inHKGm"
+        class="sc-bcXHqe inHKGm simpleui-colorpicker-colorselector"
         color="#b3e5fc"
         data-testid="test-colorselector"
+        mode="light"
         shape="roundedSquare"
         title="#b3e5fc"
       />
       <div
-        class="sc-bcXHqe bRjGSW"
+        class="sc-bcXHqe bRjGSW simpleui-colorpicker-colorselector"
         color="#d7ccc8"
         data-testid="test-colorselector"
+        mode="light"
         shape="roundedSquare"
         title="#d7ccc8"
       />
@@ -260,33 +280,38 @@ exports[`ColorList should properly render ColorList component - shape square 1`]
   "baseElement": <body>
     <div>
       <div
-        class="sc-dkrFOg bgZgCB"
+        class="sc-dkrFOg bgZgCB simpleui-colorpicker-list"
+        mode="light"
       >
         <div
-          class="sc-bcXHqe kiaURt"
+          class="sc-bcXHqe kiaURt simpleui-colorpicker-colorselector"
           color="#b2dfdb"
           data-testid="test-colorselector"
+          mode="light"
           shape="square"
           title="#b2dfdb"
         />
         <div
-          class="sc-bcXHqe cmauoY"
+          class="sc-bcXHqe cmauoY simpleui-colorpicker-colorselector"
           color="#ffcdd2"
           data-testid="test-colorselector"
+          mode="light"
           shape="square"
           title="#ffcdd2"
         />
         <div
-          class="sc-bcXHqe fOHpyp"
+          class="sc-bcXHqe fOHpyp simpleui-colorpicker-colorselector"
           color="#b3e5fc"
           data-testid="test-colorselector"
+          mode="light"
           shape="square"
           title="#b3e5fc"
         />
         <div
-          class="sc-bcXHqe etZazF"
+          class="sc-bcXHqe etZazF simpleui-colorpicker-colorselector"
           color="#d7ccc8"
           data-testid="test-colorselector"
+          mode="light"
           shape="square"
           title="#d7ccc8"
         />
@@ -295,33 +320,38 @@ exports[`ColorList should properly render ColorList component - shape square 1`]
   </body>,
   "container": <div>
     <div
-      class="sc-dkrFOg bgZgCB"
+      class="sc-dkrFOg bgZgCB simpleui-colorpicker-list"
+      mode="light"
     >
       <div
-        class="sc-bcXHqe kiaURt"
+        class="sc-bcXHqe kiaURt simpleui-colorpicker-colorselector"
         color="#b2dfdb"
         data-testid="test-colorselector"
+        mode="light"
         shape="square"
         title="#b2dfdb"
       />
       <div
-        class="sc-bcXHqe cmauoY"
+        class="sc-bcXHqe cmauoY simpleui-colorpicker-colorselector"
         color="#ffcdd2"
         data-testid="test-colorselector"
+        mode="light"
         shape="square"
         title="#ffcdd2"
       />
       <div
-        class="sc-bcXHqe fOHpyp"
+        class="sc-bcXHqe fOHpyp simpleui-colorpicker-colorselector"
         color="#b3e5fc"
         data-testid="test-colorselector"
+        mode="light"
         shape="square"
         title="#b3e5fc"
       />
       <div
-        class="sc-bcXHqe etZazF"
+        class="sc-bcXHqe etZazF simpleui-colorpicker-colorselector"
         color="#d7ccc8"
         data-testid="test-colorselector"
+        mode="light"
         shape="square"
         title="#d7ccc8"
       />
@@ -384,39 +414,45 @@ exports[`ColorList should properly render ColorList component - shape square 1`]
 exports[`ColorList should properly render ColorList component with EyeDropper 1`] = `
 <div>
   <div
-    class="sc-dkrFOg bgZgCB"
+    class="sc-dkrFOg bgZgCB simpleui-colorpicker-list"
+    mode="light"
   >
     <div
-      class="sc-bcXHqe evoygh"
+      class="sc-bcXHqe evoygh simpleui-colorpicker-colorselector"
       color="#b2dfdb"
       data-testid="test-colorselector"
+      mode="light"
       shape="circle"
       title="#b2dfdb"
     />
     <div
-      class="sc-bcXHqe jxHNVE"
+      class="sc-bcXHqe jxHNVE simpleui-colorpicker-colorselector"
       color="#ffcdd2"
       data-testid="test-colorselector"
+      mode="light"
       shape="circle"
       title="#ffcdd2"
     />
     <div
-      class="sc-bcXHqe ldIywx"
+      class="sc-bcXHqe ldIywx simpleui-colorpicker-colorselector"
       color="#b3e5fc"
       data-testid="test-colorselector"
+      mode="light"
       shape="circle"
       title="#b3e5fc"
     />
     <div
-      class="sc-bcXHqe jRrVxh"
+      class="sc-bcXHqe jRrVxh simpleui-colorpicker-colorselector"
       color="#d7ccc8"
       data-testid="test-colorselector"
+      mode="light"
       shape="circle"
       title="#d7ccc8"
     />
     <div
-      class="sc-gswNZR gQYeJH"
+      class="sc-gswNZR gQYeJH simpleui-colorpicker-eyedropper"
       data-testid="test-eyedropper"
+      mode="light"
       shape="circle"
       title="EyeDropper"
     >

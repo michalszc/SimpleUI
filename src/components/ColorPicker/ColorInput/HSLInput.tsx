@@ -75,7 +75,7 @@ const HSLInput: FC<HLSInputProps> = ({
 
     return (
         <Styles>
-            <HSLContainer>
+            <HSLContainer className={"simpleui-colorpicker-hslcontainer"}>
                 <CustomInput prefix={'H'} value={hslColor.h} onChange={(v: string) => setNewColor({
                     h: Number(v)
                 })} />

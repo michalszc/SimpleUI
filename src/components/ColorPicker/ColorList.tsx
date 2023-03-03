@@ -32,7 +32,7 @@ const ColorList: FC<ColorListProps> = ({
     colors, shape, size, setColor, eyeDropper
 }) => (
     <Styles>
-        <List size={size}>
+        <List size={size} className={"simpleui-colorpicker-list"}>
             {
                 colors
                     .map((color: CSS.DataType.Color) =>

@@ -43,7 +43,14 @@ const ColorSelector: FC<ColorSelectorProps> = ({
     color, shape, setColor
 }) => (
     <Styles>
-        <Color color={color} shape={shape} onClick={() => setColor(color)} title={color} data-testid={'test-colorselector'}/>
+        <Color 
+            color={color}
+            shape={shape}
+            onClick={() => setColor(color)}
+            title={color}
+            className={"simpleui-colorpicker-colorselector"}
+            data-testid={'test-colorselector'}
+        />
     </Styles>
 );
 
