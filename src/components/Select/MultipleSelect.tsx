@@ -3,11 +3,13 @@ import styled from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
 import { RxCross2 } from 'react-icons/rx';
 import { RiArrowDownSLine } from 'react-icons/ri';
-import Tag from "./Tag";
 import { OptionProps } from "./Option";
 import type * as CSS from "csstype";
+import TagsList from "./TagsList";
+import OptionsList from "./OptionsList";
+import { Colors } from "../../constants";
 
-export interface SelectProps extends StyleProps{
+export interface SelectProps extends StyleProps {
     /**
      * All available options 
      */
@@ -88,26 +90,23 @@ const MultipleSelect: FC<SelectProps> = ({ tagBgColor, label, onChange, children
         setShow(false);
     };
 
-    const tagColor = tagBgColor !== undefined ? tagBgColor : '#2196f3';
+    const tagColor = tagBgColor !== undefined ? tagBgColor : Colors.blue[500];
 
     return(
-        <Styles {...props}>
-            <StyledContainer>
-                <Label>{label}</Label>
-                <StyledSearchContainer>
-                    { selectedOptions.length !== 0 &&
-                        <StyledTagsContainer>
-                            {selectedOptions.map((elem) => 
-                                <Tag bg={tagColor} value={elem} onClick={() => deleteSelectedOption(elem)}/>
-                            )}
-                        </StyledTagsContainer>
+        <MainContainer>
+            { label && <Label>{label}</Label> }
+            <Styles {...props}>
+                <StyledSearchContainer className="simpleui-select">
+                    { selectedOptions.length !== 0 && 
+                        <TagsList onClick={deleteSelectedOption} tagBgColor={tagColor} selectedOptions={selectedOptions}/>
                     }
-                    <StyledInputContainer>
+                    <StyledInputContainer className="simpleui-select-inputcontainer">
                         <StyledInput 
                             placeholder={placeholder} 
                             onFocus={() => setShow(true)}
                             value={searchInput} 
                             onChange={handleChange}
+                            className="simpleui-select-input"
                         />
                         {
                             searchInput.length !== 0 ?
@@ -122,22 +121,19 @@ const MultipleSelect: FC<SelectProps> = ({ tagBgColor, label, onChange, children
                     </StyledInputContainer>
 
                 </StyledSearchContainer>
+            </Styles>
 
-                {show && 
-                <StyledOptionsContainer>
-                    {React.Children.map(children, child => {
-                        if (child.props.value.trim().toLowerCase().match(searchInput.trim().toLowerCase())) {
-                            return React.cloneElement(child, {
-                                isChecked: checkIfSelected(child.props.value),
-                                onClick: () => changeSelectedOptions(child.props.value)
-                            });
-                        }
-                    })}
-                </StyledOptionsContainer>
-                }
+            {show && 
+                <OptionsList 
+                    updateSelectedOptionsFunction={changeSelectedOptions}
+                    checkIfSelectedFunction={checkIfSelected}
+                    children={children}
+                    searchInput={searchInput}
+                 />
+            }
 
-            </StyledContainer>
-        </Styles>
+        </MainContainer>
+        
     );
 };
 
@@ -149,7 +145,7 @@ const Label = styled.h3`
     margin: 5px 0;
 `;
 
-const StyledContainer = styled.div`
+const MainContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -174,16 +170,6 @@ const StyledSearchContainer = styled.div`
 
     border: 3px solid #2196f3;
     border-radius: 10px;
-`;
-
-const StyledTagsContainer = styled.div`
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 10px;
-    justify-content: flex-start;
-    align-items: stretch;
 `;
 
 const StyledInputContainer = styled.div`
@@ -224,25 +210,3 @@ const Icon = styled.a`
     padding-left: 5px;
 `;
 
-const StyledOptionsContainer = styled.div`
-    width: 100%;
-    max-height: 200px;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    overflow-x: hidden;
-    box-shadow: 0 2px 2px #cfcfcf;
-    border-radius: 5px;
-
-    &::-webkit-scrollbar {
-        background-color: #dedede88;
-        width: 10px;
-        -webkit-overflow-scrolling: auto !important;
-        background-clip: border-box;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background: #a0a0a0;
-        border-radius: 20px;
-    }
-`;

@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { MultipleSelect } from "../../src/";
 import { Option } from "../../src/components/Select";
+import Colors from "../../src/constants/Colors";
 
 export default {
-    title: "SimpleUI/Select",
+    title: "SimpleUI/MultiSelect",
     component: MultipleSelect
 } as ComponentMeta<typeof MultipleSelect>;
 
@@ -32,7 +33,7 @@ SelectMultiple.decorators = [
         const [selected, setSelected] = useState<string[]>([]);
         
         return(
-            <MultipleSelect label="Label" placeholder="Select values" onChange={(v) => setSelected(v)}>
+            <MultipleSelect placeholder="Select values" onChange={(v) => setSelected(v)}>
                 <Option value={data[0]}/>
                 <Option value={data[1]}/>
                 <Option value={data[2]}/>
@@ -48,3 +49,57 @@ SelectMultiple.decorators = [
     }, 
 ];
 
+export const SelectMultipleCustomColors = Template.bind({});
+
+SelectMultipleCustomColors.decorators = [
+    () => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const [selected, setSelected] = useState<string[]>([]);
+        
+        return(
+            <MultipleSelect 
+            borderColor={Colors.pink[500]} 
+            tagBgColor={Colors.pink[500]}
+            placeholder="Select values" 
+            onChange={(v) => setSelected(v)}>
+                <Option value={data[0]}/>
+                <Option value={data[1]}/>
+                <Option value={data[2]}/>
+                <Option value={data[3]}/>
+                <Option value={data[4]}/>
+                <Option value={data[5]}/>
+                <Option value={data[6]}/>
+                <Option value={data[7]}/>
+                <Option value={data[8]}/>
+                <Option value={data[9]}/>
+            </MultipleSelect>
+        );
+    }, 
+];
+
+export const SelectMultipleWithLabel = Template.bind({});
+
+SelectMultipleWithLabel.decorators = [
+    () => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const [selected, setSelected] = useState<string[]>([]);
+        
+        return(
+            <MultipleSelect 
+            label="Label" 
+            placeholder="Select values" 
+            onChange={(v) => setSelected(v)}>
+                <Option value={data[0]}/>
+                <Option value={data[1]}/>
+                <Option value={data[2]}/>
+                <Option value={data[3]}/>
+                <Option value={data[4]}/>
+                <Option value={data[5]}/>
+                <Option value={data[6]}/>
+                <Option value={data[7]}/>
+                <Option value={data[8]}/>
+                <Option value={data[9]}/>
+            </MultipleSelect>
+        );
+    }, 
+];

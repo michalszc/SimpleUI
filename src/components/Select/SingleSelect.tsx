@@ -1,9 +1,10 @@
 import React, { FC, useEffect } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
 import { OptionProps } from "./Option";
 import { RxCross2 } from 'react-icons/rx';
 import { RiArrowDownSLine } from 'react-icons/ri';
+import OptionsList from './OptionsList';
 
 export interface SelectProps extends StyleProps{
     /**
@@ -27,13 +28,14 @@ export interface SelectProps extends StyleProps{
      */
     onChange: (v: string) => void;
     /**
-       * component's children, should be Option components
-       */
+     * component's children, should be Option components
+     */
     children: React.ReactElement<OptionProps> | Array<React.ReactElement<OptionProps>>;
 }
 
 const SingleSelect: FC<SelectProps> = ({ onChange, placeholder, children, label,  ...props }) => {
     const [searchInput, setSearchInput] = React.useState<string>("");
+    const [input, setInput] = React.useState<string>("");
     const [selectedOption, setSelectedOption] = React.useState<string>("");
     const [show, setShow] = React.useState<boolean>(false);
 
@@ -43,11 +45,13 @@ const SingleSelect: FC<SelectProps> = ({ onChange, placeholder, children, label,
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         event.preventDefault();
+        setInput(event.target.value);
         setSearchInput(event.target.value);
     };
 
     const resetInput = () => {
         setSearchInput("");
+        setInput("");
         deleteSelectedOption();
     };
 
@@ -63,7 +67,8 @@ const SingleSelect: FC<SelectProps> = ({ onChange, placeholder, children, label,
 
     const addSelectedOption = (elem: string) => {
         setSelectedOption(elem);
-        setSearchInput(elem);
+        setInput(elem);
+        setSearchInput("");
     };
 
     const changeSelectedOptions = (elem: string) => {
@@ -77,48 +82,44 @@ const SingleSelect: FC<SelectProps> = ({ onChange, placeholder, children, label,
     };
 
     return(
-        <Styles {...props}>
-
             <MainContainer>
-                <Label>{label}</Label>
-                <SelectOptionContainer>
+                {label && <Label>{label}</Label> }
+                <Styles {...props}>
+                    <SelectOptionContainer className="simpleui-select">
 
-                    <StyledInputContainer>
-                        <StyledInput 
-                            placeholder={placeholder} 
-                            onFocus={() => setShow(true)}
-                            value={searchInput} 
-                            onChange={handleChange}
-                        />
-                        {   
-                            searchInput.length !== 0 && 
-                            <Icon onClick={resetInput}><RxCross2 size='1.2rem' /></Icon> 
-                        }
-                        {
-                            show ? 
-                            <Icon style={{ rotate: 'x 180deg' }} onClick={() => setShow(v => !v)}><RiArrowDownSLine size='1.5rem'/></Icon>
-                            :
-                            <Icon onClick={() => setShow(v => !v)}><RiArrowDownSLine size='1.5rem'/></Icon>
-                        }                        
-                       
-                    </StyledInputContainer>
+                        <StyledInputContainer className="simpleui-select-inputcontainer">
+                            <StyledInput 
+                                placeholder={placeholder} 
+                                onFocus={() => setShow(true)}
+                                value={input} 
+                                onChange={handleChange}
+                                className="simpleui-select-input"
+                            />
+                            {   
+                                searchInput.length !== 0 || selectedOption.length !== 0 && 
+                                <Icon onClick={resetInput}><RxCross2 size='1.2rem' /></Icon> 
+                            }
+                            {
+                                show ? 
+                                <Icon style={{ rotate: 'x 180deg' }} onClick={() => setShow(v => !v)}><RiArrowDownSLine size='1.5rem'/></Icon>
+                                :
+                                <Icon onClick={() => setShow(v => !v)}><RiArrowDownSLine size='1.5rem'/></Icon>
+                            }                        
+                        
+                        </StyledInputContainer>
 
-                </SelectOptionContainer>
+                    </SelectOptionContainer>
+                </Styles>
 
-                <OptionsList hidden={!show}>
-                    {React.Children.map(children, child => {
-                        if (child.props.value.trim().toLowerCase().match(searchInput.trim().toLowerCase())) {
-                            return React.cloneElement(child, {
-                                isChecked: checkIfSelected(child.props.value),
-                                onClick: () => changeSelectedOptions(child.props.value)
-                            }); 
-                        }
-                    })}
-                </OptionsList>
-
+                {show && 
+                    <OptionsList 
+                        updateSelectedOptionsFunction={changeSelectedOptions}
+                        checkIfSelectedFunction={checkIfSelected}
+                        children={children}
+                        searchInput={searchInput}
+                    />
+                }
             </MainContainer>
-
-        </Styles>
     );
 };
 
@@ -138,6 +139,7 @@ const MainContainer = styled.div`
     min-width: 300px;
     width: fit-content;
     box-sizing: border-box;
+    background-color: transparent;
     height: auto;
     z-index: 10;
 `;
@@ -191,34 +193,5 @@ const Icon = styled.a`
     justify-content: center;
     margin-right: 5px;
     padding-left: 5px;
-`;
-
-const OptionsList = styled.div`
-    width: 100%;
-    max-height: 200px;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    overflow-x: hidden;
-    box-shadow: 0 2px 2px #cfcfcf;
-    border-radius: 5px;
-
-    ${({ hidden }) => hidden && css`
-        display: none;
-
-    `}
-
-    &::-webkit-scrollbar {
-        background-color: #dedede88;
-        width: 10px;
-        -webkit-overflow-scrolling: auto !important;
-        background-clip: border-box;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background: #a0a0a0;
-        border-radius: 20px;
-    }
-
 `;
 

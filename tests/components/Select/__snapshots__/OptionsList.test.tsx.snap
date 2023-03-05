@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OptionsList renders list with Option components 1`] = `
+<div>
+  <div
+    class="sc-bcXHqe jgetBf simpleui-select-optionslist"
+  >
+    <a
+      class="sc-gswNZR kEHkHz"
+      value="First option"
+    >
+      First option
+    </a>
+    <a
+      class="sc-gswNZR kEHkHz"
+      value="Second option"
+    >
+      Second option
+    </a>
+    <a
+      class="sc-gswNZR kEHkHz"
+      value="Third option"
+    >
+      Third option
+    </a>
+  </div>
+</div>
+`;

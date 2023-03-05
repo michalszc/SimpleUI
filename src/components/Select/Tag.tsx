@@ -37,9 +37,9 @@ const Cross = styled.a`
 const Tag: FC<TagProps> = ({ value, onClick , ...props }) => {
     return(
         <Styles {...props}>
-            <StyledTag>
+            <StyledTag className="simpleui-tag">
                 {value}
-                <Cross onClick={onClick}><RxCross1 color="white" /></Cross>
+                <Cross role='link' onClick={onClick}><RxCross1 color="white" /></Cross>
             </StyledTag>
         </Styles>
     );

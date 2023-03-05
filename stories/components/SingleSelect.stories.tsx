@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import { SingleSelect } from "../../src/";
 import { Option } from "../../src/components/Select";
+import Colors from "../../src/constants/Colors";
+
 
 export default {
-    title: "SimpleUI/Select",
+    title: "SimpleUI/SingleSelect",
     component: SingleSelect
 } as ComponentMeta<typeof SingleSelect>;
 
@@ -32,7 +34,7 @@ SelectSingle.decorators = [
         const [selected, setSelected] = useState<string>("");
         
         return(
-            <SingleSelect label="Label" placeholder="Select value" onChange={(v) => setSelected(v)}>
+            <SingleSelect placeholder="Select value" onChange={(v) => setSelected(v)}>
                 <Option value={data[0]}/>
                 <Option value={data[1]}/>
                 <Option value={data[2]}/>
@@ -48,3 +50,53 @@ SelectSingle.decorators = [
     }, 
 ];
 
+export const SelectSingleCustomColors = Template.bind({});
+
+SelectSingleCustomColors.decorators = [
+    () => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const [selected, setSelected] = useState<string>("");
+        
+        return(
+            <SingleSelect 
+            borderColor={Colors.pink[500]}
+            placeholder="Select value" 
+            onChange={(v) => setSelected(v)}>
+                <Option value={data[0]}/>
+                <Option value={data[1]}/>
+                <Option value={data[2]}/>
+                <Option value={data[3]}/>
+                <Option value={data[4]}/>
+                <Option value={data[5]}/>
+                <Option value={data[6]}/>
+                <Option value={data[7]}/>
+                <Option value={data[8]}/>
+                <Option value={data[9]}/>
+            </SingleSelect>
+        );
+    }, 
+];
+
+export const SelectSingleWithLabel = Template.bind({});
+
+SelectSingleWithLabel.decorators = [
+    () => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        const [selected, setSelected] = useState<string>("");
+        
+        return(
+            <SingleSelect label="Label" placeholder="Select value" onChange={(v) => setSelected(v)}>
+                <Option value={data[0]}/>
+                <Option value={data[1]}/>
+                <Option value={data[2]}/>
+                <Option value={data[3]}/>
+                <Option value={data[4]}/>
+                <Option value={data[5]}/>
+                <Option value={data[6]}/>
+                <Option value={data[7]}/>
+                <Option value={data[8]}/>
+                <Option value={data[9]}/>
+            </SingleSelect>
+        );
+    }, 
+];
