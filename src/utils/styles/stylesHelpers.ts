@@ -9,14 +9,16 @@ import { isStyleProp, StyleProperties } from "./style";
  * @param value 
  * @returns 
  */
-export function valueConverter(property: string, value: string, theme: Theme): string {
+export function valueConverter(property: string, value: string, theme: Theme, mode: 'light' | 'dark'): string {
     switch (property) {
         // Colors
         case 'color':
         case 'borderColor':
         case 'backgroundColor':
             return get(theme, `colors.${value}`, 
-                get(theme, `palette.${value}`,value) as string);
+                    get(theme, `palette.${value}.${mode}`,
+                        get(theme, `palette.${value}`,value) as string
+                    ) as string);
         // Sizes
         case 'padding':
         case 'paddingTop':
@@ -53,12 +55,12 @@ export function valueConverter(property: string, value: string, theme: Theme): s
  * @param theme 
  * @returns 
  */
-export default function getCss(props: Config, theme: Theme): Config {
+export default function getCss(props: Config, theme: Theme, mode: 'light' | 'dark'): Config {
     const style: Config = {};
 
     for (const prop in props) {
         if (isStyleProp(prop)) {
-            style[StyleProperties[prop]] = valueConverter(StyleProperties[prop], props[prop], theme);
+            style[StyleProperties[prop]] = valueConverter(StyleProperties[prop], props[prop], theme, mode);
         }
     }
 

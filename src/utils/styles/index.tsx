@@ -16,7 +16,7 @@ interface StylesComponentProps
 const Styles: FC<StylesComponentProps> = ({ children, ...props }) => {
     const { isDark, theme } = useTheme();
     const listOfStyles = {
-        ...props,
+        ...props
     };
     
     if (has(props, 'variant')) {
@@ -27,18 +27,19 @@ const Styles: FC<StylesComponentProps> = ({ children, ...props }) => {
         merge(listOfStyles, get(theme, `typography.${props.typography}`));
     }
 
+    const mode = get(props, 'mode', isDark ? 'dark' : 'light') as 'light' | 'dark';
+
     const style = useMemo(
-        () => getCss(listOfStyles as Config, theme),
+        () => getCss(listOfStyles as Config, theme, mode),
         [listOfStyles]
     ) as React.CSSProperties;
-
 
     const childrenWithProps = React.cloneElement(
         React.Children.only(children) as React.ReactElement,
         {
             style,
             theme,
-            isDark
+            mode
         }
     );
     

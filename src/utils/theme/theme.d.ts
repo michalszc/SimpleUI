@@ -39,3 +39,8 @@ interface Theme {
 }
 
 export default Theme;
+
+export interface IStyledTheme {
+    isDark?: boolean;
+    theme?: Theme;
+}
