@@ -1,11 +1,10 @@
-import React, { ChangeEvent, FocusEvent } from "react";
-import { FC } from "react";
+import React, { ChangeEvent, FC } from "react";
 import * as CSS from "csstype";
-import { StyleProps } from "../../utils";
+import { BaseProps, StyleProps } from "../../utils";
 import Container from "./Container";
 import Slider from "./Slider";
 
-export interface SwitchProps extends StyleProps {
+export interface SwitchProps extends StyleProps, BaseProps {
     /**
      * If true, the `Switch` will be checked. The default is `false`.
      */
@@ -23,23 +22,11 @@ export interface SwitchProps extends StyleProps {
      */
     isRequired?: boolean;
     /**
-     * The callback invoked when the `Switch` is blurred (loses focus)
-     * @param event
-     * @returns 
-     */
-    onBlur?: (event: FocusEvent<HTMLInputElement, Element>) => void;
-    /**
      * The callback invoked when the checked state of the `Switch` changes.
      * @param event 
      * @returns 
      */
     onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
-    /**
-     * The callback invoked when the `Switch` is focused
-     * @param event 
-     * @returns 
-     */
-    onFocus?: (event: FocusEvent<HTMLInputElement, Element>) => void;
     /**
      * This is the value that will be returned on form submission.
      */
@@ -57,23 +44,22 @@ export interface SwitchProps extends StyleProps {
 const Switch: FC<SwitchProps> = ({
     isChecked = false, isDisabled = false,
     isReadonly = false, isRequired = false,
-    onBlur = () => {}, onChange = () => {},
-    onFocus = () => {}, name = '',
+    onChange = () => {}, name = '', // eslint-disable-line @typescript-eslint/no-empty-function
+    id = Math.random().toString(36).slice(2),
     shape = 'circle', ...props
 }) => (
         <Container {...props}>
             <input 
+                id={id}
                 type="checkbox"
                 checked={isChecked}
                 disabled={isDisabled}
                 readOnly={isReadonly}
                 required={isRequired}
-                onBlur={onBlur}
                 onChange={(e) => !isReadonly && onChange(e)}
-                onFocus={onFocus}
                 name={name}
             />
-            <Slider shape={shape} isDisabled={isDisabled}/>
+            <Slider shape={shape} isDisabled={isDisabled} isReadonly={isReadonly}/>
         </Container>
 );
 

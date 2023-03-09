@@ -1,11 +1,11 @@
 import React, { FC } from "react";
 import * as CSS from "csstype";
 import styled from "styled-components";
-import { StyleProps } from "../../utils";
+import { BaseProps, StyleProps } from "../../utils";
 import Styles from "../../utils/styles";
 import { isNil } from "lodash";
 
-export interface ContainerProps extends StyleProps {
+export interface ContainerProps extends BaseProps, StyleProps {
     checkedColor?: CSS.DataType.Color;
     children: React.ReactNode;
 }
@@ -21,17 +21,21 @@ const SwitchContainer = styled.label<ContainerProps>`
     }
 
     & input:checked + .simpleui-switch-slider {
-        background-color: ${ ({ checkedColor, theme }) =>  isNil(checkedColor) ? theme.colors.blue[300] :  checkedColor };
+        background-color: ${ ({ checkedColor, theme, mode }) =>  isNil(checkedColor) ? (
+            mode === 'dark' ?  theme.palette.primary.dark : theme.palette.primary.light
+        ) :  checkedColor };
     }
     
     & input:focus + .simpleui-switch-slider {
-        box-shadow: 0 0 1px ${ ({ checkedColor, theme }) =>  isNil(checkedColor) ? theme.colors.blue[300] :  checkedColor };
+        box-shadow: 0 0 1px ${ ({ checkedColor, theme, mode }) =>  isNil(checkedColor) ? (
+            mode === 'dark' ?  theme.palette.primary.dark : theme.palette.primary.light
+        ) :  checkedColor };
     }
     
-    & input:checked + .simpleui-switch-slider:before {
-        -webkit-transform: translateX(26px);
-        -ms-transform: translateX(26px);
-        transform: translateX(26px);
+    & input:checked + .simpleui-switch-slider > .simpleui-switch-dot {
+        -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        transform: translateX(100%);
     }
 `;  
 
@@ -39,7 +43,11 @@ const Container: FC<ContainerProps> = ({
     children, checkedColor, ...props
 }) => (
     <Styles {...props}>
-        <SwitchContainer checkedColor={checkedColor} className={"simpleui-switch-container"}>
+        <SwitchContainer
+            checkedColor={checkedColor}
+            className={"simpleui-switch-container"} 
+            data-testid={'test-switchcontainer'}
+        >
             {children}
         </SwitchContainer>
     </Styles>

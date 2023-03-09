@@ -1,10 +1,9 @@
-import React, { ChangeEvent, FocusEvent } from "react";
-import { FC } from "react";
+import React, { FC } from "react";
 import styled from "styled-components";
-import { StyleProps } from "../../utils";
+import { BaseProps, StyleProps } from "../../utils";
 import Styles from "../../utils/styles";
 
-export interface FormLabelProps extends StyleProps {
+export interface FormLabelProps extends StyleProps, BaseProps {
     /**
      * This is the id of the element the FormLabel is bound to
      */
