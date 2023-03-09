@@ -1,0 +1,913 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch should properly render Switch component - checked 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <label
+        class="sc-hBxehG ggruCt simpleui-switch-container"
+        data-testid="test-switchcontainer"
+        id="4fzzzxjylrx"
+        mode="light"
+      >
+        <input
+          checked=""
+          id="4fzzzxjylrx"
+          name=""
+          type="checkbox"
+        />
+        <span
+          class="sc-fnGiBr ibGDdj simpleui-switch-slider"
+          id="4fzzzxjylrx"
+          mode="light"
+          shape="circle"
+        >
+          <span
+            class="sc-fEXmlR fDNaFm simpleui-switch-dot"
+            id="4fzzzxjylrx"
+            mode="light"
+            shape="circle"
+          />
+        </span>
+      </label>
+    </div>
+  </body>,
+  "container": <div>
+    <label
+      class="sc-hBxehG ggruCt simpleui-switch-container"
+      data-testid="test-switchcontainer"
+      id="4fzzzxjylrx"
+      mode="light"
+    >
+      <input
+        checked=""
+        id="4fzzzxjylrx"
+        name=""
+        type="checkbox"
+      />
+      <span
+        class="sc-fnGiBr ibGDdj simpleui-switch-slider"
+        id="4fzzzxjylrx"
+        mode="light"
+        shape="circle"
+      >
+        <span
+          class="sc-fEXmlR fDNaFm simpleui-switch-dot"
+          id="4fzzzxjylrx"
+          mode="light"
+          shape="circle"
+        />
+      </span>
+    </label>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Switch should properly render Switch component - default 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <label
+        class="sc-hBxehG ggruCt simpleui-switch-container"
+        data-testid="test-switchcontainer"
+        id="4fzzzxjylrx"
+        mode="light"
+      >
+        <input
+          id="4fzzzxjylrx"
+          name=""
+          type="checkbox"
+        />
+        <span
+          class="sc-fnGiBr ibGDdj simpleui-switch-slider"
+          id="4fzzzxjylrx"
+          mode="light"
+          shape="circle"
+        >
+          <span
+            class="sc-fEXmlR fDNaFm simpleui-switch-dot"
+            id="4fzzzxjylrx"
+            mode="light"
+            shape="circle"
+          />
+        </span>
+      </label>
+    </div>
+  </body>,
+  "container": <div>
+    <label
+      class="sc-hBxehG ggruCt simpleui-switch-container"
+      data-testid="test-switchcontainer"
+      id="4fzzzxjylrx"
+      mode="light"
+    >
+      <input
+        id="4fzzzxjylrx"
+        name=""
+        type="checkbox"
+      />
+      <span
+        class="sc-fnGiBr ibGDdj simpleui-switch-slider"
+        id="4fzzzxjylrx"
+        mode="light"
+        shape="circle"
+      >
+        <span
+          class="sc-fEXmlR fDNaFm simpleui-switch-dot"
+          id="4fzzzxjylrx"
+          mode="light"
+          shape="circle"
+        />
+      </span>
+    </label>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Switch should properly render Switch component - shape circle, disabled 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <label
+        class="sc-hBxehG ggruCt simpleui-switch-container"
+        data-testid="test-switchcontainer"
+        id="4fzzzxjylrx"
+        mode="light"
+      >
+        <input
+          disabled=""
+          id="4fzzzxjylrx"
+          name=""
+          type="checkbox"
+        />
+        <span
+          class="sc-fnGiBr pWgSJ simpleui-switch-slider"
+          id="4fzzzxjylrx"
+          mode="light"
+          shape="circle"
+        >
+          <span
+            class="sc-fEXmlR fDNaFm simpleui-switch-dot"
+            id="4fzzzxjylrx"
+            mode="light"
+            shape="circle"
+          />
+        </span>
+      </label>
+    </div>
+  </body>,
+  "container": <div>
+    <label
+      class="sc-hBxehG ggruCt simpleui-switch-container"
+      data-testid="test-switchcontainer"
+      id="4fzzzxjylrx"
+      mode="light"
+    >
+      <input
+        disabled=""
+        id="4fzzzxjylrx"
+        name=""
+        type="checkbox"
+      />
+      <span
+        class="sc-fnGiBr pWgSJ simpleui-switch-slider"
+        id="4fzzzxjylrx"
+        mode="light"
+        shape="circle"
+      >
+        <span
+          class="sc-fEXmlR fDNaFm simpleui-switch-dot"
+          id="4fzzzxjylrx"
+          mode="light"
+          shape="circle"
+        />
+      </span>
+    </label>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Switch should properly render Switch component - shape circle, enabled 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <label
+        class="sc-hBxehG ggruCt simpleui-switch-container"
+        data-testid="test-switchcontainer"
+        id="4fzzzxjylrx"
+        mode="light"
+      >
+        <input
+          id="4fzzzxjylrx"
+          name=""
+          type="checkbox"
+        />
+        <span
+          class="sc-fnGiBr ibGDdj simpleui-switch-slider"
+          id="4fzzzxjylrx"
+          mode="light"
+          shape="circle"
+        >
+          <span
+            class="sc-fEXmlR fDNaFm simpleui-switch-dot"
+            id="4fzzzxjylrx"
+            mode="light"
+            shape="circle"
+          />
+        </span>
+      </label>
+    </div>
+  </body>,
+  "container": <div>
+    <label
+      class="sc-hBxehG ggruCt simpleui-switch-container"
+      data-testid="test-switchcontainer"
+      id="4fzzzxjylrx"
+      mode="light"
+    >
+      <input
+        id="4fzzzxjylrx"
+        name=""
+        type="checkbox"
+      />
+      <span
+        class="sc-fnGiBr ibGDdj simpleui-switch-slider"
+        id="4fzzzxjylrx"
+        mode="light"
+        shape="circle"
+      >
+        <span
+          class="sc-fEXmlR fDNaFm simpleui-switch-dot"
+          id="4fzzzxjylrx"
+          mode="light"
+          shape="circle"
+        />
+      </span>
+    </label>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Switch should properly render Switch component - shape roundedSquare, disabled 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <label
+        class="sc-hBxehG ggruCt simpleui-switch-container"
+        data-testid="test-switchcontainer"
+        id="4fzzzxjylrx"
+        mode="light"
+      >
+        <input
+          disabled=""
+          id="4fzzzxjylrx"
+          name=""
+          type="checkbox"
+        />
+        <span
+          class="sc-fnGiBr kVfPLL simpleui-switch-slider"
+          id="4fzzzxjylrx"
+          mode="light"
+          shape="roundedSquare"
+        >
+          <span
+            class="sc-fEXmlR awDfN simpleui-switch-dot"
+            id="4fzzzxjylrx"
+            mode="light"
+            shape="roundedSquare"
+          />
+        </span>
+      </label>
+    </div>
+  </body>,
+  "container": <div>
+    <label
+      class="sc-hBxehG ggruCt simpleui-switch-container"
+      data-testid="test-switchcontainer"
+      id="4fzzzxjylrx"
+      mode="light"
+    >
+      <input
+        disabled=""
+        id="4fzzzxjylrx"
+        name=""
+        type="checkbox"
+      />
+      <span
+        class="sc-fnGiBr kVfPLL simpleui-switch-slider"
+        id="4fzzzxjylrx"
+        mode="light"
+        shape="roundedSquare"
+      >
+        <span
+          class="sc-fEXmlR awDfN simpleui-switch-dot"
+          id="4fzzzxjylrx"
+          mode="light"
+          shape="roundedSquare"
+        />
+      </span>
+    </label>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Switch should properly render Switch component - shape roundedSquare, enabled 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <label
+        class="sc-hBxehG ggruCt simpleui-switch-container"
+        data-testid="test-switchcontainer"
+        id="4fzzzxjylrx"
+        mode="light"
+      >
+        <input
+          id="4fzzzxjylrx"
+          name=""
+          type="checkbox"
+        />
+        <span
+          class="sc-fnGiBr gqTWDB simpleui-switch-slider"
+          id="4fzzzxjylrx"
+          mode="light"
+          shape="roundedSquare"
+        >
+          <span
+            class="sc-fEXmlR awDfN simpleui-switch-dot"
+            id="4fzzzxjylrx"
+            mode="light"
+            shape="roundedSquare"
+          />
+        </span>
+      </label>
+    </div>
+  </body>,
+  "container": <div>
+    <label
+      class="sc-hBxehG ggruCt simpleui-switch-container"
+      data-testid="test-switchcontainer"
+      id="4fzzzxjylrx"
+      mode="light"
+    >
+      <input
+        id="4fzzzxjylrx"
+        name=""
+        type="checkbox"
+      />
+      <span
+        class="sc-fnGiBr gqTWDB simpleui-switch-slider"
+        id="4fzzzxjylrx"
+        mode="light"
+        shape="roundedSquare"
+      >
+        <span
+          class="sc-fEXmlR awDfN simpleui-switch-dot"
+          id="4fzzzxjylrx"
+          mode="light"
+          shape="roundedSquare"
+        />
+      </span>
+    </label>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Switch should properly render Switch component - shape square, disabled 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <label
+        class="sc-hBxehG ggruCt simpleui-switch-container"
+        data-testid="test-switchcontainer"
+        id="4fzzzxjylrx"
+        mode="light"
+      >
+        <input
+          disabled=""
+          id="4fzzzxjylrx"
+          name=""
+          type="checkbox"
+        />
+        <span
+          class="sc-fnGiBr hYuXni simpleui-switch-slider"
+          id="4fzzzxjylrx"
+          mode="light"
+          shape="square"
+        >
+          <span
+            class="sc-fEXmlR gAcZqy simpleui-switch-dot"
+            id="4fzzzxjylrx"
+            mode="light"
+            shape="square"
+          />
+        </span>
+      </label>
+    </div>
+  </body>,
+  "container": <div>
+    <label
+      class="sc-hBxehG ggruCt simpleui-switch-container"
+      data-testid="test-switchcontainer"
+      id="4fzzzxjylrx"
+      mode="light"
+    >
+      <input
+        disabled=""
+        id="4fzzzxjylrx"
+        name=""
+        type="checkbox"
+      />
+      <span
+        class="sc-fnGiBr hYuXni simpleui-switch-slider"
+        id="4fzzzxjylrx"
+        mode="light"
+        shape="square"
+      >
+        <span
+          class="sc-fEXmlR gAcZqy simpleui-switch-dot"
+          id="4fzzzxjylrx"
+          mode="light"
+          shape="square"
+        />
+      </span>
+    </label>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Switch should properly render Switch component - shape square, enabled 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <label
+        class="sc-hBxehG ggruCt simpleui-switch-container"
+        data-testid="test-switchcontainer"
+        id="4fzzzxjylrx"
+        mode="light"
+      >
+        <input
+          id="4fzzzxjylrx"
+          name=""
+          type="checkbox"
+        />
+        <span
+          class="sc-fnGiBr blLJPw simpleui-switch-slider"
+          id="4fzzzxjylrx"
+          mode="light"
+          shape="square"
+        >
+          <span
+            class="sc-fEXmlR gAcZqy simpleui-switch-dot"
+            id="4fzzzxjylrx"
+            mode="light"
+            shape="square"
+          />
+        </span>
+      </label>
+    </div>
+  </body>,
+  "container": <div>
+    <label
+      class="sc-hBxehG ggruCt simpleui-switch-container"
+      data-testid="test-switchcontainer"
+      id="4fzzzxjylrx"
+      mode="light"
+    >
+      <input
+        id="4fzzzxjylrx"
+        name=""
+        type="checkbox"
+      />
+      <span
+        class="sc-fnGiBr blLJPw simpleui-switch-slider"
+        id="4fzzzxjylrx"
+        mode="light"
+        shape="square"
+      >
+        <span
+          class="sc-fEXmlR gAcZqy simpleui-switch-dot"
+          id="4fzzzxjylrx"
+          mode="light"
+          shape="square"
+        />
+      </span>
+    </label>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

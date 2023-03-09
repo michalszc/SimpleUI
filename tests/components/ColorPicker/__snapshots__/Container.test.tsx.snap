@@ -7,6 +7,7 @@ exports[`Container should properly render Container component 1`] = `
     <div>
       <div
         class="sc-bcXHqe essumT simpleui-colorpicker-container"
+        id="4fzzzxjylrx"
         mode="light"
       />
     </div>
@@ -14,6 +15,7 @@ exports[`Container should properly render Container component 1`] = `
   "container": <div>
     <div
       class="sc-bcXHqe essumT simpleui-colorpicker-container"
+      id="4fzzzxjylrx"
       mode="light"
     />
   </div>,
@@ -78,6 +80,7 @@ exports[`Container should properly render Container component with children 1`] 
     <div>
       <div
         class="sc-bcXHqe essumT simpleui-colorpicker-container"
+        id="4fzzzxjylrx"
         mode="light"
       >
         <div />
@@ -87,6 +90,7 @@ exports[`Container should properly render Container component with children 1`] 
   "container": <div>
     <div
       class="sc-bcXHqe essumT simpleui-colorpicker-container"
+      id="4fzzzxjylrx"
       mode="light"
     >
       <div />

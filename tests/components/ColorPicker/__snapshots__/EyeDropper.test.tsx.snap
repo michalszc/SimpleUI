@@ -8,6 +8,7 @@ exports[`EyeDropper should properly render EyeDropper component - shape circle 1
       <div
         class="sc-bcXHqe cAtZIL simpleui-colorpicker-eyedropper"
         data-testid="test-eyedropper"
+        id="4fzzzxjylrx"
         mode="light"
         shape="circle"
         title="EyeDropper"
@@ -32,6 +33,7 @@ exports[`EyeDropper should properly render EyeDropper component - shape circle 1
     <div
       class="sc-bcXHqe cAtZIL simpleui-colorpicker-eyedropper"
       data-testid="test-eyedropper"
+      id="4fzzzxjylrx"
       mode="light"
       shape="circle"
       title="EyeDropper"
@@ -113,6 +115,7 @@ exports[`EyeDropper should properly render EyeDropper component - shape roundedS
       <div
         class="sc-bcXHqe etgork simpleui-colorpicker-eyedropper"
         data-testid="test-eyedropper"
+        id="4fzzzxjylrx"
         mode="light"
         shape="roundedSquare"
         title="EyeDropper"
@@ -137,6 +140,7 @@ exports[`EyeDropper should properly render EyeDropper component - shape roundedS
     <div
       class="sc-bcXHqe etgork simpleui-colorpicker-eyedropper"
       data-testid="test-eyedropper"
+      id="4fzzzxjylrx"
       mode="light"
       shape="roundedSquare"
       title="EyeDropper"
@@ -218,6 +222,7 @@ exports[`EyeDropper should properly render EyeDropper component - shape square 1
       <div
         class="sc-bcXHqe cHLKIf simpleui-colorpicker-eyedropper"
         data-testid="test-eyedropper"
+        id="4fzzzxjylrx"
         mode="light"
         shape="square"
         title="EyeDropper"
@@ -242,6 +247,7 @@ exports[`EyeDropper should properly render EyeDropper component - shape square 1
     <div
       class="sc-bcXHqe cHLKIf simpleui-colorpicker-eyedropper"
       data-testid="test-eyedropper"
+      id="4fzzzxjylrx"
       mode="light"
       shape="square"
       title="EyeDropper"

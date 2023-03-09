@@ -10,6 +10,7 @@ exports[`HSLAInput should properly render HexInput component 1`] = `
       >
         <div
           class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+          id="4fzzzxjylrx"
           mode="light"
         >
           <div
@@ -31,6 +32,7 @@ exports[`HSLAInput should properly render HexInput component 1`] = `
     >
       <div
         class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+        id="4fzzzxjylrx"
         mode="light"
       >
         <div
