@@ -21,13 +21,35 @@ FormLabelWithSwitch.decorators = [
         const [checked, setChecked] = useState(false);
         
         return (
-            <FormLabel>
-                <span>Text</span>
-                <Switch isChecked={checked} onChange={(e) => {
-                    setChecked(prev => !prev);
-                }}/>
+            <FormLabel fontSize={'24px'}>
+                <span>Click me!</span>
+                <Switch 
+                    isChecked={checked} onChange={() => {
+                        setChecked(prev => !prev);
+                    }}
+                />
             </FormLabel>
         );
     } 
 ];
 
+export const FormLabelHtmlFor= Template.bind({});
+FormLabelHtmlFor.decorators = [
+    () => {
+        const [checked, setChecked] = useState(false);
+        
+        return (
+            <div style={{
+                display: 'flex',
+                gap: '10px'
+            }}>
+                <FormLabel htmlFor={'switch-id'} fontSize={'24px'}>
+                    <span>Click me!</span>
+                </FormLabel>
+                <Switch id={'switch-id'} isChecked={checked} onChange={() => {
+                    setChecked(prev => !prev);
+                }}/>
+            </div>
+        );
+    } 
+];
