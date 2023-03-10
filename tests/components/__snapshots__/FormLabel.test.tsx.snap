@@ -6,7 +6,7 @@ exports[`FormLabel should properly render FormLabel component 1`] = `
   "baseElement": <body>
     <div>
       <label
-        class="sc-bjfHbI bnjIFt"
+        class="sc-bjfHbI bnjIFt simpleui-formlabel"
         id="4fzzzxjylrx"
         mode="light"
       />
@@ -14,7 +14,7 @@ exports[`FormLabel should properly render FormLabel component 1`] = `
   </body>,
   "container": <div>
     <label
-      class="sc-bjfHbI bnjIFt"
+      class="sc-bjfHbI bnjIFt simpleui-formlabel"
       id="4fzzzxjylrx"
       mode="light"
     />

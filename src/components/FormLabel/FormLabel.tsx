@@ -21,7 +21,7 @@ const FormLabel: FC<FormLabelProps> = ({
     htmlFor, children, ...props
 }) => (
     <Styles {...props}>
-        <Label htmlFor={htmlFor}>
+        <Label htmlFor={htmlFor} className={'simpleui-formlabel'}>
             {children}
         </Label>
     </Styles>
