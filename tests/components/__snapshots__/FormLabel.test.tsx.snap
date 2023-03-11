@@ -1,29 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header should properly render Header component 1`] = `
+exports[`FormLabel should properly render FormLabel component 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="sc-bcXHqe hDjTQR simpleui-colorpicker-header"
-        color="#FFF"
+      <label
+        class="sc-bjfHbI bnjIFt simpleui-formlabel"
         id="4fzzzxjylrx"
         mode="light"
-      >
-        #FFF
-      </div>
+      />
     </div>
   </body>,
   "container": <div>
-    <div
-      class="sc-bcXHqe hDjTQR simpleui-colorpicker-header"
-      color="#FFF"
+    <label
+      class="sc-bjfHbI bnjIFt simpleui-formlabel"
       id="4fzzzxjylrx"
       mode="light"
-    >
-      #FFF
-    </div>
+    />
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

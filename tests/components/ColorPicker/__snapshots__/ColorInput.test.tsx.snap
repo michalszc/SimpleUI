@@ -7,6 +7,7 @@ exports[`ColorInput should properly render ColorInput component - type hex 1`] =
   >
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      id="4fzzzxjylrx"
       mode="light"
     >
       <div
@@ -27,10 +28,12 @@ exports[`ColorInput should properly render ColorInput component - type hsl 1`] =
 <div>
   <div
     class="sc-iBYQkv boYHRO simpleui-colorpicker-hslcontainer"
+    id="4fzzzxjylrx"
     mode="light"
   >
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      id="4fzzzxjylrx"
       mode="light"
     >
       <div
@@ -45,6 +48,7 @@ exports[`ColorInput should properly render ColorInput component - type hsl 1`] =
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      id="4fzzzxjylrx"
       mode="light"
     >
       <div
@@ -59,6 +63,7 @@ exports[`ColorInput should properly render ColorInput component - type hsl 1`] =
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      id="4fzzzxjylrx"
       mode="light"
     >
       <div
@@ -79,10 +84,12 @@ exports[`ColorInput should properly render ColorInput component - type hsla 1`] 
 <div>
   <div
     class="sc-gKPRtg hDVxWN simpleui-colorpicker-hslacontainer"
+    id="4fzzzxjylrx"
     mode="light"
   >
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      id="4fzzzxjylrx"
       mode="light"
     >
       <div
@@ -97,6 +104,7 @@ exports[`ColorInput should properly render ColorInput component - type hsla 1`] 
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      id="4fzzzxjylrx"
       mode="light"
     >
       <div
@@ -111,6 +119,7 @@ exports[`ColorInput should properly render ColorInput component - type hsla 1`] 
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      id="4fzzzxjylrx"
       mode="light"
     >
       <div
@@ -125,6 +134,7 @@ exports[`ColorInput should properly render ColorInput component - type hsla 1`] 
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      id="4fzzzxjylrx"
       mode="light"
     >
       <div
@@ -145,10 +155,12 @@ exports[`ColorInput should properly render ColorInput component - type rgb 1`] =
 <div>
   <div
     class="sc-eDvSVe eJvcwf simpleui-colorpicker-rgbcontainer"
+    id="4fzzzxjylrx"
     mode="light"
   >
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      id="4fzzzxjylrx"
       mode="light"
     >
       <div
@@ -163,6 +175,7 @@ exports[`ColorInput should properly render ColorInput component - type rgb 1`] =
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      id="4fzzzxjylrx"
       mode="light"
     >
       <div
@@ -177,6 +190,7 @@ exports[`ColorInput should properly render ColorInput component - type rgb 1`] =
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      id="4fzzzxjylrx"
       mode="light"
     >
       <div
@@ -197,10 +211,12 @@ exports[`ColorInput should properly render ColorInput component - type rgba 1`] 
 <div>
   <div
     class="sc-jSUZER ggHwA-d simpleui-colorpicker-rgbacontainer"
+    id="4fzzzxjylrx"
     mode="light"
   >
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      id="4fzzzxjylrx"
       mode="light"
     >
       <div
@@ -215,6 +231,7 @@ exports[`ColorInput should properly render ColorInput component - type rgba 1`] 
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      id="4fzzzxjylrx"
       mode="light"
     >
       <div
@@ -229,6 +246,7 @@ exports[`ColorInput should properly render ColorInput component - type rgba 1`] 
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      id="4fzzzxjylrx"
       mode="light"
     >
       <div
@@ -243,6 +261,7 @@ exports[`ColorInput should properly render ColorInput component - type rgba 1`] 
     </div>
     <div
       class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+      id="4fzzzxjylrx"
       mode="light"
     >
       <div

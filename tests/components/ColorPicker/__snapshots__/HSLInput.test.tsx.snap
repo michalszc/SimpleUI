@@ -7,10 +7,12 @@ exports[`HSLInput should properly render HSLInput component 1`] = `
     <div>
       <div
         class="sc-hLBbgP DwPCz simpleui-colorpicker-hslcontainer"
+        id="4fzzzxjylrx"
         mode="light"
       >
         <div
           class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+          id="4fzzzxjylrx"
           mode="light"
         >
           <div
@@ -25,6 +27,7 @@ exports[`HSLInput should properly render HSLInput component 1`] = `
         </div>
         <div
           class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+          id="4fzzzxjylrx"
           mode="light"
         >
           <div
@@ -39,6 +42,7 @@ exports[`HSLInput should properly render HSLInput component 1`] = `
         </div>
         <div
           class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+          id="4fzzzxjylrx"
           mode="light"
         >
           <div
@@ -57,10 +61,12 @@ exports[`HSLInput should properly render HSLInput component 1`] = `
   "container": <div>
     <div
       class="sc-hLBbgP DwPCz simpleui-colorpicker-hslcontainer"
+      id="4fzzzxjylrx"
       mode="light"
     >
       <div
         class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+        id="4fzzzxjylrx"
         mode="light"
       >
         <div
@@ -75,6 +81,7 @@ exports[`HSLInput should properly render HSLInput component 1`] = `
       </div>
       <div
         class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+        id="4fzzzxjylrx"
         mode="light"
       >
         <div
@@ -89,6 +96,7 @@ exports[`HSLInput should properly render HSLInput component 1`] = `
       </div>
       <div
         class="sc-bcXHqe dLNOCe simpleui-colorpicker-inputcontainer"
+        id="4fzzzxjylrx"
         mode="light"
       >
         <div

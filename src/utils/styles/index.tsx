@@ -19,6 +19,8 @@ const Styles: FC<StylesComponentProps> = ({ children, ...props }) => {
         ...props
     };
     
+    const id = get(props, 'id', Math.random().toString(36).slice(2));
+
     if (has(props, 'variant')) {
         merge(listOfStyles, get(theme, `components.${props.variant}`));
     }
@@ -39,7 +41,8 @@ const Styles: FC<StylesComponentProps> = ({ children, ...props }) => {
         {
             style,
             theme,
-            mode
+            mode,
+            id
         }
     );
     
