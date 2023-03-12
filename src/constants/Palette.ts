@@ -21,15 +21,15 @@ export interface IPalette {
  */
 const Palette: IPalette = {
     primary: {
-        light: blue[50],
-        main: blue[200],
-        dark: blue[400],
+        light: blue[300],
+        main: blue[500],
+        dark: blue[700],
         contrast: white 
     },
     secondary: {
-        light: purple[50],
-        main: purple[200],
-        dark: purple[400],
+        light: purple[300],
+        main: purple[400],
+        dark: purple[700],
         contrast: white
     },
     error: {

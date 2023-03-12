@@ -1,2 +1,6 @@
-export { default as Button } from "./Button";
+export * from "./Button";
+export * from "./ColorPicker";
+export * from './Switch';
+export * from './FormLabel';
 export * from "./Select";
+
