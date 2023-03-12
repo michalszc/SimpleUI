@@ -10,22 +10,20 @@ export interface OptionsListProps extends StyleProps {
     children: React.ReactElement<OptionProps> | Array<React.ReactElement<OptionProps>>;
 }
 
-const OptionsList: FC<OptionsListProps> = ({ checkIfSelectedFunction, updateSelectedOptionsFunction, searchInput, children, ...props }) => {
-    return(
-        <Styles {...props}>
-            <StyledOptionsContainer className="simpleui-select-optionslist">
-                {React.Children.map(children, child => {
-                        if (child.props.value.trim().toLowerCase().match(searchInput.trim().toLowerCase())) {
-                            return React.cloneElement(child, {
-                                isChecked: checkIfSelectedFunction(child.props.value),
-                                onClick: () => updateSelectedOptionsFunction(child.props.value)
-                            });
-                        }
-                })}
-            </StyledOptionsContainer>
-        </Styles>
-    );
-};
+const OptionsList: FC<OptionsListProps> = ({ checkIfSelectedFunction, updateSelectedOptionsFunction, searchInput, children, ...props }) => (
+    <Styles {...props}>
+        <StyledOptionsContainer className="simpleui-select-optionslist">
+            {React.Children.map(children, child => {
+                if (child.props.value.trim().toLowerCase().match(searchInput.trim().toLowerCase())) {
+                    return React.cloneElement(child, {
+                        isChecked: checkIfSelectedFunction(child.props.value),
+                        onClick: () => updateSelectedOptionsFunction(child.props.value)
+                    });
+                }
+            })}
+        </StyledOptionsContainer>
+    </Styles>
+);
 
 export default OptionsList;
 

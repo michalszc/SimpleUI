@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect, useMemo, useState } from "react";
 import styled from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
 import { OptionProps } from "./Option";
@@ -8,21 +8,13 @@ import OptionsList from './OptionsList';
 
 export interface SelectProps extends StyleProps{
     /**
-     * All available options 
-     */
-    values?: string[];
-    /**
-     * label of Single Select
-     */
-    label?: string;
-    /**
-     * If true, option shows as unselected/selected and can't be select/unselect
-     */
-    isReadOnly?: boolean;
-    /**
      * Text display when input section is empty
      */
     placeholder?: string;
+    /**
+     * selected option     
+     * */
+    selected?: string;
     /**
      * activated everytime the component is rendered
      */
@@ -33,11 +25,19 @@ export interface SelectProps extends StyleProps{
     children: React.ReactElement<OptionProps> | Array<React.ReactElement<OptionProps>>;
 }
 
-const SingleSelect: FC<SelectProps> = ({ onChange, placeholder, children, label,  ...props }) => {
-    const [searchInput, setSearchInput] = React.useState<string>("");
-    const [input, setInput] = React.useState<string>("");
-    const [selectedOption, setSelectedOption] = React.useState<string>("");
-    const [show, setShow] = React.useState<boolean>(false);
+interface MainContainerProps {
+    show: boolean;
+}
+
+const SingleSelect: FC<SelectProps> = ({ onChange, selected = "", placeholder, children,  ...props }) => {
+    const [searchInput, setSearchInput] = useState<string>("");
+    const [input, setInput] = useState<string>("");
+    const [selectedOption, setSelectedOption] = useState<string>(selected);
+    const [show, setShow] = useState<boolean>(false);
+
+    const showCross = useMemo(
+       () => searchInput.length !== 0 || selectedOption.length !== 0
+    , [searchInput, selectedOption]);
 
     useEffect(() => {
         onChange(selectedOption);
@@ -82,34 +82,28 @@ const SingleSelect: FC<SelectProps> = ({ onChange, placeholder, children, label,
     };
 
     return(
-            <MainContainer>
-                {label && <Label>{label}</Label> }
-                <Styles {...props}>
-                    <SelectOptionContainer className="simpleui-select">
-
-                        <StyledInputContainer className="simpleui-select-inputcontainer">
-                            <StyledInput 
-                                placeholder={placeholder} 
-                                onFocus={() => setShow(true)}
-                                value={input} 
-                                onChange={handleChange}
-                                className="simpleui-select-input"
-                            />
-                            {   
-                                searchInput.length !== 0 || selectedOption.length !== 0 && 
-                                <Icon onClick={resetInput}><RxCross2 size='1.2rem' /></Icon> 
-                            }
-                            {
-                                show ? 
-                                <Icon style={{ rotate: 'x 180deg' }} onClick={() => setShow(v => !v)}><RiArrowDownSLine size='1.5rem'/></Icon>
-                                :
-                                <Icon onClick={() => setShow(v => !v)}><RiArrowDownSLine size='1.5rem'/></Icon>
-                            }                        
-                        
-                        </StyledInputContainer>
-
-                    </SelectOptionContainer>
-                </Styles>
+        <Styles {...props}>
+            <MainContainer show={show}>
+                <InputContainer className="simpleui-select-inputcontainer">
+                    <Input 
+                        placeholder={placeholder} 
+                        onFocus={() => setShow(true)}
+                        value={input} 
+                        onChange={handleChange}
+                        className="simpleui-select-input"
+                    />
+                    {   
+                        showCross && 
+                        <Icon onClick={resetInput}><RxCross2 size='1.2rem' /></Icon> 
+                    }
+                    {
+                        show ? 
+                        <Icon style={{ rotate: 'x 180deg' }} onClick={() => setShow(v => !v)}><RiArrowDownSLine size='1.5rem'/></Icon>
+                        :
+                        <Icon onClick={() => setShow(v => !v)}><RiArrowDownSLine size='1.5rem'/></Icon>
+                    }                        
+                
+                </InputContainer>
 
                 {show && 
                     <OptionsList 
@@ -120,21 +114,18 @@ const SingleSelect: FC<SelectProps> = ({ onChange, placeholder, children, label,
                     />
                 }
             </MainContainer>
+        </Styles>
     );
 };
 
 export default SingleSelect;
 
-const Label = styled.h3`
-    font-family: sans-serif;
-    color: #555;
-    margin: 5px 0;
-`;
-
-const MainContainer = styled.div`
+const MainContainer = styled.div<MainContainerProps>`
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    border: .3px solid #a8a8a8;
+    border-radius: 5px;
     flex-direction: column;
     min-width: 300px;
     width: fit-content;
@@ -144,22 +135,10 @@ const MainContainer = styled.div`
     z-index: 10;
 `;
 
-const SelectOptionContainer = styled.div`
-    height: auto;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 5px;
-    box-sizing: border-box;
-    border: 3px solid #2196f3;
-    border-radius: 10px;
-    background-color: #ffffff;
-`;
-
-const StyledInputContainer = styled.div`
+const InputContainer = styled.div`
     height: 100%;  
     width: 100%;
+    padding: 5px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -167,7 +146,7 @@ const StyledInputContainer = styled.div`
     align-items: center;
 `;
 
-const StyledInput = styled.input`
+const Input = styled.input`
     border: .3px solid #e0e0e0;
     border-radius: 5px;
     height: 100%;

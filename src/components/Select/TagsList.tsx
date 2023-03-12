@@ -19,23 +19,19 @@ export interface TagsListProps extends StyleProps {
     onClick: (v: string) => void;
 }
 
-const TagsList: FC<TagsListProps> = ({ onClick, selectedOptions, tagBgColor, ...props }) => {
-    const tagColor = tagBgColor !== undefined ? tagBgColor : '#2196f3';
-
-    return(
-        <Styles {...props}>
-            <StyledTagsContainer className="simpleui-select-tagslist">
-                {selectedOptions?.map((elem) => 
-                    <Tag bg={tagColor} value={elem} onClick={() => onClick(elem)}/>
-                )}
-            </StyledTagsContainer>
-        </Styles>
-    );
-};
+const TagsList: FC<TagsListProps> = ({ onClick, selectedOptions, tagBgColor = '#2196f3', ...props }) => (
+    <Styles {...props}>
+        <TagsContainer className="simpleui-select-tagslist">
+            {selectedOptions?.map((elem) => 
+                <Tag key={Math.random().toString(36).slice(2)} bg={tagBgColor} value={elem} onClick={() => onClick(elem)}/>
+            )}
+        </TagsContainer>
+    </Styles>
+);
 
 export default TagsList;
 
-const StyledTagsContainer = styled.div`
+const TagsContainer = styled.div`
     height: 100%;
     width: 100%;
     display: flex;

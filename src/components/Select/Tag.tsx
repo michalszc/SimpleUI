@@ -14,6 +14,19 @@ export interface TagProps extends StyleProps {
     onClick?: MouseEventHandler<HTMLAnchorElement>;
 }
 
+const Tag: FC<TagProps> = ({ value, onClick , ...props }) => (
+    <Styles {...props}>
+        <StyledTag className="simpleui-tag">
+            {value}
+            <Cross role='link' onClick={onClick}>
+                <RxCross1 color="white" />
+            </Cross>
+        </StyledTag>
+    </Styles>
+);
+
+export default Tag;
+
 const StyledTag = styled.div<TagProps>`
     width: auto;
     height: 40%;
@@ -33,17 +46,3 @@ const Cross = styled.a`
     cursor: pointer;
     padding-left: 5px;
 `;
-
-const Tag: FC<TagProps> = ({ value, onClick , ...props }) => {
-    return(
-        <Styles {...props}>
-            <StyledTag className="simpleui-tag">
-                {value}
-                <Cross role='link' onClick={onClick}><RxCross1 color="white" /></Cross>
-            </StyledTag>
-        </Styles>
-    );
-};
-
-export default Tag;
-

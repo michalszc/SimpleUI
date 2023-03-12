@@ -11,25 +11,17 @@ import { Colors } from "../../constants";
 
 export interface SelectProps extends StyleProps {
     /**
-     * All available options 
-     */
-    values?: string[];
-    /**
      * activated everytime the component is rendered
      */
     onChange: (v: string[]) => void;
     /**
-     * label of Single Select
-     */
-    label?: string;
-    /**
-     * If true, option shows as unselected/selected and can't be select/unselect
-     */
-    isReadOnly?: boolean;
-    /**
      * Text display when input section is empty
      */
     placeholder?: string;
+    /**
+     * array of selected options
+     */
+    selected?: Array<string>;
     /**
      * costum bg color for tags
      */
@@ -40,10 +32,14 @@ export interface SelectProps extends StyleProps {
     children: React.ReactElement<OptionProps> | Array<React.ReactElement<OptionProps>>;
 }
 
-const MultipleSelect: FC<SelectProps> = ({ tagBgColor, label, onChange, children, placeholder, ...props }) => {
+const MultipleSelect: FC<SelectProps> = ({ 
+    tagBgColor = Colors.blue[400], 
+    selected = [], onChange, 
+    children, placeholder, ...props }) => {
+    
     const [show, setShow] = React.useState<boolean>(false);
     const [searchInput, setSearchInput] = React.useState<string>("");
-    const [selectedOptions, setSelectedOptions] = React.useState<string[]>([]);
+    const [selectedOptions, setSelectedOptions] = React.useState<string[]>(selected);
 
     useEffect(() => {
         onChange(selectedOptions);
@@ -58,6 +54,7 @@ const MultipleSelect: FC<SelectProps> = ({ tagBgColor, label, onChange, children
         setSearchInput("");
     };
 
+    //useCallback
     const checkIfSelected = (elem: string):boolean => {
         const e = selectedOptions.filter((item) => {
            return elem === item;
@@ -90,15 +87,16 @@ const MultipleSelect: FC<SelectProps> = ({ tagBgColor, label, onChange, children
         setShow(false);
     };
 
-    const tagColor = tagBgColor !== undefined ? tagBgColor : Colors.blue[500];
-
     return(
-        <MainContainer>
-            { label && <Label>{label}</Label> }
-            <Styles {...props}>
+        <Styles {...props}>
+            <MainContainer>
                 <StyledSearchContainer className="simpleui-select">
                     { selectedOptions.length !== 0 && 
-                        <TagsList onClick={deleteSelectedOption} tagBgColor={tagColor} selectedOptions={selectedOptions}/>
+                        <TagsList 
+                            onClick={deleteSelectedOption} 
+                            tagBgColor={tagBgColor} 
+                            selectedOptions={selectedOptions}
+                        />
                     }
                     <StyledInputContainer className="simpleui-select-inputcontainer">
                         <StyledInput 
@@ -121,7 +119,6 @@ const MultipleSelect: FC<SelectProps> = ({ tagBgColor, label, onChange, children
                     </StyledInputContainer>
 
                 </StyledSearchContainer>
-            </Styles>
 
             {show && 
                 <OptionsList 
@@ -132,24 +129,21 @@ const MultipleSelect: FC<SelectProps> = ({ tagBgColor, label, onChange, children
                  />
             }
 
-        </MainContainer>
+            </MainContainer>
+        </Styles>
         
     );
 };
 
 export default MultipleSelect;
 
-const Label = styled.h3`
-    font-family: sans-serif;
-    color: #555;
-    margin: 5px 0;
-`;
-
 const MainContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 350px;
+    border: .3px solid #a8a8a8;
+    border-radius: 5px;
     box-sizing: border-box;
     height: auto;
     margin: 0px;
