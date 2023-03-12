@@ -23,7 +23,7 @@ export interface OptionProps extends StyleProps {
 
 const OptionContainer = styled.a<OptionProps>`
     font-family: sans-serif;
-    color: #555555;
+    color: ${ ({ theme }) =>  theme.colors.grey[600] };
     padding: 10px 0 10px 15px;
     width: 100%;
     font-size: 1.1rem;

@@ -107,12 +107,12 @@ const SingleSelect: FC<SelectProps> = ({ onChange, selected = "", placeholder, c
 
 export default SingleSelect;
 
-const MainContainer = styled.div`
+const MainContainer = styled.div<StyleProps>`
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    border: .3px solid #a8a8a8;
-    border-radius: 5px;
+    border: .3px solid ${ ({ theme }) =>  theme.colors.grey[500] };
+    border-radius: ${ ({ theme }) => theme.sizes[2]};
     flex-direction: column;
     min-width: 300px;
     width: fit-content;

@@ -36,7 +36,7 @@ const TagsContainer = styled.div`
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding: 0 10px;
+    margin: 10px;
     justify-content: flex-start;
     align-items: stretch;
 `;

@@ -31,9 +31,9 @@ const StyledTag = styled.div<TagProps>`
     width: auto;
     height: 40%;
     padding: 8px;
-    margin: 5px 0;
     margin-right: 5px;
-    border-radius: 5px;
+    margin-bottom: 3px;
+    border-radius: ${ ({ theme }) => theme.sizes[1] };
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -47,8 +47,11 @@ const MultipleSelect: FC<SelectProps> = ({
 
     const showCross = useMemo(
         () => searchInput.length !== 0
-     , [searchInput]);
+    , [searchInput]);
  
+    const showTagsList = useMemo(
+        () => selectedOptions.length !== 0
+    , [selectedOptions]);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         event.preventDefault();
@@ -95,36 +98,33 @@ const MultipleSelect: FC<SelectProps> = ({
     return(
         <Styles {...props}>
             <MainContainer>
-                <SearchContainer className="simpleui-select">
-                    { selectedOptions.length !== 0 && 
-                        <TagsList 
-                            onClick={deleteSelectedOption} 
-                            tagBgColor={tagBgColor} 
-                            selectedOptions={selectedOptions}
-                        />
-                    }
-                    
-                    <InputContainer 
-                        onChange={handleChange}
-                        onFocus={() => setShow(true)}
-                        placeholder={placeholder}
-                        input={searchInput}
-                        resetInput={resetInput}
-                        isCrossVisible={showCross}
-                        isArrowVisible={show}
-                        onArrowClick={() => setShow(v => !v)}
+                { showTagsList && 
+                    <TagsList 
+                        onClick={deleteSelectedOption} 
+                        tagBgColor={tagBgColor} 
+                        selectedOptions={selectedOptions}
                     />
+                }
 
-                </SearchContainer>
+                <InputContainer 
+                    onChange={handleChange}
+                    onFocus={() => setShow(true)}
+                    placeholder={placeholder}
+                    input={searchInput}
+                    resetInput={resetInput}
+                    isCrossVisible={showCross}
+                    isArrowVisible={show}
+                    onArrowClick={() => setShow(v => !v)}
+                />
 
-            {show && 
-                <OptionsList 
-                    updateSelectedOptionsFunction={changeSelectedOptions}
-                    checkIfSelectedFunction={checkIfSelected}
-                    children={children}
-                    searchInput={searchInput}
-                 />
-            }
+                { show && 
+                    <OptionsList 
+                        updateSelectedOptionsFunction={changeSelectedOptions}
+                        checkIfSelectedFunction={checkIfSelected}
+                        children={children}
+                        searchInput={searchInput}
+                    />
+                }
 
             </MainContainer>
         </Styles>
@@ -139,24 +139,10 @@ const MainContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     width: 350px;
-    border: .3px solid #a8a8a8;
-    border-radius: 5px;
+    border: .3px solid ${ ({ theme }) =>  theme.colors.grey[500] };
+    border-radius: ${ ({ theme }) =>  theme.sizes[2] };
     box-sizing: border-box;
     height: auto;
     margin: 0px;
     z-index: 10;
-`;
-
-const SearchContainer = styled.div`
-    background-color: #ffffff;
-    width: 100%;
-    height: fit-content;
-    padding: 5px 10px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    overflow-inline: auto;
-    border-radius: 10px;
 `;
