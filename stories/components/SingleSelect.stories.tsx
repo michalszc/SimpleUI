@@ -35,3 +35,9 @@ SelectSingleCustomColors.args = {
     placeholder: 'Placeholder',
     borderColor: Colors.pink[500]
 };
+
+export const SelectSingleWithDefaultValues = Template.bind({});
+SelectSingleWithDefaultValues.args = {
+    placeholder: "Select values",
+    selected: "Third Option",
+};

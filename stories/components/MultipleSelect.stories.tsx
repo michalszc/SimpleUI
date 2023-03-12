@@ -33,6 +33,14 @@ export const SelectMultipleCustomColors = Template.bind({});
 SelectMultipleCustomColors.args = {
     placeholder: "Select values",
     tagBgColor: Colors.pink[500],
+    borderColor: Colors.pink[500]
 };
 
-export const SelectMultipleWithLabel = Template.bind({});
+export const SelectMultipleWithDefaultValues = Template.bind({});
+SelectMultipleWithDefaultValues.args = {
+    placeholder: "Select values",
+    selected: [
+        "Third Option",
+        "Ninth Option"
+    ]
+};

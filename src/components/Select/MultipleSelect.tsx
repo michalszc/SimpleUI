@@ -1,15 +1,15 @@
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect, useMemo, useState } from "react";
 import styled from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
-import { RxCross2 } from 'react-icons/rx';
-import { RiArrowDownSLine } from 'react-icons/ri';
 import { OptionProps } from "./Option";
 import type * as CSS from "csstype";
 import TagsList from "./TagsList";
 import OptionsList from "./OptionsList";
 import { Colors } from "../../constants";
+import { BaseProps } from "../../utils";
+import InputContainer from "./InputContainer";
 
-export interface SelectProps extends StyleProps {
+export interface SelectProps extends StyleProps, BaseProps {
     /**
      * activated everytime the component is rendered
      */
@@ -37,13 +37,18 @@ const MultipleSelect: FC<SelectProps> = ({
     selected = [], onChange, 
     children, placeholder, ...props }) => {
     
-    const [show, setShow] = React.useState<boolean>(false);
-    const [searchInput, setSearchInput] = React.useState<string>("");
-    const [selectedOptions, setSelectedOptions] = React.useState<string[]>(selected);
+    const [show, setShow] = useState<boolean>(false);
+    const [searchInput, setSearchInput] = useState<string>("");
+    const [selectedOptions, setSelectedOptions] = useState<string[]>(selected);
 
     useEffect(() => {
         onChange(selectedOptions);
     }, [selectedOptions]);
+
+    const showCross = useMemo(
+        () => searchInput.length !== 0
+     , [searchInput]);
+ 
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         event.preventDefault();
@@ -90,7 +95,7 @@ const MultipleSelect: FC<SelectProps> = ({
     return(
         <Styles {...props}>
             <MainContainer>
-                <StyledSearchContainer className="simpleui-select">
+                <SearchContainer className="simpleui-select">
                     { selectedOptions.length !== 0 && 
                         <TagsList 
                             onClick={deleteSelectedOption} 
@@ -98,27 +103,19 @@ const MultipleSelect: FC<SelectProps> = ({
                             selectedOptions={selectedOptions}
                         />
                     }
-                    <StyledInputContainer className="simpleui-select-inputcontainer">
-                        <StyledInput 
-                            placeholder={placeholder} 
-                            onFocus={() => setShow(true)}
-                            value={searchInput} 
-                            onChange={handleChange}
-                            className="simpleui-select-input"
-                        />
-                        {
-                            searchInput.length !== 0 ?
-                            <Icon onClick={resetInput}><RxCross2 size='1.2rem' /></Icon>
-                            : 
-                            (show ? 
-                            <Icon style={{ rotate: 'x 180deg' }} onClick={() => setShow(v => !v)}><RiArrowDownSLine size='1.5rem'/></Icon>
-                            :
-                            <Icon onClick={() => setShow(v => !v)}><RiArrowDownSLine size='1.5rem'/></Icon>
-                            )                        
-                        }
-                    </StyledInputContainer>
+                    
+                    <InputContainer 
+                        onChange={handleChange}
+                        onFocus={() => setShow(true)}
+                        placeholder={placeholder}
+                        input={searchInput}
+                        resetInput={resetInput}
+                        isCrossVisible={showCross}
+                        isArrowVisible={show}
+                        onArrowClick={() => setShow(v => !v)}
+                    />
 
-                </StyledSearchContainer>
+                </SearchContainer>
 
             {show && 
                 <OptionsList 
@@ -150,7 +147,7 @@ const MainContainer = styled.div`
     z-index: 10;
 `;
 
-const StyledSearchContainer = styled.div`
+const SearchContainer = styled.div`
     background-color: #ffffff;
     width: 100%;
     height: fit-content;
@@ -161,46 +158,5 @@ const StyledSearchContainer = styled.div`
     justify-content: flex-start;
     align-items: center;
     overflow-inline: auto;
-
-    border: 3px solid #2196f3;
     border-radius: 10px;
 `;
-
-const StyledInputContainer = styled.div`
-    height: 100%;
-    padding: 5px;   
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-`;
-
-const StyledInput = styled.input`
-    border: .3px solid #e0e0e0;
-    border-radius: 5px;
-    height: 100%;
-    width: 100%;
-    padding: 5px;
-    font-size: 1em;
-    color: #555555;
-    
-    background-color: transparent;
-    border-radius: 0px;
-    border: none;
-    color: black;
-
-    &:focus {
-        outline: none;
-    }
-`;
-
-const Icon = styled.a`
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 5px;
-    padding-left: 5px;
-`;
-

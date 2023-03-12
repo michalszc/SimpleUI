@@ -2,11 +2,11 @@ import React, { FC, useEffect, useMemo, useState } from "react";
 import styled from "styled-components";
 import Styles, { StyleProps } from "../../utils/styles";
 import { OptionProps } from "./Option";
-import { RxCross2 } from 'react-icons/rx';
-import { RiArrowDownSLine } from 'react-icons/ri';
 import OptionsList from './OptionsList';
+import { BaseProps } from "../../utils";
+import InputContainer from "./InputContainer";
 
-export interface SelectProps extends StyleProps{
+export interface SelectProps extends StyleProps, BaseProps{
     /**
      * Text display when input section is empty
      */
@@ -25,13 +25,9 @@ export interface SelectProps extends StyleProps{
     children: React.ReactElement<OptionProps> | Array<React.ReactElement<OptionProps>>;
 }
 
-interface MainContainerProps {
-    show: boolean;
-}
-
 const SingleSelect: FC<SelectProps> = ({ onChange, selected = "", placeholder, children,  ...props }) => {
     const [searchInput, setSearchInput] = useState<string>("");
-    const [input, setInput] = useState<string>("");
+    const [input, setInput] = useState<string>(selected);
     const [selectedOption, setSelectedOption] = useState<string>(selected);
     const [show, setShow] = useState<boolean>(false);
 
@@ -83,27 +79,18 @@ const SingleSelect: FC<SelectProps> = ({ onChange, selected = "", placeholder, c
 
     return(
         <Styles {...props}>
-            <MainContainer show={show}>
-                <InputContainer className="simpleui-select-inputcontainer">
-                    <Input 
-                        placeholder={placeholder} 
-                        onFocus={() => setShow(true)}
-                        value={input} 
-                        onChange={handleChange}
-                        className="simpleui-select-input"
-                    />
-                    {   
-                        showCross && 
-                        <Icon onClick={resetInput}><RxCross2 size='1.2rem' /></Icon> 
-                    }
-                    {
-                        show ? 
-                        <Icon style={{ rotate: 'x 180deg' }} onClick={() => setShow(v => !v)}><RiArrowDownSLine size='1.5rem'/></Icon>
-                        :
-                        <Icon onClick={() => setShow(v => !v)}><RiArrowDownSLine size='1.5rem'/></Icon>
-                    }                        
-                
-                </InputContainer>
+            <MainContainer>
+
+                <InputContainer 
+                    onChange={handleChange}
+                    onFocus={() => setShow(true)}
+                    placeholder={placeholder}
+                    input={input}
+                    resetInput={resetInput}
+                    isCrossVisible={showCross}
+                    isArrowVisible={show}
+                    onArrowClick={() => setShow(v => !v)}
+                />
 
                 {show && 
                     <OptionsList 
@@ -120,7 +107,7 @@ const SingleSelect: FC<SelectProps> = ({ onChange, selected = "", placeholder, c
 
 export default SingleSelect;
 
-const MainContainer = styled.div<MainContainerProps>`
+const MainContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -134,43 +121,3 @@ const MainContainer = styled.div<MainContainerProps>`
     height: auto;
     z-index: 10;
 `;
-
-const InputContainer = styled.div`
-    height: 100%;  
-    width: 100%;
-    padding: 5px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-`;
-
-const Input = styled.input`
-    border: .3px solid #e0e0e0;
-    border-radius: 5px;
-    height: 100%;
-    width: 100%;
-    padding: 10px;
-    font-size: 1em;
-    color: #555555;
-    
-    background-color: transparent;
-    border-radius: 0px;
-    border: none;
-    color: black;
-
-    &:focus {
-        outline: none;
-    }
-`;
-
-const Icon = styled.a`
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 5px;
-    padding-left: 5px;
-`;
-
